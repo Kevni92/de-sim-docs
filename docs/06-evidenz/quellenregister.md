@@ -1,7 +1,7 @@
 ---
 title: Quellenregister
 summary: Ausgangspunkt für amtliche Statistiken, Rechtsgrundlagen, Forschungsdaten und methodische Standards.
-status: Arbeitsstand 0.6
+status: Arbeitsstand 0.7
 last_updated: 2026-07-13
 ---
 
@@ -12,7 +12,7 @@ last_updated: 2026-07-13
 ### Einkommensteuer 2026
 
 - [BMF: Berechnung der Einkommensteuer 2026](https://www.bmf-steuerrechner.de/ekst/eingabeformekst.xhtml) — Referenz für Tarifzonen, Formeln, Rundung und Splittingprüfung.
-- [Destatis: Lohn- und Einkommensteuerstatistik](https://genesis.destatis.de/datenbank/online/statistic/73111/details) — zukünftige Kalibrierung von Einkommensverteilung und Steuerfällen.
+- [Destatis: Lohn- und Einkommensteuerstatistik](https://genesis.destatis.de/datenbank/online/statistic/73111/details) — Kalibrierungs- und Plausibilitätsrahmen für Einkommensverteilung und Steuerfälle.
 - [BMF: Datensammlung zur Steuerpolitik](https://www.bundesfinanzministerium.de/Content/DE/Downloads/Broschueren_Bestellservice/datensammlung-zur-steuerpolitik-2026.html) — Aggregate und zeitliche Einordnung steuerpolitischer Kennzahlen.
 
 ### Weitere Einnahmenmodule
@@ -29,7 +29,7 @@ last_updated: 2026-07-13
 - [BMF: Kapitalertragsteuer](https://www.bundesfinanzministerium.de/Content/DE/Standardartikel/Video-Textfassungen/Finanzisch/textfassung-kapitalertragsteuer.html) — pauschaler Steuersatz von 25 Prozent und grundlegende Einordnung.
 - [Generalzolldirektion: Energiesteuer](https://www.zoll.de/DE/Fachthemen/Steuern/Verbrauchsteuern/Energie/energie_node.html) — Energieerzeugnisse, Steuergegenstände und Verfahren.
 
-Die Rechtsquellen definieren Tarif- und Beitragsparameter. Sie liefern nicht automatisch die für eine Aufkommenssimulation benötigten Bemessungsgrundlagen oder Verhaltenselastizitäten. Diese Modellbestandteile werden getrennt als Modell oder Annahme dokumentiert.
+Die Rechtsquellen definieren Tarif- und Beitragsparameter. Sie liefern nicht automatisch die für eine Aufkommenssimulation benötigten Bemessungsgrundlagen oder Verhaltenselastizitäten. Diese Bestandteile werden getrennt als Modell oder Annahme dokumentiert.
 
 ### Ausgabenmodule 2026
 
@@ -45,7 +45,7 @@ Die Rechtsquellen definieren Tarif- und Beitragsparameter. Sie liefern nicht aut
 - [BMF: 30. Subventionsbericht](https://www.bundesfinanzministerium.de/Content/DE/Downloads/Broschueren_Bestellservice/30-subventionsbericht.html) — Finanzhilfen und Steuervergünstigungen der Berichtsjahre 2025 und 2026.
 - [BAMF: Statistiken](https://www.bamf.de/DE/Themen/Statistik/statistik-node.html) — Fall-, Verfahrens- und Integrationsstatistiken für Migration und Asyl.
 
-Diese Quellen bestimmen Rechtsstruktur, institutionelle Zuständigkeit und Plausibilitätsrahmen. Die in der Anwendung verwendeten Baselinebeträge sind gerundete und abgegrenzte Modellaggregate. Sie werden nicht ohne Prüfung mit einer einzelnen amtlichen Tabelle gleichgesetzt. Mittelabfluss, Begünstigtenanteile und Folgewirkungen bleiben getrennt gekennzeichnete Modellannahmen.
+Diese Quellen bestimmen Rechtsstruktur, institutionelle Zuständigkeit und Plausibilitätsrahmen. Baselinebeträge sind gerundete und abgegrenzte Modellaggregate und werden nicht ungeprüft einer einzelnen amtlichen Tabelle gleichgesetzt.
 
 ### Mikrosimulation und Vergleichssysteme
 
@@ -55,11 +55,24 @@ Diese Quellen bestimmen Rechtsstruktur, institutionelle Zuständigkeit und Plaus
 
 ## Bevölkerung und Haushalte
 
-- [Destatis: Mikrozensus](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Haushalte-Familien/Methoden/mikrozensus.html)
-- [Destatis: Einkommens- und Verbrauchsstichprobe](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Einkommen-Konsum-Lebensbedingungen/evs2023-info.html)
+### Tatsächlich verwendete Rand- und Plausibilitätsquellen
+
+- [Destatis: Bevölkerung nach Altersgruppen](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Bevoelkerungsstand/Tabellen/bevoelkerung-altersgruppen-deutschland.html) — Bevölkerungsstand und Altersstruktur; amtliches Randziel.
+- [Destatis: Mikrozensus – Methode und Haushalte](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Haushalte-Familien/Methoden/mikrozensus.html) — Haushaltsformen, Erwerbsstatus und Wohnverhältnisse; amtlicher Ausgangspunkt für gerundete Randziele.
+- [Destatis: Erwerbstätigkeit](https://www.destatis.de/DE/Themen/Arbeit/Arbeitsmarkt/Erwerbstaetigkeit/_inhalt.html) — Plausibilitätsrahmen für Erwerbsstatus und Erwerbsbeteiligung.
+- [Bundesbank: Private Haushalte und ihre Finanzen, PHF](https://www.bundesbank.de/de/bundesbank/forschung/studie-zur-wirtschaftlichen-lage-privater-haushalte-phf/ergebnisse-604886) — Plausibilitätsrahmen für die vorsichtig modellierte Verteilung von Vermögen und Schulden.
+
+### Methodische Ausgangspunkte für spätere Verfeinerung
+
+- [Destatis: Einkommens- und Verbrauchsstichprobe 2023](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Einkommen-Konsum-Lebensbedingungen/evs2023-info.html)
 - [DIW: SOEP-Datenzugang](https://www.diw.de/de/diw_01.c.601584.de/datenzugang.html)
-- [Bundesbank: Private Haushalte und ihre Finanzen](https://www.bundesbank.de/de/bundesbank/forschung/studie-zur-wirtschaftlichen-lage-privater-haushalte-phf/ergebnisse-604886)
 - [Destatis: 16. koordinierte Bevölkerungsvorausberechnung](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Bevoelkerungsvorausberechnung/annahmen_ergebnisse_16te_kBv.html)
+
+### Verwendung in Milestone 7
+
+Die Anwendung übernimmt keine Einzeldatensätze aus diesen Quellen. Sie verwendet gerundete Randziele und fachliche Plausibilitätsrahmen. Gemeinsame Verteilungen, Einkommen, Vermögen, Schulden und Stadt-Land-Abhängigkeiten werden im HaushaltsKompass modelliert und entsprechend gekennzeichnet.
+
+Jede Kalibrierungsdimension besitzt eine Quellen-ID. Der Nachweis zeigt Datenstand, Status, Methode, Einschränkungen, Modellversion und Unsicherheit. Raking-Ergebnisse sind Modellwerte und keine amtlichen Einzelfallzahlen.
 
 ## Kita, Familie und Bildung
 
@@ -85,11 +98,12 @@ Diese Quellen bestimmen Rechtsstruktur, institutionelle Zuständigkeit und Plaus
 
 ## Ausbaustand
 
-Das Register dokumentiert die Ausgangspunkte. Für tatsächlich verwendete Kennzahlen werden konkrete Formeln, Tabellen, Variablen, Stichproben, Lizenzbedingungen, Datenstände, Prüffälle und verwendete Ausschnitte im jeweiligen Modul nachgewiesen.
+Das Register dokumentiert die Ausgangspunkte. Für tatsächlich verwendete Kennzahlen werden konkrete Formeln, Baselines, Variablen, Stichproben, Datenstände, Prüffälle und verwendete Ausschnitte im jeweiligen Modul nachgewiesen.
 
 ## Verwandte Kapitel
 
 - [Einkommensteuer-Modul 2026](../02-fiskal/einkommensteuer-modul.md)
+- [Synthetische Bevölkerung](../03-daten/synthetische-bevoelkerung.md)
 - [Weitere Einnahmemodule](../02-fiskal/weitere-einnahmemodule.md)
 - [Ausgabenmodule 2026](../02-fiskal/ausgabenmodule.md)
 - [Evidenzdatenbank und Quellenprovenienz](evidenzdatenbank.md)
