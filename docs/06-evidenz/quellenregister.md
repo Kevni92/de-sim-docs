@@ -31,6 +31,22 @@ last_updated: 2026-07-13
 
 Die Rechtsquellen definieren Tarif- und Beitragsparameter. Sie liefern nicht automatisch die für eine Aufkommenssimulation benötigten Bemessungsgrundlagen oder Verhaltenselastizitäten. Diese Modellbestandteile werden getrennt als Modell oder Annahme dokumentiert.
 
+### Ausgabenmodule 2026
+
+- [BMAS: Regelbedarfe in Sozialhilfe und Bürgergeld 2026](https://www.bmas.de/DE/Service/Presse/Pressemitteilungen/2025/fortschreibung-regelbedarfe-sozialhilfe-und-buergergeld.html) — gesetzliche und amtliche Grundlage für die Regelbedarfsstruktur.
+- [Bundesregierung: Rentenversicherungsbericht 2025](https://www.bundesregierung.de/breg-de/aktuelles/rentenbericht-2025-2394260) — Finanzentwicklung, Beitragssatz, Sicherungsniveau und Projektionen der gesetzlichen Rentenversicherung.
+- [Destatis: Bildungsfinanzen und Ausbildungsförderung](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bildung-Forschung-Kultur/Bildungsfinanzen-Ausbildungsfoerderung/_inhalt.html) — föderale Bildungsausgaben und statistische Abgrenzungen.
+- [BMBFSFJ: Kindergeld](https://www.bmbfsfj.bund.de/bmbfsfj/themen/familie/familienleistungen/kindergeld) — Anspruch, Höhe und Rechtsgrundlagen monetärer Familienleistungen.
+- [BMBFSFJ: Kinderbetreuung](https://www.bmbfsfj.bund.de/bmbfsfj/themen/familie/kinderbetreuung) — Ausbau, Qualität und föderale Finanzierung der Kindertagesbetreuung.
+- [BMG: Zahlen und Fakten zur gesetzlichen Krankenversicherung](https://www.bundesgesundheitsministerium.de/themen/krankenversicherung/zahlen-und-fakten-zur-krankenversicherung.html) — Versicherten-, Einnahmen- und Ausgabenstruktur der GKV.
+- [BMG: Leistungen der Pflegeversicherung im Überblick](https://www.bundesgesundheitsministerium.de/themen/pflege/online-ratgeber-pflege/leistungen-der-pflegeversicherung/leistungen-im-ueberblick) — amtliche Leistungsansprüche und Pflegeleistungsstruktur.
+- [BMF: Bundeshaushalt 2026](https://www.bundesfinanzministerium.de/Web/DE/Themen/Oeffentliche_Finanzen/Bundeshaushalt/Bundeshaushalt-2026/bundeshaushalt-2026.html) — Haushaltsansätze, Investitionen und Sondervermögen.
+- [Bundeshaushalt digital](https://www.bundeshaushalt.de/DE/Bundeshaushalt-digital/bundeshaushalt-digital.html) — Einzelpläne und Titel, darunter Verteidigung und Infrastruktur.
+- [BMF: 30. Subventionsbericht](https://www.bundesfinanzministerium.de/Content/DE/Downloads/Broschueren_Bestellservice/30-subventionsbericht.html) — Finanzhilfen und Steuervergünstigungen der Berichtsjahre 2025 und 2026.
+- [BAMF: Statistiken](https://www.bamf.de/DE/Themen/Statistik/statistik-node.html) — Fall-, Verfahrens- und Integrationsstatistiken für Migration und Asyl.
+
+Diese Quellen bestimmen Rechtsstruktur, institutionelle Zuständigkeit und Plausibilitätsrahmen. Die in der Anwendung verwendeten Baselinebeträge sind gerundete und abgegrenzte Modellaggregate. Sie werden nicht ohne Prüfung mit einer einzelnen amtlichen Tabelle gleichgesetzt. Mittelabfluss, Begünstigtenanteile und Folgewirkungen bleiben getrennt gekennzeichnete Modellannahmen.
+
 ### Mikrosimulation und Vergleichssysteme
 
 - [EUROMOD, Joint Research Centre](https://joint-research-centre.ec.europa.eu/euromod_en)
@@ -75,6 +91,7 @@ Das Register dokumentiert die Ausgangspunkte. Für tatsächlich verwendete Kennz
 
 - [Einkommensteuer-Modul 2026](../02-fiskal/einkommensteuer-modul.md)
 - [Weitere Einnahmemodule](../02-fiskal/weitere-einnahmemodule.md)
+- [Ausgabenmodule 2026](../02-fiskal/ausgabenmodule.md)
 - [Evidenzdatenbank und Quellenprovenienz](evidenzdatenbank.md)
 - [Berechnung und Quellen](berechnungstransparenz.md)
 - [Unsicherheit und Szenarien](../04-modell/unsicherheit-und-szenarien.md)
