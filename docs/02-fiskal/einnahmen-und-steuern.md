@@ -1,38 +1,41 @@
 ---
 title: Einnahmen und Steuern
-summary: Modulares Kapitel des Pflichtenhefts und Research Briefings.
-status: Arbeitsstand 0.3
+summary: Fachliche Anforderungen an Einnahmen-, Steuer- und Beitragsmodule des Simulators.
+status: Arbeitsstand 0.5
 last_updated: 2026-07-13
 ---
 
-# 5. Einnahmen und Steuern
+# Einnahmen und Steuern
 
-## 5.1 Einkommensteuer
+## Einkommensteuer
+
+Die Einkommensteuer ist das erste vollständig implementierte Steuer-Modul. Die gesetzliche Baseline, das Reformszenario, die aggregierte Aufkommenswirkung und die Verteilung werden in einem eigenen Kapitel beschrieben:
+
+[Zum Einkommensteuer-Modul 2026](einkommensteuer-modul.md)
 
 Veränderbare Parameter:
 
 - Grundfreibetrag,
 - Eingangssteuersatz,
 - Progressionszonen,
-- Schwellen und Sätze des Spitzensteuersatzes,
-- zusätzliche Tarifstufen,
-- lineare oder proportionale Tarife,
+- Schwelle und Satz des Spitzensteuersatzes,
+- Reichensteuersatz,
 - Ehegattensplitting,
-- Kinderfreibeträge,
-- Werbungskostenpauschale,
-- Besteuerung von Renten,
-- Kapitalertragsteuer und Günstigerprüfung.
+- kombinierter Kinderfreibetrag.
 
-Ausgaben und Wirkungen:
+Ausgegeben werden:
 
-- Aufkommen nach staatlicher Ebene,
-- Steuerlast nach Bruttoeinkommen,
+- tarifliche Steuer für Referenzfälle,
 - Grenz- und Durchschnittssteuersatz,
-- verfügbares Haushaltseinkommen,
-- Gewinner und Verlierer nach Dezil,
-- Arbeitsanreiz nur als optionales Verhaltensszenario.
+- aggregiertes Einkommensteueraufkommen,
+- verfügbare Einkommensänderung,
+- Gewinner und Verlierer,
+- Wirkung nach Einkommensdezil,
+- getrennte statische und verhaltensbasierte Wirkung.
 
-## 5.2 Vermögen- und Erbschaftsteuern
+Noch nicht enthalten sind Werbungskosten, Rentenbesteuerung, Kapitalertragsteuer, Solidaritätszuschlag, Kirchensteuer, Sozialbeiträge und die vollständige Günstigerprüfung mit Kindergeld. Diese Grenzen werden in der Oberfläche und im Nachweis ausdrücklich ausgewiesen.
+
+## Vermögen- und Erbschaftsteuern
 
 Das Modell benötigt:
 
@@ -46,7 +49,7 @@ Das Modell benötigt:
 
 Topvermögen werden nicht aus normalen Haushaltsbefragungen allein abgeleitet. Eine eigene Topvermögens-Korrektur mit konservativem, mittlerem und hohem Szenario ist erforderlich.
 
-## 5.3 Konsumsteuern
+## Konsumsteuern
 
 - Regel- und ermäßigter Umsatzsteuersatz,
 - Produktgruppen,
@@ -59,7 +62,7 @@ Topvermögen werden nicht aus normalen Haushaltsbefragungen allein abgeleitet. E
 
 Konsumsteuern werden über haushaltsspezifische Ausgabenprofile modelliert. Eine reine Multiplikation mit dem Gesamtkonsum reicht nicht aus.
 
-## 5.4 Unternehmens- und Kommunalsteuern
+## Unternehmens- und Kommunalsteuern
 
 - Körperschaftsteuer,
 - Gewerbesteuer,
@@ -70,7 +73,7 @@ Konsumsteuern werden über haushaltsspezifische Ausgabenprofile modelliert. Eine
 
 Verhaltensreaktionen von Unternehmen werden als eigenes Szenario geführt. Sie dürfen die statische Erstwirkung nicht verdecken.
 
-## 5.5 Sozialbeiträge und sonstige Einnahmen
+## Sozialbeiträge und sonstige Einnahmen
 
 - Renten-, Kranken-, Pflege- und Arbeitslosenversicherung,
 - Beitragsbemessungsgrenzen,
@@ -80,8 +83,21 @@ Verhaltensreaktionen von Unternehmen werden als eigenes Szenario geführt. Sie d
 - Zölle,
 - Kreditaufnahme.
 
+## Gemeinsame Regeln aller Einnahmenmodule
+
+Jedes Modul muss:
+
+1. gesetzliche oder statistische Baseline und Szenario trennen,
+2. statische Erstwirkung vor Verhaltenseffekten zeigen,
+3. aggregierte Werte aus derselben Logik wie die Einzelfallansicht ableiten,
+4. Datenstand, Rechtsstand und Modellversion ausweisen,
+5. nicht berechnete Größen als nicht berechnet kennzeichnen,
+6. Rechenweg, Quellen, Unsicherheit und bekannte Grenzen öffnen können.
+
 ## Verwandte Kapitel
 
+- [Einkommensteuer-Modul 2026](einkommensteuer-modul.md)
 - [Systemgrenze und Baseline](systemgrenze-und-baseline.md)
-- [Synthetische Bevölkerung und Haushalte](../03-daten/synthetische-bevoelkerung.md)
+- [Synthetische Bevölkerung](../03-daten/synthetische-bevoelkerung.md)
 - [Wirkungsmodell](../04-modell/wirkungsmodell.md)
+- [Berechnung und Quellen](../06-evidenz/berechnungstransparenz.md)

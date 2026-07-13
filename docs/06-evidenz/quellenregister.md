@@ -1,7 +1,7 @@
 ---
 title: Quellenregister
-summary: Ausgangspunkt für amtliche Statistiken, Forschungsdaten und methodische Standards.
-status: Arbeitsstand 0.4
+summary: Ausgangspunkt für amtliche Statistiken, Rechtsgrundlagen, Forschungsdaten und methodische Standards.
+status: Arbeitsstand 0.5
 last_updated: 2026-07-13
 ---
 
@@ -9,8 +9,14 @@ last_updated: 2026-07-13
 
 ## Staat, Steuern und Mikrosimulation
 
-- [Destatis: Lohn- und Einkommensteuerstatistik](https://genesis.destatis.de/datenbank/online/statistic/73111/details)
-- [BMF: Datensammlung zur Steuerpolitik](https://www.bundesfinanzministerium.de/Content/DE/Downloads/Broschueren_Bestellservice/datensammlung-zur-steuerpolitik-2026.html)
+### Einkommensteuer 2026
+
+- [BMF: Berechnung der Einkommensteuer 2026](https://www.bmf-steuerrechner.de/ekst/eingabeformekst.xhtml) — verbindliche Referenz für Tarifzonen, Formeln, Rundung und Splittingprüfung im ersten Einkommensteuer-Modul.
+- [Destatis: Lohn- und Einkommensteuerstatistik](https://genesis.destatis.de/datenbank/online/statistic/73111/details) — zukünftige Kalibrierung von Einkommensverteilung und Steuerfällen.
+- [BMF: Datensammlung zur Steuerpolitik](https://www.bundesfinanzministerium.de/Content/DE/Downloads/Broschueren_Bestellservice/datensammlung-zur-steuerpolitik-2026.html) — Aggregate und zeitliche Einordnung steuerpolitischer Kennzahlen.
+
+### Mikrosimulation und Vergleichssysteme
+
 - [EUROMOD, Joint Research Centre](https://joint-research-centre.ec.europa.eu/euromod_en)
 - [OpenFisca: Dokumentation](https://openfisca.org/doc/)
 - [GETTSIM: Dokumentation](https://gettsim.readthedocs.io/)
@@ -47,10 +53,11 @@ last_updated: 2026-07-13
 
 ## Ausbaustand
 
-Das Register ist ein Startpunkt. Für jede tatsächlich verwendete Kennzahl werden später konkrete Tabellen, Variablen, Stichproben, Lizenzbedingungen, Datenstände und verwendete Ausschnitte dokumentiert.
+Das Register dokumentiert die Ausgangspunkte. Für tatsächlich verwendete Kennzahlen werden konkrete Formeln, Tabellen, Variablen, Stichproben, Lizenzbedingungen, Datenstände, Prüffälle und verwendete Ausschnitte im jeweiligen Modul nachgewiesen.
 
 ## Verwandte Kapitel
 
+- [Einkommensteuer-Modul 2026](../02-fiskal/einkommensteuer-modul.md)
 - [Evidenzdatenbank und Quellenprovenienz](evidenzdatenbank.md)
 - [Berechnung und Quellen](berechnungstransparenz.md)
 - [Unsicherheit und Szenarien](../04-modell/unsicherheit-und-szenarien.md)
