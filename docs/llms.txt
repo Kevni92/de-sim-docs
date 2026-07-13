@@ -1,6 +1,6 @@
 # Deutschland-Simulator – Fachliche Dokumentation
 Language: German
-Status: fachliche Modell- und Forschungsdokumentation, version 0.8
+Status: fachliche Modell- und Forschungsdokumentation, version 0.9
 Start: /index.md
 Overview: /00-meta/index.md
 Principles: /01-produkt/vision-und-grundsaetze.md
@@ -10,6 +10,7 @@ Income tax module 2026 with synthetic population: /02-fiskal/einkommensteuer-mod
 Additional revenue modules: /02-fiskal/weitere-einnahmemodule.md
 Public spending overview: /02-fiskal/ausgaben-und-leistungen.md
 Expense modules 2026: /02-fiskal/ausgabenmodule.md
+SGB II, Bürgergeld and Grundsicherungsgeld microsimulation contract: /02-fiskal/buergergeld-modul.md
 Synthetic population, calibration, weighting and privacy: /03-daten/synthetische-bevoelkerung.md
 Effects model: /04-modell/wirkungsmodell.md
 Indirect effects: /04-modell/indirekte-und-nichtmonetaere-wirkungen.md
@@ -17,6 +18,6 @@ Indirect and long-term effects: /04-modell/indirekte-und-langfristige-wirkungen.
 Uncertainty: /04-modell/unsicherheit-und-szenarien.md
 Evidence: /06-evidenz/evidenzdatenbank.md
 Calculation transparency: /06-evidenz/berechnungstransparenz.md
-Population and model sources: /06-evidenz/quellenregister.md
+Population, SGB II and model sources: /06-evidenz/quellenregister.md
 Governance: /09-governance/validierung-governance-ethik.md
 Excluded from public documentation: software architecture, worker protocol, IndexedDB stores, internal requirements, design prompts and implementation planning.

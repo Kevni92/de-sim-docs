@@ -1,7 +1,7 @@
 ---
 title: Quellenregister
 summary: Ausgangspunkt für amtliche Statistiken, Rechtsgrundlagen, Forschungsdaten und methodische Standards.
-status: Arbeitsstand 0.7
+status: Arbeitsstand 0.8
 last_updated: 2026-07-13
 ---
 
@@ -31,9 +31,34 @@ last_updated: 2026-07-13
 
 Die Rechtsquellen definieren Tarif- und Beitragsparameter. Sie liefern nicht automatisch die für eine Aufkommenssimulation benötigten Bemessungsgrundlagen oder Verhaltenselastizitäten. Diese Bestandteile werden getrennt als Modell oder Annahme dokumentiert.
 
-### Ausgabenmodule 2026
+### Bürgergeld und Grundsicherungsgeld nach dem SGB II
 
-- [BMAS: Regelbedarfe in Sozialhilfe und Bürgergeld 2026](https://www.bmas.de/DE/Service/Presse/Pressemitteilungen/2025/fortschreibung-regelbedarfe-sozialhilfe-und-buergergeld.html) — gesetzliche und amtliche Grundlage für die Regelbedarfsstruktur.
+#### Rechtsgrundlagen und amtliche Parameter
+
+- [Sozialgesetzbuch II](https://www.gesetze-im-internet.de/sgb_2/) — verbindliche Rechtsgrundlage für Berechtigung, Bedarfsgemeinschaft, Regelbedarf, Mehrbedarfe, Einkommen, Vermögen, Unterkunft und Heizung sowie Leistungsminderungen.
+- [BMAS: Leistungen und Bedarfe in der Grundsicherung für Arbeitsuchende](https://www.bmas.de/DE/Arbeit/Grundsicherung-fuer-Arbeitsuchende/Leistungen-und-Bedarfe-in-der-Grundsicherung-fuer-Arbeitsuchende/leistungen-und-bedarfe-in-der-grundsicherung-fuer-arbeitsuchende.html) — amtliche Übersicht der ab Juli 2026 geltenden Begriffe, Regelbedarfe, Mehrbedarfe, Unterkunftsregeln und Beispielrechnungen.
+- [BMAS: Verordnung zur Fortschreibung der Regelbedarfe 2026](https://www.bmas.de/DE/Service/Gesetze-und-Gesetzesvorhaben/verordnung-zur-fortschreibung-der-regelbedarfe-fuer-das-jahr-2026.html) — Fortschreibung, Gültigkeit und methodische Einordnung der Regelbedarfsstufen.
+- [BMAS: Bedarfsgemeinschaft und Haushaltsgemeinschaft](https://www.bmas.de/DE/Arbeit/Grundsicherung-fuer-Arbeitsuchende/Leistungen-und-Bedarfe-in-der-Grundsicherung-fuer-Arbeitsuchende/bedarfsgemeinschaft-haushaltsgemeinschaft.html) — amtliche Abgrenzung von Haushalt und Bedarfsgemeinschaft.
+- [Bundesagentur für Arbeit: Voraussetzungen, Einkommen und Vermögen](https://www.arbeitsagentur.de/grundsicherung/finanziell-absichern/voraussetzungen-einkommen-vermoegen) — operative amtliche Erläuterung von Berechtigung, Freibeträgen und Vermögensprüfung.
+- [Bundesagentur für Arbeit: Einkommen ergänzen](https://www.arbeitsagentur.de/grundsicherung/finanziell-absichern/einkommen-ergaenzen) — operative Erläuterung von ergänzendem Leistungsbezug und Einkommensanrechnung.
+
+#### Statistik, Kalibrierung und Wohnkosten
+
+- [Bundesagentur für Arbeit: Grundsicherung für Arbeitsuchende – Statistik](https://statistik.arbeitsagentur.de/DE/Navigation/Statistiken/Fachstatistiken/Grundsicherung-fuer-Arbeitsuchende-SGBII/Grundsicherung-fuer-Arbeitsuchende-SGBII-Nav.html) — Einstieg in Bestands-, Personen-, Bedarfsgemeinschafts- und Leistungsstatistiken.
+- [Bundesagentur für Arbeit: Bedarfe, Zahlungen, Einkommen und Wohnkosten](https://statistik.arbeitsagentur.de/DE/Navigation/Statistiken/Fachstatistiken/Grundsicherung-fuer-Arbeitsuchende-SGBII/Leistungen-Einkommen-Bedarfe-Wohnkosten/Leistungen-Einkommen-Bedarfe-Wohnkosten-Nav.html) — Monats- und Quartalstabellen zu Zahlungsansprüchen, Einkommen, Wohnsituation und Kosten der Unterkunft.
+- [Bundesagentur für Arbeit: beliebte Produkte zur Grundsicherung](https://statistik.arbeitsagentur.de/DE/Navigation/Statistiken/Fachstatistiken/Grundsicherung-fuer-Arbeitsuchende-SGBII/Produkte/Beliebte-Produkte-Nav.html) — Zeitreihen und Eckwerte nach Bedarfsgemeinschaftstyp, Alter, Region und weiteren Merkmalen.
+- [Bundeshaushalt digital](https://www.bundeshaushalt.de/DE/Bundeshaushalt-digital/bundeshaushalt-digital.html) — Titel und Haushaltsansätze für Bundesleistungen, Beteiligungen und Verwaltung; nicht identisch mit statistischen Zahlungsansprüchen.
+- kommunale Richtlinien, Satzungen und schlüssige Konzepte zu Unterkunft und Heizung — regionale Rechts- und Datenquelle für Angemessenheitsgrenzen; jeder Datensatz benötigt Region, Gültigkeitszeitraum, Veröffentlichungsdatum und Quellenbeleg.
+- kommunale oder bundesweite Heizspiegel — Referenz für die fachliche Prüfung von Heizkosten; Verwendung und Fallback müssen sichtbar dokumentiert werden.
+
+#### Verwendungsregeln im Modell
+
+Gesetzliche Parameter werden als niedrige Unsicherheit geführt, sofern Rechtsstand, Gültigkeitszeitraum und Einheit eindeutig sind. BA-Statistiken liefern Kalibrierungs- und Vergleichsgrößen, aber keine vollständigen gemeinsamen Mikrodaten. Kommunale Unterkunftswerte sind regional und zeitlich heterogen und dürfen nicht durch einen unmarkierten bundesweiten Durchschnitt ersetzt werden.
+
+Bestände und Zahlungsansprüche zu statistischen Stichtagen sind von tatsächlichen Ausgabenströmen und Haushaltsansätzen zu unterscheiden. Das Modell zeigt Referenzwert, Modellwert, Abweichung und Vergleichbarkeit je Komponente. Eine freie Kalibrierkonstante zur künstlichen exakten Gesamtsumme ist nicht zulässig.
+
+### Weitere Ausgabenmodule 2026
+
 - [Bundesregierung: Rentenversicherungsbericht 2025](https://www.bundesregierung.de/breg-de/aktuelles/rentenbericht-2025-2394260) — Finanzentwicklung, Beitragssatz, Sicherungsniveau und Projektionen der gesetzlichen Rentenversicherung.
 - [Destatis: Bildungsfinanzen und Ausbildungsförderung](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bildung-Forschung-Kultur/Bildungsfinanzen-Ausbildungsfoerderung/_inhalt.html) — föderale Bildungsausgaben und statistische Abgrenzungen.
 - [BMBFSFJ: Kindergeld](https://www.bmbfsfj.bund.de/bmbfsfj/themen/familie/familienleistungen/kindergeld) — Anspruch, Höhe und Rechtsgrundlagen monetärer Familienleistungen.
@@ -41,7 +66,6 @@ Die Rechtsquellen definieren Tarif- und Beitragsparameter. Sie liefern nicht aut
 - [BMG: Zahlen und Fakten zur gesetzlichen Krankenversicherung](https://www.bundesgesundheitsministerium.de/themen/krankenversicherung/zahlen-und-fakten-zur-krankenversicherung.html) — Versicherten-, Einnahmen- und Ausgabenstruktur der GKV.
 - [BMG: Leistungen der Pflegeversicherung im Überblick](https://www.bundesgesundheitsministerium.de/themen/pflege/online-ratgeber-pflege/leistungen-der-pflegeversicherung/leistungen-im-ueberblick) — amtliche Leistungsansprüche und Pflegeleistungsstruktur.
 - [BMF: Bundeshaushalt 2026](https://www.bundesfinanzministerium.de/Web/DE/Themen/Oeffentliche_Finanzen/Bundeshaushalt/Bundeshaushalt-2026/bundeshaushalt-2026.html) — Haushaltsansätze, Investitionen und Sondervermögen.
-- [Bundeshaushalt digital](https://www.bundeshaushalt.de/DE/Bundeshaushalt-digital/bundeshaushalt-digital.html) — Einzelpläne und Titel, darunter Verteidigung und Infrastruktur.
 - [BMF: 30. Subventionsbericht](https://www.bundesfinanzministerium.de/Content/DE/Downloads/Broschueren_Bestellservice/30-subventionsbericht.html) — Finanzhilfen und Steuervergünstigungen der Berichtsjahre 2025 und 2026.
 - [BAMF: Statistiken](https://www.bamf.de/DE/Themen/Statistik/statistik-node.html) — Fall-, Verfahrens- und Integrationsstatistiken für Migration und Asyl.
 
@@ -68,11 +92,13 @@ Diese Quellen bestimmen Rechtsstruktur, institutionelle Zuständigkeit und Plaus
 - [DIW: SOEP-Datenzugang](https://www.diw.de/de/diw_01.c.601584.de/datenzugang.html)
 - [Destatis: 16. koordinierte Bevölkerungsvorausberechnung](https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Bevoelkerungsvorausberechnung/annahmen_ergebnisse_16te_kBv.html)
 
-### Verwendung in Milestone 7
+### Verwendung in Milestone 7 und im Bürgergeld-Modul
 
 Die Anwendung übernimmt keine Einzeldatensätze aus diesen Quellen. Sie verwendet gerundete Randziele und fachliche Plausibilitätsrahmen. Gemeinsame Verteilungen, Einkommen, Vermögen, Schulden und Stadt-Land-Abhängigkeiten werden im HaushaltsKompass modelliert und entsprechend gekennzeichnet.
 
-Jede Kalibrierungsdimension besitzt eine Quellen-ID. Der Nachweis zeigt Datenstand, Status, Methode, Einschränkungen, Modellversion und Unsicherheit. Raking-Ergebnisse sind Modellwerte und keine amtlichen Einzelfallzahlen.
+Für das Bürgergeld-Modul werden zusätzliche Randziele zu Bedarfsgemeinschaftstypen, Leistungsbezug, Einkommen, Wohnkosten und Regionen aus der BA-Statistik benötigt. Raking oder andere Kalibrierung trifft Randverteilungen, identifiziert aber nicht automatisch alle gemeinsamen Verteilungen.
+
+Jede Kalibrierungsdimension besitzt eine Quellen-ID. Der Nachweis zeigt Datenstand, Status, Methode, Einschränkungen, Modellversion und Unsicherheit. Kalibrierungsergebnisse sind Modellwerte und keine amtlichen Einzelfallzahlen.
 
 ## Kita, Familie und Bildung
 
@@ -102,6 +128,7 @@ Das Register dokumentiert die Ausgangspunkte. Für tatsächlich verwendete Kennz
 
 ## Verwandte Kapitel
 
+- [Bürgergeld- und Grundsicherungsgeld-Modul](../02-fiskal/buergergeld-modul.md)
 - [Einkommensteuer-Modul 2026](../02-fiskal/einkommensteuer-modul.md)
 - [Synthetische Bevölkerung](../03-daten/synthetische-bevoelkerung.md)
 - [Weitere Einnahmemodule](../02-fiskal/weitere-einnahmemodule.md)
