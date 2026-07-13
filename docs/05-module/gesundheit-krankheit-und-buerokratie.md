@@ -1,13 +1,13 @@
 ---
 title: Gesundheit, Krankheitstage und Bürokratie
-summary: Modulares Kapitel des Pflichtenhefts und Research Briefings.
-status: Arbeitsstand 0.3
+summary: Fachliche Wirkungsketten für Gesundheit, Arbeitsunfähigkeit und Verwaltungsaufwand.
+status: Arbeitsstand 0.4
 last_updated: 2026-07-13
 ---
 
-# 11. Gesundheit, Krankheitstage und Bürokratie
+# Gesundheit, Krankheitstage und Bürokratie
 
-## 11.1 Krankheitstage als Ergebnisgröße
+## Krankheitstage als Ergebnisgröße
 
 Der Simulator führt mindestens:
 
@@ -21,7 +21,7 @@ Der Simulator führt mindestens:
 
 Die BAuA schätzt für 2024 bei durchschnittlich 20,8 Arbeitsunfähigkeitstagen je arbeitnehmender Person 881,5 Millionen AU-Tage, Produktionsausfälle von 134 Milliarden Euro und einen Ausfall an Bruttowertschöpfung von 227 Milliarden Euro. Diese Werte sind ein Baseline-Anker, keine universelle Umrechnungsformel für jede Reform.
 
-## 11.2 Gesundheitspolitische Wirkungsketten
+## Gesundheitspolitische Wirkungsketten
 
 Beispiele:
 
@@ -31,7 +31,7 @@ Beispiele:
 
 Jeder Übergang benötigt eine eigene Evidenzbewertung.
 
-## 11.3 Elektronische Arbeitsunfähigkeitsbescheinigung
+## Elektronische Arbeitsunfähigkeitsbescheinigung
 
 Bei einer Abschaffung oder Änderung der eAU werden getrennt betrachtet:
 
@@ -44,7 +44,7 @@ Bei einer Abschaffung oder Änderung der eAU werden getrennt betrachtet:
 
 Die eAU verbessert nach Angaben des GKV-Spitzenverbands Übermittlung, Dokumentation und Medienbruchfreiheit. Gleichzeitig hat die vollständigere Erfassung den beobachteten Krankenstand statistisch verändert. Das Modell darf eine höhere Zahl gemeldeter Fälle daher nicht automatisch als reale Verschlechterung der Gesundheit interpretieren.
 
-## 11.4 Bürokratiekosten
+## Bürokratiekosten
 
 Bürokratie wird in natürlichen Einheiten modelliert:
 
@@ -58,7 +58,7 @@ Bürokratie wird in natürlichen Einheiten modelliert:
 
 Erst danach erfolgt eine monetäre Zusammenfassung.
 
-## 11.5 Grenzen
+## Grenzen
 
 Eine Regeländerung wie die Pflicht zur Bescheinigung ab dem ersten Krankheitstag kann Verhalten, Arztkontakte, Erfassung und tatsächliche Abwesenheit unterschiedlich beeinflussen. Diese Effekte werden nicht zu einer scheinbar sicheren Zahl zusammengezogen.
 
@@ -66,4 +66,4 @@ Eine Regeländerung wie die Pflicht zur Bescheinigung ab dem ersten Krankheitsta
 
 - [Indirekte und nicht monetäre Wirkungen](../04-modell/indirekte-und-nichtmonetaere-wirkungen.md)
 - [Evidenzdatenbank und Quellenprovenienz](../06-evidenz/evidenzdatenbank.md)
-- [Technische Architektur](../08-technik/technische-architektur.md)
+- [Berechnung und Quellen](../06-evidenz/berechnungstransparenz.md)
