@@ -123,7 +123,7 @@ Die gemeinsame Verteilung ist eine Modellkonstruktion. Sie ist keine Kopie einer
 
 ## Kalibrierung und Gewichtung
 
-Die Gewichte werden durch iteratives proportionales Anpassen, auch Raking genannt, an mehrere Randverteilungen angepasst. Kalibriert werden mindestens:
+Die Gewichte werden durch iteratives proportionales Anpassen, auch Raking genannt, an mehrere Randverteilungen angepasst. Die Implementierung verwendet 40 aufeinanderfolgende Anpassungsrunden. Kalibriert werden mindestens:
 
 - Altersgruppen,
 - Haushaltstypen,
@@ -135,7 +135,7 @@ Die Gewichte werden durch iteratives proportionales Anpassen, auch Raking genann
 - Stadt-Land-Kategorie,
 - Miete und Eigentum.
 
-Jede Kategorie erhält Zielwert, synthetischen Istwert, absolute und relative Abweichung, Toleranz, Status und Quellen-ID. Die Toleranzen liegen dimensionsabhängig typischerweise zwischen 1,5 und 3 Prozent relativer Abweichung. Überschreitungen werden als Warnung sichtbar hervorgehoben und nicht verborgen.
+Jede Kategorie erhält Zielwert, synthetischen Istwert, absolute und relative Abweichung, Toleranz, Status und Quellen-ID. Die Toleranzen liegen dimensionsabhängig zwischen 2 und 4 Prozent relativer Abweichung. Überschreitungen werden als Warnung sichtbar hervorgehoben und nicht verborgen.
 
 Raking trifft Randverteilungen, aber nicht automatisch alle mehrdimensionalen Abhängigkeiten. Aus einer guten Alters- und Einkommenskalibrierung folgt daher nicht, dass jede Kombination aus Alter, Haushaltstyp, Region und Einkommen repräsentativ ist.
 
