@@ -1,7 +1,7 @@
 ---
 title: UI-Referenz und Nutzerflüsse
 summary: Verbindliche Übernahme der Staat-sKlarheit-Oberfläche als Anwendungsbasis.
-status: Arbeitsstand 0.5
+status: Arbeitsstand 0.6
 last_updated: 2026-07-13
 ---
 
@@ -87,9 +87,24 @@ Jede zentrale Kennzahl kann einen Drawer öffnen. Dieser zeigt mindestens:
 - bekannte Grenzen,
 - Link zur Originalquelle.
 
+### Szenarioverwaltung
+
+Milestone 2 ergänzt einen zweiten Drawer für den vollständigen Szenariozustand. Er enthält:
+
+- Name und Beschreibung,
+- Rechtsstand und Datenstand,
+- Zeithorizont,
+- Modellstufe,
+- explizite Annahmen,
+- Modellversion,
+- referenzierte Quellen-IDs,
+- Aktionen für Neu, Duplizieren, Import, Export und Kopieren.
+
+Die Szenarioverwaltung verwendet dieselbe Drawer-Struktur, Typografie, Farbgebung und Mobile-Logik wie die Quellenansicht.
+
 ## Lokale Persistenz
 
-Szenarien werden weiterhin ausschließlich über die definierte lokale Servergrenze gespeichert:
+Szenarien und der aktive Entwurf werden ausschließlich über die definierte lokale Servergrenze gespeichert:
 
 ```text
 React-Oberfläche
@@ -98,11 +113,13 @@ React-Oberfläche
       → IndexedDB
 ```
 
-Die UI greift nicht direkt auf IndexedDB zu.
+Die UI greift nicht direkt auf IndexedDB zu. Rückgängig, Wiederholen und die automatische Wiederherstellung arbeiten auf dem zentralen Szenariozustand.
 
-## Abgrenzung von Milestone 1
+## Abgrenzung von Milestone 1 und 2
 
-Milestone 1 liefert die vollständige visuelle und navigierbare Anwendungsbasis. Noch nicht Bestandteil sind:
+Milestone 1 liefert die vollständige visuelle und navigierbare Anwendungsbasis. Milestone 2 ergänzt das zentrale Zustands- und Lebenszyklusmodell.
+
+Noch nicht Bestandteil sind:
 
 - amtlich kalibrierte Steuerberechnungen,
 - synthetische Bevölkerung,
@@ -123,11 +140,16 @@ Playwright prüft mindestens:
 - Navigation zur Einkommensteuer,
 - Live-Änderung eines Parameters,
 - Quellen-Drawer,
-- Speichern und Laden eines Szenarios,
+- Szenarioverwaltung,
+- Rückgängig und Wiederholen,
+- Autosave und Reload,
+- Speichern, Laden und Duplizieren,
+- JSON-Import und JSON-Export,
 - Szenariovergleich.
 
 ## Verwandte Kapitel
 
+- [Zentrales Szenario- und Zustandsmodell](zentrales-szenario-und-zustandsmodell.md)
 - [Lokaler Worker und Persistenz](lokaler-worker-und-persistenz.md)
 - [Technische Architektur](technische-architektur.md)
 - [Berechnungstransparenz](../06-evidenz/berechnungstransparenz.md)
