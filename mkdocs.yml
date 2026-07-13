@@ -75,6 +75,7 @@ nav:
       - Ausgaben und Leistungen: 02-fiskal/ausgaben-und-leistungen.md
       - Ausgabenmodule 2026: 02-fiskal/ausgabenmodule.md
       - Bürgergeld- und Grundsicherungsgeld-Modul: 02-fiskal/buergergeld-modul.md
+      - Unterkunft und Heizung – Berlin 2026: 02-fiskal/kdu-berlin-2026.md
   - Bevölkerung und Datenbasis:
       - Synthetische Bevölkerung: 03-daten/synthetische-bevoelkerung.md
   - Wirkungsmodellierung:
@@ -92,6 +93,7 @@ nav:
       - Evidenzschema: 06-evidenz/evidenzschema.md
       - Berechnung und Quellen: 06-evidenz/berechnungstransparenz.md
       - Quellenregister: 06-evidenz/quellenregister.md
+      - KdU-Quellen Berlin 2026: 06-evidenz/kdu-quellen-berlin-2026.md
   - Darstellung der Ergebnisse:
       - Visualisierungen: 07-visualisierung/visualisierungen.md
   - Qualität und Verantwortung:
