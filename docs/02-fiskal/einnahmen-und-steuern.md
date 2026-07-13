@@ -1,87 +1,53 @@
 ---
 title: Einnahmen und Steuern
-summary: Fachliche Anforderungen an Einnahmen-, Steuer- und Beitragsmodule des Simulators.
-status: Arbeitsstand 0.5
+summary: Fachliche Anforderungen und aktueller Ausbaustand der Einnahmen-, Steuer- und Beitragsmodule.
+status: Arbeitsstand 0.6
 last_updated: 2026-07-13
 ---
 
 # Einnahmen und Steuern
 
-## Einkommensteuer
+Der Simulator enthält einen gemeinsamen fachlichen Rahmen für Einnahmen. Gesetzliche Baseline, Szenarioparameter, statische Erstwirkung, Verhaltenskomponente, Unsicherheit und Quellen werden getrennt ausgewiesen.
 
-Die Einkommensteuer ist das erste vollständig implementierte Steuer-Modul. Die gesetzliche Baseline, das Reformszenario, die aggregierte Aufkommenswirkung und die Verteilung werden in einem eigenen Kapitel beschrieben:
+## Implementierter Ausbaustand
+
+### Einkommensteuer
+
+Die Einkommensteuer ist als tarifbasiertes Modul mit gesetzlicher Baseline 2026, Referenzpopulation, Aufkommensaggregation und Verteilungsdarstellung umgesetzt.
 
 [Zum Einkommensteuer-Modul 2026](einkommensteuer-modul.md)
 
-Veränderbare Parameter:
+Veränderbar sind Grundfreibetrag, Eingangs-, Spitzen- und Reichensteuersatz, Tarifschwelle, Ehegattensplitting und Kinderfreibetrag. Ausgegeben werden Tarifsteuer, Grenz- und Durchschnittssteuersatz, Aufkommen, Gewinner und Verlierer, Dezile sowie Referenzhaushalte.
 
-- Grundfreibetrag,
-- Eingangssteuersatz,
-- Progressionszonen,
-- Schwelle und Satz des Spitzensteuersatzes,
-- Reichensteuersatz,
-- Ehegattensplitting,
-- kombinierter Kinderfreibetrag.
+### Weitere Einnahmen
 
-Ausgegeben werden:
+Milestone 5 ergänzt folgende Aggregatmodule:
 
-- tarifliche Steuer für Referenzfälle,
-- Grenz- und Durchschnittssteuersatz,
-- aggregiertes Einkommensteueraufkommen,
-- verfügbare Einkommensänderung,
-- Gewinner und Verlierer,
-- Wirkung nach Einkommensdezil,
-- getrennte statische und verhaltensbasierte Wirkung.
-
-Noch nicht enthalten sind Werbungskosten, Rentenbesteuerung, Kapitalertragsteuer, Solidaritätszuschlag, Kirchensteuer, Sozialbeiträge und die vollständige Günstigerprüfung mit Kindergeld. Diese Grenzen werden in der Oberfläche und im Nachweis ausdrücklich ausgewiesen.
-
-## Vermögen- und Erbschaftsteuern
-
-Das Modell benötigt:
-
-- Freibeträge,
-- Steuersätze und Progression,
-- Verwandtschaftsgrade,
-- Immobilien- und Betriebsvermögen,
-- Verschonungsregeln,
-- Bewertungsabschläge,
-- Aufkommens- und Ausweichannahmen.
-
-Topvermögen werden nicht aus normalen Haushaltsbefragungen allein abgeleitet. Eine eigene Topvermögens-Korrektur mit konservativem, mittlerem und hohem Szenario ist erforderlich.
-
-## Konsumsteuern
-
-- Regel- und ermäßigter Umsatzsteuersatz,
-- Produktgruppen,
-- Energiesteuern,
-- Stromsteuer,
-- Tabak- und Alkoholsteuern,
-- CO2-Bepreisung,
-- Luftverkehrsteuer,
-- Kraftfahrzeugsteuer.
-
-Konsumsteuern werden über haushaltsspezifische Ausgabenprofile modelliert. Eine reine Multiplikation mit dem Gesamtkonsum reicht nicht aus.
-
-## Unternehmens- und Kommunalsteuern
-
+- Umsatzsteuer,
+- Erbschaft- und Schenkungsteuer,
+- Vermögensteuer als hypothetisches Szenario mit Null-Baseline,
+- Sozialversicherungsbeiträge,
 - Körperschaftsteuer,
-- Gewerbesteuer,
-- Verlustverrechnung,
-- Investitionsanreize,
-- Abschreibungsregeln,
-- Quellensteuern.
+- Kapitalertragsteuer,
+- Energie- und Verbrauchsteuern.
 
-Verhaltensreaktionen von Unternehmen werden als eigenes Szenario geführt. Sie dürfen die statische Erstwirkung nicht verdecken.
+[Zu den weiteren Einnahmemodulen](weitere-einnahmemodule.md)
 
-## Sozialbeiträge und sonstige Einnahmen
+Alle sieben Module verwenden denselben Bedien- und Transparenzvertrag, behalten aber ihre unterschiedlichen Steuerobjekte, Bemessungsgrundlagen und Unsicherheiten.
 
-- Renten-, Kranken-, Pflege- und Arbeitslosenversicherung,
-- Beitragsbemessungsgrenzen,
-- Arbeitgeber- und Arbeitnehmeranteile,
-- Gebühren,
-- Dividenden staatlicher Beteiligungen,
-- Zölle,
-- Kreditaufnahme.
+## Noch nicht vollständig umgesetzt
+
+Folgende Bereiche benötigen weitere fachliche Vertiefung oder eigene Module:
+
+- Gewerbesteuer und kommunale Hebesätze,
+- Grundsteuer,
+- Zölle, Gebühren und staatliche Beteiligungserträge,
+- CO₂-Bepreisung außerhalb der Verbrauchsteuerindizes,
+- Luftverkehr- und Kraftfahrzeugsteuer,
+- vollständige Unternehmensbesteuerung einschließlich Gewerbesteuer, Organschaften und Mindeststeuer,
+- detaillierte Produktgruppen und Konsumprofile,
+- vollständige Verteilung der Sozialbeiträge auf Personengruppen,
+- Wechselwirkungen zwischen Steuern, Beiträgen, Preisen, Löhnen und Transfers.
 
 ## Gemeinsame Regeln aller Einnahmenmodule
 
@@ -89,15 +55,28 @@ Jedes Modul muss:
 
 1. gesetzliche oder statistische Baseline und Szenario trennen,
 2. statische Erstwirkung vor Verhaltenseffekten zeigen,
-3. aggregierte Werte aus derselben Logik wie die Einzelfallansicht ableiten,
-4. Datenstand, Rechtsstand und Modellversion ausweisen,
-5. nicht berechnete Größen als nicht berechnet kennzeichnen,
-6. Rechenweg, Quellen, Unsicherheit und bekannte Grenzen öffnen können.
+3. Verhaltensreaktionen als Annahme und nicht als sichere Prognose kennzeichnen,
+4. aggregierte Werte aus derselben Logik wie die Detailansicht ableiten,
+5. Datenstand, Rechtsstand und Modellversion ausweisen,
+6. nicht berechnete Größen als nicht berechnet kennzeichnen,
+7. Rechenweg, Quellen, Unsicherheit, Inzidenz und bekannte Grenzen öffnen können,
+8. Szenarioparameter verlustfrei speichern, laden, exportieren und importieren.
+
+## Methodische Trennung
+
+Die aktuelle Implementierung umfasst zwei unterschiedliche Reifestufen:
+
+- Die Einkommensteuer verwendet einen gesetzlichen Tarifkern und eine kalibrierte Referenzpopulation.
+- Die weiteren Einnahmen verwenden transparente Aggregatmodelle mit kalibrierten Ausgangswerten und expliziten Annahmen.
+
+Ergebnisse dieser Stufen dürfen nicht ohne Kennzeichnung miteinander gleichgesetzt werden. Insbesondere sind Inzidenzangaben der zusätzlichen Module noch keine repräsentativen Haushaltsverteilungsrechnungen.
 
 ## Verwandte Kapitel
 
 - [Einkommensteuer-Modul 2026](einkommensteuer-modul.md)
+- [Weitere Einnahmemodule](weitere-einnahmemodule.md)
 - [Systemgrenze und Baseline](systemgrenze-und-baseline.md)
 - [Synthetische Bevölkerung](../03-daten/synthetische-bevoelkerung.md)
 - [Wirkungsmodell](../04-modell/wirkungsmodell.md)
+- [Unsicherheit und Szenarien](../04-modell/unsicherheit-und-szenarien.md)
 - [Berechnung und Quellen](../06-evidenz/berechnungstransparenz.md)
