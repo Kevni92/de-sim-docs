@@ -1,3 +1,3 @@
 # Deutschland-Simulator – Dokumentation
 
-Die vollständige modulare Dokumentation wird automatisch initialisiert und anschließend bei jedem Commit als GitHub Page veröffentlicht.
+Die modulare Dokumentation wird durch den Initialisierungsworkflow eingespielt und anschließend über GitHub Pages veröffentlicht.
