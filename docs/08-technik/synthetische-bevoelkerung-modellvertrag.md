@@ -78,19 +78,22 @@ Ausgabe:
 
 Der Generator verwendet einen projektinternen deterministischen PRNG. Die Lauf-ID wird aus Seed, Stichprobengröße, Baseline und Modellversion abgeleitet. Für dieselben Eingaben bleiben Mikrodaten und Zusammenfassungen stabil; der Erstellungszeitpunkt ist reine Laufmetadaten-Provenienz.
 
+Die letzte erzeugte Haushaltsstruktur wird an die noch offene Personenzahl angepasst. Dadurch entspricht die tatsächliche Stichprobengröße exakt der angeforderten und zulässigen Größe.
+
 Zulässige Stichprobengrößen werden browserseitig auf 500 bis 50.000 Personen begrenzt. Die UI bietet 2.000, 5.000, 10.000, 25.000 und 50.000 an. Standard sind 10.000 Personen.
 
 ## Kalibrierungsvertrag
 
-Das Raking setzt zunächst konstante Gewichte und passt diese in 24 Iterationen nacheinander an die Zielmargen an. Personen- und Haushaltsgewichte werden getrennt kalibriert.
+Das Raking setzt zunächst konstante Gewichte und passt diese in **40 Iterationen** nacheinander an die Zielmargen an. Personen- und Haushaltsgewichte werden getrennt kalibriert.
 
 Personendimensionen:
 
 - Altersgruppe,
 - Erwerbsstatus,
 - Bundesland,
-- Gemeindetyp,
-- Einkommensdezil.
+- Gemeindetyp.
+
+Die Einkommensdezile werden anschließend anhand der kalibrierten Personengewichte als gewichtete Quantile gebildet und separat berichtet.
 
 Haushaltsdimensionen:
 
@@ -102,6 +105,12 @@ Haushaltsdimensionen:
 - Kinderzahl.
 
 Nach dem letzten Durchlauf werden die Gewichte auf das dokumentierte Gesamtziel normiert. Die Berichtslogik berechnet Ziel, Ist, absolute und relative Abweichung. Der Laufstatus ist `warnung`, sobald mindestens eine Kategorie ihre Toleranz überschreitet.
+
+Die implementierten relativen Toleranzen liegen dimensionsabhängig zwischen 2 und 4 Prozent:
+
+- 2 Prozent für Altersgruppen,
+- 3 Prozent für Haushaltstyp, Erwerbsstatus, Einkommensdezile, Bundesländer, Gemeindetyp und Wohnen,
+- 4 Prozent für Haushaltsgröße und Kinderzahl.
 
 Die Implementierung darf nicht behaupten, dass Raking alle gemeinsamen Verteilungen identifiziert.
 
@@ -174,7 +183,7 @@ Stores:
 
 Eine Schemaerweiterung erhöht `DB_VERSION` und legt fehlende Stores beziehungsweise Indizes in `onupgradeneeded` an. Migrationen dürfen keine direkten IndexedDB-Zugriffe in React einführen.
 
-Die Generierung ersetzt einen vorhandenen Lauf mit derselben deterministischen ID atomar nach dem Löschen seiner Detaildaten. Nach erfolgreicher Speicherung wird der Lauf aktiviert. Beim Löschen des aktiven Laufs wird ein verbleibender Lauf gewählt; fehlt einer, wird beim nächsten Zugriff der Standardlauf erzeugt.
+Die Generierung ersetzt einen vorhandenen Lauf mit derselben deterministischen ID nach dem Löschen seiner Detaildaten. Nach erfolgreicher Speicherung wird der Lauf aktiviert. Beim Löschen des aktiven Laufs wird ein verbleibender Lauf gewählt; fehlt einer, wird beim nächsten Zugriff der Standardlauf erzeugt.
 
 ## Szenariointegration
 
