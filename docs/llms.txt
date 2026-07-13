@@ -1,0 +1,11 @@
+# Deutschland-Simulator Dokumentation
+Language: German
+Status: planning and research documentation, version 0.3
+Start: /index.md
+AI reading index: /00-meta/ki-leseindex.md
+Requirements: /01-produkt/anforderungskatalog.md
+Fiscal model: /02-fiskal/systemgrenze-und-baseline.md
+Effects: /04-modell/wirkungsmodell.md
+Evidence: /06-evidenz/evidenzdatenbank.md
+Architecture: /08-technik/technische-architektur.md
+Roadmap: /10-roadmap/mvp-und-roadmap.md
