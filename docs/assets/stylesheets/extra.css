@@ -5,3 +5,20 @@
 .md-typeset table:not([class]) th { background: rgba(20,125,126,.10); }
 .md-grid { max-width: 1500px; }
 .md-sidebar { width: 16rem; }
+
+/* Linke Navigation: Unterpunkte etwas einrücken */
+.md-sidebar .md-nav__list .md-nav__list {
+  margin-left: .55rem;
+  padding-left: .6rem;
+  border-left: 1px solid rgba(127, 127, 127, .18);
+}
+
+.md-sidebar .md-nav__list .md-nav__list .md-nav__list {
+  margin-left: .45rem;
+  padding-left: .55rem;
+}
+
+/* Info-/Index-Icons in der Navigation ausblenden */
+.md-sidebar .md-nav__link .md-nav__icon {
+  display: none;
+}
