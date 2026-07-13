@@ -1,11 +1,11 @@
 ---
 title: Quellenregister
-summary: Modulares Kapitel des Pflichtenhefts und Research Briefings.
-status: Arbeitsstand 0.3
+summary: Ausgangspunkt für amtliche Statistiken, Forschungsdaten und methodische Standards.
+status: Arbeitsstand 0.4
 last_updated: 2026-07-13
 ---
 
-# 22. Quellenregister
+# Quellenregister
 
 ## Staat, Steuern und Mikrosimulation
 
@@ -45,12 +45,12 @@ last_updated: 2026-07-13
 - [W3C PROV-O](https://www.w3.org/TR/prov-o/)
 - [FAIR Principles](https://www.go-fair.org/fair-principles/)
 
-## Hinweis
+## Ausbaustand
 
-Das Register ist ein Startpunkt. Für die Implementierung müssen konkrete Tabellen, Variablen, Stichproben, Lizenzbedingungen und Datenstände auf Datensatzebene dokumentiert werden.
+Das Register ist ein Startpunkt. Für jede tatsächlich verwendete Kennzahl werden später konkrete Tabellen, Variablen, Stichproben, Lizenzbedingungen, Datenstände und verwendete Ausschnitte dokumentiert.
 
 ## Verwandte Kapitel
 
 - [Evidenzdatenbank und Quellenprovenienz](evidenzdatenbank.md)
-- [Berechnungstransparenz im Produkt](berechnungstransparenz.md)
-- [Research Backlog](../10-roadmap/research-backlog.md)
+- [Berechnung und Quellen](berechnungstransparenz.md)
+- [Unsicherheit und Szenarien](../04-modell/unsicherheit-und-szenarien.md)
