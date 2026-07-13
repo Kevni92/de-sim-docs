@@ -1,17 +1,17 @@
 ---
 title: Synthetische Bevölkerung und Haushalte
-summary: Modulares Kapitel des Pflichtenhefts und Research Briefings.
-status: Arbeitsstand 0.3
+summary: Fachliche Beschreibung der Modellbevölkerung, ihrer Merkmale, Datenquellen und Kalibrierung.
+status: Arbeitsstand 0.4
 last_updated: 2026-07-13
 ---
 
-# 7. Synthetische Bevölkerung und Haushalte
+# Synthetische Bevölkerung und Haushalte
 
-## 7.1 Grundkonzept
+## Grundkonzept
 
 Es werden nicht 85 Millionen reale Personen gespeichert. Der Simulator nutzt eine gewichtete synthetische Bevölkerung aus Modellpersonen und Modellhaushalten. Ein Datensatz kann beispielsweise 2.400 vergleichbare Haushalte repräsentieren.
 
-## 7.2 Merkmale
+## Merkmale
 
 - Alter und Geschlecht,
 - Haushaltsform und Partnerschaft,
@@ -28,7 +28,7 @@ Es werden nicht 85 Millionen reale Personen gespeichert. Der Simulator nutzt ein
 - Betreuungssituation,
 - Gesundheits- und Ausfallrisiken nur in aggregierter, nicht identifizierbarer Form.
 
-## 7.3 Datenquellen
+## Datenquellen
 
 Der Merkmalskern wird aus mehreren Quellen kalibriert:
 
@@ -40,7 +40,7 @@ Der Merkmalskern wird aus mehreren Quellen kalibriert:
 - Statistik der Bundesagentur für Arbeit,
 - Regionaldaten und Bevölkerungsfortschreibung.
 
-## 7.4 Kalibrierung
+## Kalibrierung
 
 Gewichte werden so angepasst, dass wichtige Randverteilungen gleichzeitig getroffen werden:
 
@@ -52,7 +52,7 @@ Gewichte werden so angepasst, dass wichtige Randverteilungen gleichzeitig getrof
 - regionale Verteilung,
 - Steuer- und Beitragsaggregate.
 
-## 7.5 Datenschutz
+## Datenschutz
 
 Es werden keine echten Einzeldatensätze öffentlich ausgeliefert. Forschungsdaten mit Zugangsbeschränkungen werden nur in zugelassenen Umgebungen verarbeitet; öffentliche Exporte enthalten synthetische oder ausreichend aggregierte Daten.
 
@@ -60,4 +60,4 @@ Es werden keine echten Einzeldatensätze öffentlich ausgeliefert. Forschungsdat
 
 - [Einnahmen und Steuern](../02-fiskal/einnahmen-und-steuern.md)
 - [Demografie und Alterspyramide](../05-module/demografie-und-alterspyramide.md)
-- [Technische Architektur](../08-technik/technische-architektur.md)
+- [Evidenzdatenbank](../06-evidenz/evidenzdatenbank.md)
