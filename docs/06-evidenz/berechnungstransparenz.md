@@ -1,13 +1,13 @@
 ---
-title: Berechnungstransparenz im Produkt
-summary: Modulares Kapitel des Pflichtenhefts und Research Briefings.
-status: Arbeitsstand 0.3
+title: Berechnung und Quellen
+summary: Fachliche Anforderungen an nachvollziehbare Rechenwege, Quellen und Unsicherheiten.
+status: Arbeitsstand 0.4
 last_updated: 2026-07-13
 ---
 
-# 15. Berechnungstransparenz im Produkt
+# Berechnung und Quellen
 
-## 15.1 Detailbutton
+## Detailansicht
 
 Bei jeder Ausgabe gibt es den Button **„Berechnung und Quellen“**. Er öffnet eine Ansicht mit:
 
@@ -26,9 +26,9 @@ Bei jeder Ausgabe gibt es den Button **„Berechnung und Quellen“**. Er öffne
 13. Modell- und Datenversion,
 14. Änderungsverlauf.
 
-## 15.2 Rechenbaum
+## Rechenbaum
 
-Der Nutzer kann den Rechenweg aufklappen:
+Der Rechenweg kann schrittweise aufgeklappt werden:
 
 ```text
 Zusätzliche Kita-Ausgaben
@@ -41,18 +41,18 @@ Zusätzliche Kita-Ausgaben
 
 Jeder Knoten zeigt seine eigene Unsicherheit. Die Gesamtaussage darf nicht sicherer erscheinen als die schwächste wesentliche Verbindung.
 
-## 15.3 Quellenansicht
+## Quellenansicht
 
 Jede Quelle zeigt:
 
 - kurze Zusammenfassung,
-- konkreten verwendeten Abschnitt,
+- konkret verwendeten Abschnitt,
 - warum sie passend ist,
 - warum sie möglicherweise nicht vollständig übertragbar ist,
 - alternative Quellen,
 - Datum der letzten Prüfung.
 
-## 15.4 Export
+## Szenarioexport
 
 Ein Szenarioexport enthält:
 
@@ -60,11 +60,11 @@ Ein Szenarioexport enthält:
 - Ergebniswerte,
 - Quellenliste,
 - Parameterliste,
-- Softwareversion,
-- Datenvintage,
+- Modellversion,
+- Datenstand,
 - reproduzierbare Szenario-ID.
 
-## 15.5 Korrekturen
+## Korrekturen
 
 Fehler und Quellenänderungen werden öffentlich dokumentiert. Frühere Modellläufe bleiben mit ihrer damaligen Version abrufbar und werden nicht stillschweigend umgeschrieben.
 
@@ -72,4 +72,4 @@ Fehler und Quellenänderungen werden öffentlich dokumentiert. Frühere Modelll�
 
 - [Evidenzdatenbank und Quellenprovenienz](evidenzdatenbank.md)
 - [Visualisierungen](../07-visualisierung/visualisierungen.md)
-- [Technische Architektur](../08-technik/technische-architektur.md)
+- [Unsicherheit und Szenarien](../04-modell/unsicherheit-und-szenarien.md)
