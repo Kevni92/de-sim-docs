@@ -1,11 +1,13 @@
 # Deutschland-Simulator – Fachliche Dokumentation
 Language: German
-Status: fachliche Modell- und Forschungsdokumentation, version 0.4
+Status: fachliche Modell- und Forschungsdokumentation, version 0.6
 Start: /index.md
 Overview: /00-meta/index.md
 Principles: /01-produkt/vision-und-grundsaetze.md
 Fiscal baseline: /02-fiskal/systemgrenze-und-baseline.md
-Taxes and revenue: /02-fiskal/einnahmen-und-steuern.md
+Taxes and revenue overview: /02-fiskal/einnahmen-und-steuern.md
+Income tax module 2026: /02-fiskal/einkommensteuer-modul.md
+Additional revenue modules: /02-fiskal/weitere-einnahmemodule.md
 Public spending: /02-fiskal/ausgaben-und-leistungen.md
 Synthetic population: /03-daten/synthetische-bevoelkerung.md
 Effects model: /04-modell/wirkungsmodell.md
