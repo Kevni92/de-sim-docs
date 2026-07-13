@@ -2,13 +2,19 @@
 
 ## Zweck
 
-Die Listen **Einnahmen** und **Ausgaben** unterscheiden sichtbar zwischen geänderten Szenariowerten, belastbaren beziehungsweise unsicheren Berechnungen und noch nicht implementierten Detailmodulen.
+Die Listen **Einnahmen** und **Ausgaben** unterscheiden sichtbar zwischen geänderten Szenariowerten, interaktiven Hover-Zuständen, belastbaren beziehungsweise unsicheren Berechnungen und noch nicht implementierten Detailmodulen.
 
 ## Geänderte Szenariowerte
 
-Implementierte Haushaltsposten behalten unabhängig von einer Abweichung zur Baseline denselben neutralen Zeilenhintergrund. Eine Änderung wird ausschließlich über den angezeigten Differenzwert und dessen positive beziehungsweise negative Textfarbe kenntlich gemacht.
+Eine türkis hinterlegte Zeile kennzeichnet einen gegenüber der Baseline veränderten Wert. Maßgeblich ist eine von null abweichende Differenz des jeweiligen Einnahmen- oder Ausgabenpostens. Die Änderung bleibt zusätzlich am positiven beziehungsweise negativen Differenzwert erkennbar.
 
-Dadurch entsteht in den Dashboardlisten kein scheinbarer Aktiv- oder Auswahlzustand. Eine farbige Flächenmarkierung bleibt tatsächlichen Auswahlzuständen in Navigation und Detailansichten vorbehalten.
+Die türkise Fläche ist ein dauerhafter Zustandsindikator und kein Hinweis auf den aktuell mit der Maus berührten Menüpunkt.
+
+## Hover-Zustand
+
+Beim Überfahren einer implementierten Zeile wird die gesamte Zeile einschließlich Kennzahl, Punktindikator und Quellenaktion neutral hervorgehoben. Der Hover-Zustand beschränkt sich nicht auf den linken Hauptbutton.
+
+Unveränderte Zeilen verwenden beim Hover eine neutrale graue Fläche. Bereits geänderte Zeilen behalten ihren türkisen Charakter und werden beim Hover stärker akzentuiert. Dadurch bleiben dauerhafter Änderungsstatus und kurzfristige Interaktion jederzeit unterscheidbar.
 
 ## Nicht implementierte Detailmodule
 
@@ -53,8 +59,11 @@ Der Playwright-Test muss mindestens prüfen:
 
 1. eine nicht implementierte Einnahmenposition ist deaktiviert, gestreift und ohne Hover-Effekt,
 2. eine implementierte Position mit niedriger Konfidenz bleibt bedienbar und erhält keinen Deaktivierungshintergrund,
-3. eine nicht implementierte Ausgabenposition verwendet denselben Zustand,
-4. Quellenbuttons zeigen bei Fokus die Evidenzvorschau mit Grundlage, Stand und Unsicherheit,
-5. der Punktindikator erklärt die Skala von einem bis drei Punkten,
-6. Desktop- und Mobilansicht bleiben tastaturbedienbar,
-7. der Desktop-Zustand wird als Browser-Screenshot gesichert.
+3. eine geänderte Zeile besitzt einen anderen Grundzustand als eine unveränderte Zeile,
+4. der Hover einer unveränderten Zeile unterscheidet sich vom dauerhaften Changed-Zustand,
+5. beim Hover wird die gesamte Zeile und nicht nur der Hauptbutton hervorgehoben,
+6. eine nicht implementierte Ausgabenposition verwendet denselben Disabled-Zustand,
+7. Quellenbuttons zeigen bei Fokus die Evidenzvorschau mit Grundlage, Stand und Unsicherheit,
+8. der Punktindikator erklärt die Skala von einem bis drei Punkten,
+9. Desktop- und Mobilansicht bleiben tastaturbedienbar,
+10. der Desktop-Zustand wird als Browser-Screenshot gesichert.
