@@ -1,9 +1,21 @@
-site_name: Deutschland-Simulator – Dokumentation
-site_description: Pflichtenheft und Research Briefing für einen transparenten Staatshaushalts- und Wirkungssimulator
+site_name: Deutschland-Simulator – Fachliche Dokumentation
+site_description: Fachliche Grundlagen, Datenquellen, Wirkungsmodelle und Evidenz für einen transparenten Staatshaushalts- und Wirkungssimulator
 site_url: https://kevni92.github.io/de-sim-docs/
 repo_url: https://github.com/Kevni92/de-sim-docs
 repo_name: Kevni92/de-sim-docs
 edit_uri: edit/main/docs/
+
+# Interne Planungs-, Technik-, Design- und Umsetzungsunterlagen bleiben im
+# Repository erhalten, werden aber weder gebaut noch in Suche oder Navigation
+# der öffentlichen Website aufgenommen.
+exclude_docs: |
+  00-meta/ki-leseindex.md
+  00-meta/dokumentationsstandard.md
+  01-produkt/anforderungskatalog.md
+  01-produkt/ui-und-interaktionsmodell.md
+  08-technik/
+  10-roadmap/
+  11-design/
 
 theme:
   name: material
@@ -31,9 +43,11 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Helle Darstellung
+
 plugins:
   - search:
       lang: de
+
 markdown_extensions:
   - admonition
   - attr_list
@@ -43,49 +57,37 @@ markdown_extensions:
       permalink: true
   - pymdownx.details
   - pymdownx.superfences
+
 extra_css:
   - assets/stylesheets/extra.css
+
 nav:
   - Start: index.md
-  - Einstieg und Meta:
-      - Übersicht: 00-meta/index.md
-      - KI-Leseindex: 00-meta/ki-leseindex.md
-      - Dokumentationsstandard: 00-meta/dokumentationsstandard.md
+  - Grundlagen:
+      - Fachlicher Überblick: 00-meta/index.md
+      - Zielbild und Grundsätze: 01-produkt/vision-und-grundsaetze.md
       - Glossar: 00-meta/glossar.md
-  - Produktkonzept:
-      - Vision und Grundsätze: 01-produkt/vision-und-grundsaetze.md
-      - Anforderungskatalog: 01-produkt/anforderungskatalog.md
-      - UI und Interaktion: 01-produkt/ui-und-interaktionsmodell.md
-  - Fiskalisches Modell:
+  - Staatshaushalt und Steuern:
       - Systemgrenze und Baseline: 02-fiskal/systemgrenze-und-baseline.md
       - Einnahmen und Steuern: 02-fiskal/einnahmen-und-steuern.md
       - Ausgaben und Leistungen: 02-fiskal/ausgaben-und-leistungen.md
-  - Bevölkerung und Daten:
+  - Bevölkerung und Datenbasis:
       - Synthetische Bevölkerung: 03-daten/synthetische-bevoelkerung.md
   - Wirkungsmodellierung:
-      - Wirkungsmodell: 04-modell/wirkungsmodell.md
-      - Indirekte Wirkungen: 04-modell/indirekte-und-nichtmonetaere-wirkungen.md
+      - Grundmodell: 04-modell/wirkungsmodell.md
+      - Indirekte und nicht monetäre Wirkungen: 04-modell/indirekte-und-nichtmonetaere-wirkungen.md
       - Unsicherheit und Szenarien: 04-modell/unsicherheit-und-szenarien.md
-  - Fachliche Module:
+  - Fachliche Themenfelder:
       - Kita, Familie und Bildung: 05-module/kita-familie-und-bildung.md
-      - Gesundheit und Bürokratie: 05-module/gesundheit-krankheit-und-buerokratie.md
+      - Gesundheit, Krankheit und Verwaltung: 05-module/gesundheit-krankheit-und-buerokratie.md
       - Demografie und Alterspyramide: 05-module/demografie-und-alterspyramide.md
-      - Weitere Wirkungsmodule: 05-module/weitere-wirkungsmodule.md
-  - Evidenz und Transparenz:
+      - Weitere Wirkungsbereiche: 05-module/weitere-wirkungsmodule.md
+  - Evidenz und Nachvollziehbarkeit:
       - Evidenzdatenbank: 06-evidenz/evidenzdatenbank.md
       - Evidenzschema: 06-evidenz/evidenzschema.md
-      - Berechnungstransparenz: 06-evidenz/berechnungstransparenz.md
+      - Berechnung und Quellen: 06-evidenz/berechnungstransparenz.md
       - Quellenregister: 06-evidenz/quellenregister.md
-  - Visualisierung:
+  - Darstellung der Ergebnisse:
       - Visualisierungen: 07-visualisierung/visualisierungen.md
-  - Technik:
-      - Technische Architektur: 08-technik/technische-architektur.md
-      - Modulvertrag: 08-technik/modulvertrag.md
-  - Governance:
-      - Validierung, Governance und Ethik: 09-governance/validierung-governance-ethik.md
-  - Umsetzung:
-      - Implementierungsprinzipien: 10-roadmap/implementierungsprinzipien.md
-      - MVP und Roadmap: 10-roadmap/mvp-und-roadmap.md
-      - Research Backlog: 10-roadmap/research-backlog.md
-  - Design:
-      - Figma-Prompt: 11-design/figma-prompt.md
+  - Qualität und Verantwortung:
+      - Validierung, Neutralität und Ethik: 09-governance/validierung-governance-ethik.md
