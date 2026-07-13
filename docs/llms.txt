@@ -1,6 +1,6 @@
 # Deutschland-Simulator – Fachliche Dokumentation
 Language: German
-Status: fachliche Modell- und Forschungsdokumentation, version 0.7
+Status: fachliche Modell- und Forschungsdokumentation, version 0.8
 Start: /index.md
 Overview: /00-meta/index.md
 Principles: /01-produkt/vision-und-grundsaetze.md
@@ -13,6 +13,7 @@ Expense modules 2026: /02-fiskal/ausgabenmodule.md
 Synthetic population, calibration, weighting and privacy: /03-daten/synthetische-bevoelkerung.md
 Effects model: /04-modell/wirkungsmodell.md
 Indirect effects: /04-modell/indirekte-und-nichtmonetaere-wirkungen.md
+Indirect and long-term effects: /04-modell/indirekte-und-langfristige-wirkungen.md
 Uncertainty: /04-modell/unsicherheit-und-szenarien.md
 Evidence: /06-evidenz/evidenzdatenbank.md
 Calculation transparency: /06-evidenz/berechnungstransparenz.md
