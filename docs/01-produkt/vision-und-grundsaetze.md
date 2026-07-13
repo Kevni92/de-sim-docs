@@ -1,27 +1,27 @@
 ---
-title: Vision und Grundsätze
-summary: Modulares Kapitel des Pflichtenhefts und Research Briefings.
-status: Arbeitsstand 0.3
+title: Zielbild und Grundsätze
+summary: Fachliche Leitlinien für Neutralität, Zeitdimension, Sprache und den Umgang mit Unsicherheit.
+status: Arbeitsstand 0.4
 last_updated: 2026-07-13
 ---
 
-# 1. Vision und Grundsätze
+# Zielbild und Grundsätze
 
-## 1.1 Produktvision
+## Zielbild
 
-Der Deutschland-Simulator übersetzt komplexe politische Eingriffe in verständliche Wirkungsketten. Ein Nutzer kann beispielsweise den Grundfreibetrag erhöhen, Kita-Ausgaben verändern oder die elektronische Arbeitsunfähigkeitsbescheinigung abschaffen. Das System zeigt anschließend nicht nur die unmittelbaren Kosten, sondern auch plausible Folgepfade.
+Der Deutschland-Simulator übersetzt komplexe politische Eingriffe in verständliche Wirkungsketten. Eine Person kann beispielsweise den Grundfreibetrag erhöhen, Kita-Ausgaben verändern oder die elektronische Arbeitsunfähigkeitsbescheinigung abschaffen. Der Simulator zeigt anschließend nicht nur die unmittelbaren Kosten, sondern auch plausible Folgepfade.
 
 Beispiel Kita:
 
-`mehr Finanzierung → mehr Personal bzw. geringere Überlastung → verlässlichere Öffnungszeiten → weniger Betreuungsnotfälle → weniger verlorene Arbeitsstunden der Eltern → höhere Arbeitsmarktteilnahme und geringere Belastung`
+`mehr Finanzierung → mehr Personal beziehungsweise geringere Überlastung → verlässlichere Öffnungszeiten → weniger Betreuungsnotfälle → weniger verlorene Arbeitsstunden der Eltern → höhere Arbeitsmarktteilnahme und geringere Belastung`
 
 Beispiel Schule:
 
-`Investition → bessere Ausstattung bzw. Lernbedingungen → mögliche Kompetenzgewinne → langfristig höhere Erwerbschancen, Steuereinnahmen und gesellschaftliche Teilhabe`
+`Investition → bessere Ausstattung beziehungsweise Lernbedingungen → mögliche Kompetenzgewinne → langfristig höhere Erwerbschancen, Steuereinnahmen und gesellschaftliche Teilhabe`
 
-## 1.2 Politische Neutralität
+## Politische Neutralität
 
-Das Produkt darf weder Parteien noch politische Lager bevorzugen. Es bewertet Maßnahmen anhand derselben Regeln:
+Der Simulator darf weder Parteien noch politische Lager bevorzugen. Er bewertet Maßnahmen anhand derselben Regeln:
 
 - gleiche Definitionen,
 - gleiche Baseline,
@@ -32,7 +32,7 @@ Das Produkt darf weder Parteien noch politische Lager bevorzugen. Es bewertet Ma
 
 Eine Maßnahme darf gleichzeitig positive und negative Wirkungen haben. Diese werden nebeneinander dargestellt.
 
-## 1.3 Keine Scheingenauigkeit
+## Keine Scheingenauigkeit
 
 Nicht jeder plausible Zusammenhang ist belastbar quantifizierbar. Deshalb gelten drei Darstellungsformen:
 
@@ -42,7 +42,7 @@ Nicht jeder plausible Zusammenhang ist belastbar quantifizierbar. Deshalb gelten
 
 Eine minimale Fantasiezahl ist schlechter als ein ehrliches „nicht quantifizierbar“. Der Zusammenhang soll dennoch im Wirkungsgraph erscheinen.
 
-## 1.4 Zeitdimension
+## Zeitdimension
 
 Jede Wirkung wird einem Horizont zugeordnet:
 
@@ -53,7 +53,7 @@ Jede Wirkung wird einem Horizont zugeordnet:
 
 Kurzfristige Haushaltswirkungen und langfristige gesellschaftliche Wirkungen dürfen nicht in einer Summe vermischt werden.
 
-## 1.5 Grundsätze für Sprache
+## Grundsätze für Sprache
 
 - Geldwirkungen werden in Alltagssprache formuliert: „Du hast ungefähr 50 Euro mehr im Monat, weil ...“
 - Ursache und Wirkung werden getrennt benannt.
@@ -63,6 +63,7 @@ Kurzfristige Haushaltswirkungen und langfristige gesellschaftliche Wirkungen dü
 
 ## Verwandte Kapitel
 
-- [Anforderungskatalog](anforderungskatalog.md)
-- [UI und Interaktionsmodell](ui-und-interaktionsmodell.md)
-- [Validierung, Governance und Ethik](../09-governance/validierung-governance-ethik.md)
+- [Wirkungsmodell](../04-modell/wirkungsmodell.md)
+- [Indirekte und nicht monetäre Wirkungen](../04-modell/indirekte-und-nichtmonetaere-wirkungen.md)
+- [Berechnung und Quellen](../06-evidenz/berechnungstransparenz.md)
+- [Validierung, Neutralität und Ethik](../09-governance/validierung-governance-ethik.md)
