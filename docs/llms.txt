@@ -8,7 +8,8 @@ Fiscal baseline: /02-fiskal/systemgrenze-und-baseline.md
 Taxes and revenue overview: /02-fiskal/einnahmen-und-steuern.md
 Income tax module 2026: /02-fiskal/einkommensteuer-modul.md
 Additional revenue modules: /02-fiskal/weitere-einnahmemodule.md
-Public spending: /02-fiskal/ausgaben-und-leistungen.md
+Public spending overview: /02-fiskal/ausgaben-und-leistungen.md
+Expense modules 2026: /02-fiskal/ausgabenmodule.md
 Synthetic population: /03-daten/synthetische-bevoelkerung.md
 Effects model: /04-modell/wirkungsmodell.md
 Indirect effects: /04-modell/indirekte-und-nichtmonetaere-wirkungen.md
