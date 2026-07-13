@@ -1,7 +1,7 @@
 ---
 title: Lokaler Worker und Persistenz
-summary: Übergangsarchitektur für Quellen sowie Speichern und Laden ohne externen Server.
-status: Arbeitsstand 0.6
+summary: Übergangsarchitektur für Quellen, Metriken sowie Speichern und Laden ohne externen Server.
+status: Arbeitsstand 0.7
 last_updated: 2026-07-13
 ---
 
@@ -9,7 +9,7 @@ last_updated: 2026-07-13
 
 ## Ziel
 
-Die erste Projektphase verwendet keinen externen Anwendungsserver. Quellen, gespeicherte Szenarien und der aktive Arbeitsentwurf werden über eine serverähnliche Schnittstelle angesprochen, deren Implementierung vollständig im Browser läuft.
+Die erste Projektphase verwendet keinen externen Anwendungsserver. Quellen, Kennzahlennachweise, gespeicherte Szenarien und der aktive Arbeitsentwurf werden über eine serverähnliche Schnittstelle angesprochen, deren Implementierung vollständig im Browser läuft.
 
 Dadurch kann die Fachlogik bereits gegen einen klaren Serververtrag entwickelt werden, ohne die spätere Auslagerung an eine HTTP-API zu blockieren.
 
@@ -28,7 +28,7 @@ Die Oberfläche darf IndexedDB nicht direkt verwenden. Sämtliche Zugriffe laufe
 
 ### LocalServerClient
 
-- stellt fachlich benannte Methoden für Quellen, Szenarien und den aktiven Entwurf bereit,
+- stellt fachlich benannte Methoden für Quellen, Metriken, Szenarien und den aktiven Entwurf bereit,
 - erzeugt Korrelations-IDs für parallele Anfragen,
 - übersetzt Worker-Antworten in Promises,
 - kapselt Transportfehler.
@@ -37,30 +37,35 @@ Die Oberfläche darf IndexedDB nicht direkt verwenden. Sämtliche Zugriffe laufe
 
 - simuliert die spätere Servergrenze,
 - validiert und verteilt Anfragen,
+- stellt versionierte Referenzdaten für Quellen und Metriken bereit,
 - führt Datenbankzugriffe außerhalb des UI-Threads aus,
 - liefert typisierte Erfolgs- oder Fehlerantworten.
 
 ### IndexedDB
 
 - speichert Quellenmetadaten,
+- speichert strukturierte Kennzahlennachweise,
 - speichert vollständige Szenarien inklusive Modellstufe und Änderungszeitpunkt,
 - speichert den aktiven Arbeitsentwurf für die Wiederherstellung nach einem Reload,
 - wird versioniert migriert,
 - enthält keine geheime oder personenbezogene Information.
 
-## Datenbankversion 2
+## Datenbankversion 3
 
-Milestone 2 verwendet drei Object Stores:
+Milestone 3 verwendet vier Object Stores:
 
 | Store | Zweck |
 |---|---|
 | `sources` | Quellen- und Methodikdaten |
+| `metrics` | Definitionen, Rechenwege, Parameter, Unsicherheit und Historie von Kennzahlen |
 | `scenarios` | dauerhaft gespeicherte Szenarien |
 | `drafts` | automatisch gesicherter aktiver Entwurf |
 
 Der aktive Entwurf liegt im Store `drafts` unter dem stabilen Schlüssel `active`.
 
-Die Migration von Version 1 auf Version 2 ergänzt nur den neuen Store. Bestehende Quellen und Szenarien bleiben erhalten.
+Die Migration von Version 2 auf Version 3 ergänzt ausschließlich `metrics`. Bestehende Quellen, Szenarien und Entwürfe bleiben erhalten.
+
+Referenzdaten für `sources` und `metrics` werden über stabile IDs aktualisiert. Diese Aktualisierung überschreibt keine Nutzerobjekte in `scenarios` oder `drafts`.
 
 ## Fachliche Objekte
 
@@ -77,6 +82,24 @@ Ein Quellenobjekt enthält mindestens:
 - verwendete Methode,
 - bekannte Grenzen,
 - Datum der letzten fachlichen Prüfung.
+
+### MetricRecord
+
+Ein Kennzahlennachweis enthält mindestens:
+
+- stabile Metrik-ID,
+- Name, Kategorie, Definition und Einheit,
+- Evidenzstatus und Konfidenz,
+- Datenjahr und Rechtsstand,
+- referenzierte Quellen-IDs,
+- Gesamtformel,
+- verwendete Parameter,
+- geordnete Rechenschritte,
+- Unsicherheitsdefinition,
+- bekannte Grenzen,
+- Änderungsverlauf.
+
+Der aktuell angezeigte Wert wird aus dem Szenariozustand berechnet und nicht als statischer Bestandteil des Metrikregisters behandelt.
 
 ### ScenarioDraft
 
@@ -111,6 +134,7 @@ Der Worker unterstützt mindestens:
 
 ```text
 sources:list
+metrics:list
 scenarios:list
 scenarios:save
 scenarios:delete
@@ -126,6 +150,8 @@ Jede Anfrage und Antwort trägt eine Korrelations-ID. Fehler werden als struktur
 
 Beim Start lädt die Anwendung den Entwurf mit `draft:get`. Der geladene Zustand wird normalisiert, damit ältere lokale Daten weiterhin verwendet werden können.
 
+Quellen und Metriken werden beim Start parallel mit Szenarien und Entwurf geladen. Die UI zeigt einen Nachweis nur, wenn die referenzierte Metrik im Register vorhanden ist.
+
 ## Austauschbarkeit
 
 Der UI-Code hängt ausschließlich vom Client-Vertrag ab. Eine spätere Serverimplementierung ersetzt den Worker-Transport durch HTTP oder RPC, ohne dass Fachkomponenten IndexedDB-Details kennen müssen.
@@ -135,31 +161,36 @@ Für die Migration gelten folgende Regeln:
 1. Methoden und Ergebnisobjekte bleiben möglichst kompatibel.
 2. Fehler werden weiterhin strukturiert zurückgegeben.
 3. lokale Szenarien können als versioniertes JSON exportiert und auf den Server übertragen werden.
-4. Quellen-IDs bleiben stabil, damit gespeicherte Szenarien reproduzierbar bleiben.
+4. Quellen- und Metrik-IDs bleiben stabil, damit gespeicherte Szenarien reproduzierbar bleiben.
 5. die aktive Entwurfssemantik wird serverseitig entweder als Draft-Ressource oder als lokale Cache-Schicht fortgeführt.
+6. historische Modellversionen dürfen nicht stillschweigend durch neue Rechenwege ersetzt werden.
 
 ## Testanforderungen
 
 - Quellen lassen sich über den Client laden.
+- Metriken lassen sich über `metrics:list` laden.
+- jede registrierte Metrik verweist nur auf vorhandene Quellen-IDs.
 - Szenarien lassen sich speichern, nach einem Reload wieder laden und löschen.
 - der aktive Entwurf wird nach einem Reload vollständig wiederhergestellt.
 - die aktive Szenario-ID bleibt erhalten.
 - parallele Anfragen werden über Korrelations-IDs korrekt zugeordnet.
 - Worker-Fehler blockieren die Oberfläche nicht dauerhaft.
-- Playwright prüft Speichern, Laden, Autosave, Import, Export und Duplizieren.
+- Playwright prüft Speichern, Laden, Autosave, Import, Export, Duplizieren und sichtbare Nachweise.
 
 ## Grenzen der lokalen Fassung
 
 - keine Benutzerkonten,
 - keine Synchronisierung zwischen Geräten,
 - keine Konfliktauflösung,
-- keine serverseitige Versionshistorie,
+- keine serverseitige unveränderliche Versionshistorie,
 - keine vertraulichen Daten,
 - keine öffentlichen Freigabelinks,
-- Demoquellen sind noch keine fachlich freigegebene Produktionsdatenbank.
+- Referenzdaten werden noch mit der Anwendung ausgeliefert,
+- Demoquellen und Demonstrationsmetriken sind noch keine vollständig fachlich freigegebene Produktionsdatenbank.
 
 ## Verwandte Kapitel
 
+- [Transparenzregister und Metrikvertrag](transparenzregister-und-metrikvertrag.md)
 - [Zentrales Szenario- und Zustandsmodell](zentrales-szenario-und-zustandsmodell.md)
 - [UI-Referenz und Nutzerflüsse](ui-referenz-und-nutzerfluesse.md)
 - [Technische Architektur](technische-architektur.md)
