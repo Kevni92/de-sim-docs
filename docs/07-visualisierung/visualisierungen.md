@@ -1,13 +1,13 @@
 ---
 title: Visualisierungen
-summary: Modulares Kapitel des Pflichtenhefts und Research Briefings.
-status: Arbeitsstand 0.3
+summary: Fachliche Darstellungsformen für Haushalt, Verteilung, Wirkungsketten, Regionen und Zeit.
+status: Arbeitsstand 0.4
 last_updated: 2026-07-13
 ---
 
-# 17. Visualisierungen
+# Visualisierungen
 
-## 17.1 Haushaltsbilanz
+## Haushaltsbilanz
 
 - Einnahmen,
 - Ausgaben,
@@ -15,15 +15,15 @@ last_updated: 2026-07-13
 - Veränderung zur Baseline,
 - Schuldenpfad und Zinsen.
 
-## 17.2 Sankey-Diagramm
+## Sankey-Diagramm
 
 Zeigt Geldflüsse zwischen Einnahmen, staatlichen Ebenen und Ausgaben. Konsolidierte interne Transfers sind gesondert markiert.
 
-## 17.3 Wirkungsgraph
+## Wirkungsgraph
 
 Interaktive Knoten und Kanten zeigen direkte und indirekte Folgen. Linienart und Badge kennzeichnen Evidenz und Quantifizierbarkeit.
 
-## 17.4 Verteilungsdiagramme
+## Verteilungsdiagramme
 
 - Einkommensdezile,
 - Haushaltstypen,
@@ -32,7 +32,7 @@ Interaktive Knoten und Kanten zeigen direkte und indirekte Folgen. Linienart und
 - Vermögensgruppen,
 - Bundesländer.
 
-## 17.5 Deutschlandkarte
+## Deutschlandkarte
 
 Die Karte kann anzeigen:
 
@@ -44,11 +44,11 @@ Die Karte kann anzeigen:
 
 Regionale Unterschiede werden nur bis zur belastbaren Datenauflösung gezeigt.
 
-## 17.6 Alterspyramide
+## Alterspyramide
 
 Baseline und Szenario können überlagert oder als Differenz dargestellt werden. Ein Zeitregler steuert das Jahr.
 
-## 17.7 Zeit- und Lebensqualitätsindikatoren
+## Zeit- und Lebensqualitätsindikatoren
 
 - Betreuungsstunden,
 - Wartezeiten,
@@ -57,12 +57,12 @@ Baseline und Szenario können überlagert oder als Differenz dargestellt werden.
 - Unterrichtsausfall,
 - Verwaltungsminuten.
 
-## 17.8 Barrierefreie Alternative
+## Barrierefreie Alternativen
 
-Jede Grafik besitzt eine Tabelle, eine Textzusammenfassung und einen Datenexport.
+Jede Grafik besitzt eine Tabelle, eine Textzusammenfassung und einen Datenexport. Farben sind nie der einzige Bedeutungsträger.
 
 ## Verwandte Kapitel
 
-- [UI und Interaktionsmodell](../01-produkt/ui-und-interaktionsmodell.md)
 - [Indirekte und nicht monetäre Wirkungen](../04-modell/indirekte-und-nichtmonetaere-wirkungen.md)
-- [Berechnungstransparenz im Produkt](../06-evidenz/berechnungstransparenz.md)
+- [Berechnung und Quellen](../06-evidenz/berechnungstransparenz.md)
+- [Unsicherheit und Szenarien](../04-modell/unsicherheit-und-szenarien.md)
