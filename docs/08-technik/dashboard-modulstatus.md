@@ -6,7 +6,9 @@ Die Listen **Einnahmen** und **Ausgaben** unterscheiden sichtbar zwischen geänd
 
 ## Geänderte Szenariowerte
 
-Eine türkis hinterlegte Zeile kennzeichnet einen gegenüber der Baseline veränderten Wert. Maßgeblich ist eine von null abweichende Differenz des jeweiligen Einnahmen- oder Ausgabenpostens. Die Farbe ist kein Hinweis auf den Implementierungsstand.
+Implementierte Haushaltsposten behalten unabhängig von einer Abweichung zur Baseline denselben neutralen Zeilenhintergrund. Eine Änderung wird ausschließlich über den angezeigten Differenzwert und dessen positive beziehungsweise negative Textfarbe kenntlich gemacht.
+
+Dadurch entsteht in den Dashboardlisten kein scheinbarer Aktiv- oder Auswahlzustand. Eine farbige Flächenmarkierung bleibt tatsächlichen Auswahlzuständen in Navigation und Detailansichten vorbehalten.
 
 ## Nicht implementierte Detailmodule
 
@@ -28,5 +30,6 @@ Der Playwright-Test muss mindestens prüfen:
 
 1. eine nicht implementierte Einnahmenposition ist deaktiviert, gestreift und ohne Hover-Effekt,
 2. eine implementierte Position mit niedriger Konfidenz bleibt bedienbar und erhält keinen Deaktivierungshintergrund,
-3. eine nicht implementierte Ausgabenposition verwendet denselben Zustand,
-4. der Desktop-Zustand wird als Browser-Screenshot gesichert.
+3. eine geänderte implementierte Position verwendet denselben neutralen Hintergrund wie eine unveränderte Position,
+4. eine nicht implementierte Ausgabenposition verwendet denselben deaktivierten Zustand,
+5. der Desktop-Zustand wird als Browser-Screenshot gesichert.
