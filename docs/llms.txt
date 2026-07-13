@@ -1,11 +1,18 @@
-# Deutschland-Simulator Dokumentation
+# Deutschland-Simulator – Fachliche Dokumentation
 Language: German
-Status: planning and research documentation, version 0.3
+Status: fachliche Modell- und Forschungsdokumentation, version 0.4
 Start: /index.md
-AI reading index: /00-meta/ki-leseindex.md
-Requirements: /01-produkt/anforderungskatalog.md
-Fiscal model: /02-fiskal/systemgrenze-und-baseline.md
-Effects: /04-modell/wirkungsmodell.md
+Overview: /00-meta/index.md
+Principles: /01-produkt/vision-und-grundsaetze.md
+Fiscal baseline: /02-fiskal/systemgrenze-und-baseline.md
+Taxes and revenue: /02-fiskal/einnahmen-und-steuern.md
+Public spending: /02-fiskal/ausgaben-und-leistungen.md
+Synthetic population: /03-daten/synthetische-bevoelkerung.md
+Effects model: /04-modell/wirkungsmodell.md
+Indirect effects: /04-modell/indirekte-und-nichtmonetaere-wirkungen.md
+Uncertainty: /04-modell/unsicherheit-und-szenarien.md
 Evidence: /06-evidenz/evidenzdatenbank.md
-Architecture: /08-technik/technische-architektur.md
-Roadmap: /10-roadmap/mvp-und-roadmap.md
+Calculation transparency: /06-evidenz/berechnungstransparenz.md
+Sources: /06-evidenz/quellenregister.md
+Governance: /09-governance/validierung-governance-ethik.md
+Excluded from public documentation: software architecture, internal requirements, design prompts and implementation planning.
