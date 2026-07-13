@@ -1,24 +1,49 @@
-:root { --md-default-fg-color--light: #5e6875; }
-.md-typeset h1 { font-weight: 760; letter-spacing: -0.025em; }
-.md-typeset h2 { font-weight: 710; letter-spacing: -0.015em; }
-.md-typeset table:not([class]) { font-size: 0.78rem; }
-.md-typeset table:not([class]) th { background: rgba(20,125,126,.10); }
-.md-grid { max-width: 1500px; }
-.md-sidebar { width: 16rem; }
-
-/* Linke Navigation: Unterpunkte etwas einrücken */
-.md-sidebar .md-nav__list .md-nav__list {
-  margin-left: .55rem;
-  padding-left: .6rem;
-  border-left: 1px solid rgba(127, 127, 127, .18);
+:root {
+  --md-default-fg-color--light: #5e6875;
 }
 
-.md-sidebar .md-nav__list .md-nav__list .md-nav__list {
-  margin-left: .45rem;
-  padding-left: .55rem;
+.md-typeset h1 {
+  font-weight: 760;
+  letter-spacing: -0.025em;
 }
 
-/* Info-/Index-Icons in der Navigation ausblenden */
-.md-sidebar .md-nav__link .md-nav__icon {
-  display: none;
+.md-typeset h2 {
+  font-weight: 710;
+  letter-spacing: -0.015em;
+}
+
+.md-typeset table:not([class]) {
+  font-size: 0.78rem;
+}
+
+.md-typeset table:not([class]) th {
+  background: rgba(20, 125, 126, 0.1);
+}
+
+.md-grid {
+  max-width: 1500px;
+}
+
+.md-sidebar {
+  width: 16rem;
+}
+
+/* Unterpunkte unter den Bereichsüberschriften leicht einrücken. */
+.md-sidebar--primary .md-nav__list .md-nav__list {
+  margin-left: 0.45rem;
+  padding-left: 0.55rem;
+}
+
+.md-sidebar--primary .md-nav__list .md-nav__list .md-nav__list {
+  margin-left: 0.35rem;
+  padding-left: 0.45rem;
+}
+
+/* Kleine Info-/Index-Symbole neben Navigationseinträgen vollständig ausblenden. */
+.md-sidebar--primary .md-nav__link .md-nav__icon,
+.md-sidebar--primary .md-nav__link .md-icon,
+.md-sidebar--primary .md-nav__link svg,
+.md-sidebar--primary .md-nav__link::after {
+  display: none !important;
+  content: none !important;
 }
