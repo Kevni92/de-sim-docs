@@ -1,15 +1,15 @@
 ---
 title: Einkommensteuer-Modul 2026
-summary: Gesetzliche Tarifbaseline, synthetische Bevölkerungsaggregation, Reformszenarien und Grenzen des Einkommensteuer-Moduls.
-status: Implementiert 1.1
-last_updated: 2026-07-13
+summary: Gesetzliche Tarifbaseline, automatische synthetische Modellbasis, Reformszenarien und Grenzen des Einkommensteuer-Moduls.
+status: Implementiert 1.2
+last_updated: 2026-07-14
 ---
 
 # Einkommensteuer-Modul 2026
 
 ## Ziel und Systemgrenze
 
-Das Einkommensteuer-Modul verbindet den gesetzlichen Tarifkern mit der aktiven synthetischen Bevölkerung. Eine Änderung der Tarifparameter aktualisiert konsistent:
+Das Einkommensteuer-Modul verbindet den gesetzlichen Tarifkern mit der automatisch bereitgestellten synthetischen Modellbasis. Eine Änderung der Tarifparameter aktualisiert konsistent:
 
 - die tarifliche Einkommensteuer eines frei wählbaren Referenzfalls,
 - das aggregierte Einkommensteueraufkommen,
@@ -63,22 +63,22 @@ Referenzwerte der automatisierten Validierung:
 | 100.000 € zvE, Einzelveranlagung | 30.864 € |
 | 60.000 € gemeinsames zvE, Splitting | 8.434 € |
 
-## Synthetische Bevölkerung und Kalibrierung
+## Automatische synthetische Modellbasis
 
-Die primäre sichtbare Verteilungsbasis ist seit Milestone 7 der aktive, vollständig synthetische Bevölkerungslauf. Erwachsene werden zu Steuerhaushalten zusammengeführt. Für jeden Haushalt werden gesetzliche und reformierte tarifliche Steuer berechnet und mit dem Haushaltsgewicht aggregiert.
+Beim direkten Öffnen der Einkommensteuerseite wird eine vorhandene Szenarioreferenz geladen. Besitzt das Szenario noch keine Referenz, stellt der Bevölkerungs-Worker automatisch die stabile Standardbasis bereit. Ein passender gespeicherter Lauf wird wiederverwendet; andernfalls wird er lokal erzeugt.
 
-Die Einkommensteuerseite zeigt:
+Normale Nutzende müssen die Bevölkerungsverwaltung nicht öffnen. Die Reformansicht zeigt lediglich den verständlichen Zustand der Modellbasis. Lauf-ID, Seed, Stichprobengröße, Modellversion, Kalibrierung und gespeicherte Läufe liegen unter **Modellbasis und Bevölkerung**.
 
-- Lauf-ID,
-- synthetische Stichprobengröße,
-- gewichtete Bevölkerung,
-- Datenstand,
-- Modellversion,
-- Kalibrierungsstatus.
+Erwachsene werden zu Steuerhaushalten zusammengeführt. Für jeden Haushalt werden gesetzliche und reformierte tarifliche Steuer berechnet und mit dem Haushaltsgewicht aggregiert.
 
-Der aktive Lauf ist Bestandteil des Szenarios. Ein fehlender Lauf wird sichtbar gemeldet und nicht stillschweigend ersetzt.
+Die Modellbasis ist Bestandteil des Szenarios. Gespeichert werden Lauf-ID, Modellversion, Seed, Stichprobengröße und Baseline-ID. Fehlt der Lauf lokal, gilt:
 
-Das Aggregataufkommen wird weiterhin auf die im Simulator verwendete Baseline von 358,2 Milliarden Euro normiert:
+- bei vollständigen und kompatiblen Angaben kann die identische Modellbasis neu erzeugt werden,
+- andernfalls bleibt die ursprüngliche Referenz sichtbar fehlend,
+- die Standardbasis wird erst nach einer ausdrücklichen Entscheidung übernommen,
+- vor einem Basiswechsel wird auf mögliche Ergebnisänderungen hingewiesen.
+
+Das Aggregataufkommen wird auf die im Simulator verwendete Baseline von 358,2 Milliarden Euro normiert:
 
 ```text
 k = 358,2 Mrd. € / Σ(Haushaltsgewicht_i × gesetzliche Steuer_i)
@@ -90,7 +90,7 @@ Aufkommen_Szenario = k × Σ(Haushaltsgewicht_i × Reformsteuer_i)
 
 Diese Aufkommensnormierung stellt Aggregatkonsistenz her. Die Bevölkerungsgewichte selbst werden getrennt gegen Alters-, Haushalts-, Erwerbs-, Einkommens-, Regional- und Wohnränder kalibriert. Weder die Aufkommensnormierung noch das Raking ersetzen eine amtliche Mikrosimulation.
 
-Die frühere 50-Zellen-Referenzpopulation bleibt als technischer Fallback und Regressionstest erhalten. Sie ist bei vorhandenem Bevölkerungslauf nicht mehr die primäre sichtbare Verteilungsbasis.
+Die frühere 50-Zellen-Referenzpopulation bleibt als technischer Fallback und Regressionstest erhalten. Sie ist bei verfügbarer Modellbasis nicht die primäre Verteilungsgrundlage.
 
 ## Statische und verhaltensbasierte Wirkung
 
@@ -145,21 +145,13 @@ Diese Profile sind keine Datensätze des aktiven Bevölkerungslaufs, nicht repr�
 
 ## Unsicherheit und Interpretation
 
-Die gesetzliche Tarifberechnung ist deterministisch. Unsicherheit entsteht bei:
-
-- synthetischer gemeinsamer Verteilung,
-- Haushalts- und Einkommensgewichtung,
-- Kalibrierung der Randverteilungen,
-- Aufkommensnormierung,
-- vereinfachten steuerlichen Merkmalen,
-- Verhaltenselastizitäten,
-- fehlenden Wechselwirkungen mit Transfers und Sozialbeiträgen.
+Die gesetzliche Tarifberechnung ist deterministisch. Unsicherheit entsteht bei synthetischer gemeinsamer Verteilung, Haushalts- und Einkommensgewichtung, Kalibrierung, Aufkommensnormierung, vereinfachten steuerlichen Merkmalen, Verhaltenselastizitäten und fehlenden Wechselwirkungen mit Transfers und Sozialbeiträgen.
 
 Daher gilt:
 
 - Tarifwerte bekannter Testfälle sind exakt reproduzierbar.
 - Aufkommens- und Verteilungsergebnisse sind Modellrechnungen.
-- Kalibrierungswarnungen und Modellgrenzen bleiben sichtbar.
+- Kalibrierungswarnungen und Modellgrenzen bleiben erreichbar.
 - Verhaltenswerte werden nicht mit der statischen Wirkung vermischt.
 - Regionale Wirkungen bleiben bis zu einer fachlich belastbaren Berechnung als **nicht berechnet** gekennzeichnet.
 
@@ -170,11 +162,12 @@ Automatisch geprüft werden:
 - bekannte Tarifwerte in wesentlichen Tarifzonen,
 - Splitting und Abrundung,
 - unveränderliche gesetzliche Baseline,
-- deterministische Bevölkerung bei gleichem Seed,
+- automatische Bereitstellung und Wiederverwendung der Standardbasis,
+- deterministische Rekonstruktion bei vollständiger Referenz,
+- fehlende und nicht rekonstruierbare Importreferenzen,
 - positive Gewichte und konsistente Haushaltsreferenzen,
-- gewichtete Summen und Kalibrierungsbericht,
 - Reaktion von Aufkommen, Gewinnern, Verlierern und Dezilen auf Tarifänderungen,
-- Wiederherstellung des aktiven Laufs über IndexedDB,
+- Persistenz sowie JSON-Export und -Import,
 - Desktop- und Mobilansicht.
 
 ## Quellen
@@ -182,12 +175,13 @@ Automatisch geprüft werden:
 - [BMF: Berechnung der Einkommensteuer 2026](https://www.bmf-steuerrechner.de/ekst/eingabeformekst.xhtml)
 - [Destatis: Lohn- und Einkommensteuerstatistik](https://genesis.destatis.de/datenbank/online/statistic/73111/details)
 - [BMF: Datensammlung zur Steuerpolitik](https://www.bundesfinanzministerium.de/Content/DE/Downloads/Broschueren_Bestellservice/datensammlung-zur-steuerpolitik-2026.html)
-- [Synthetische Bevölkerung und Haushalte](../03-daten/synthetische-bevoelkerung.md)
+- [Synthetische Bevölkerung und Modellbasis](../03-daten/synthetische-bevoelkerung.md)
 
 ## Verwandte Kapitel
 
+- [Informationsarchitektur und progressive Offenlegung](../01-produkt/informationsarchitektur-und-progressive-offenlegung.md)
 - [Einnahmen und Steuern](einnahmen-und-steuern.md)
-- [Synthetische Bevölkerung](../03-daten/synthetische-bevoelkerung.md)
+- [Synthetische Bevölkerung und Modellbasis](../03-daten/synthetische-bevoelkerung.md)
 - [Unsicherheit und Szenarien](../04-modell/unsicherheit-und-szenarien.md)
 - [Berechnung und Quellen](../06-evidenz/berechnungstransparenz.md)
 - [Validierung, Neutralität und Ethik](../09-governance/validierung-governance-ethik.md)
