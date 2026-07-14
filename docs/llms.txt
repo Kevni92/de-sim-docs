@@ -7,12 +7,12 @@ Principles: /01-produkt/vision-und-grundsaetze.md
 Information architecture and progressive disclosure: /01-produkt/informationsarchitektur-und-progressive-offenlegung.md
 Fiscal baseline: /02-fiskal/systemgrenze-und-baseline.md
 Taxes and revenue overview: /02-fiskal/einnahmen-und-steuern.md
-Income tax module 2026 with synthetic population: /02-fiskal/einkommensteuer-modul.md
+Income tax module 2026 with automatic synthetic model basis: /02-fiskal/einkommensteuer-modul.md
 Additional revenue modules: /02-fiskal/weitere-einnahmemodule.md
 Public spending overview: /02-fiskal/ausgaben-und-leistungen.md
 Expense modules 2026: /02-fiskal/ausgabenmodule.md
 SGB II, Bürgergeld and Grundsicherungsgeld microsimulation contract: /02-fiskal/buergergeld-modul.md
-Synthetic population, calibration, weighting and privacy: /03-daten/synthetische-bevoelkerung.md
+Automatic synthetic population model basis, reconstruction, calibration, weighting and privacy: /03-daten/synthetische-bevoelkerung.md
 Effects model: /04-modell/wirkungsmodell.md
 Indirect effects: /04-modell/indirekte-und-nichtmonetaere-wirkungen.md
 Indirect and long-term effects: /04-modell/indirekte-und-langfristige-wirkungen.md
