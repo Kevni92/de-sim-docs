@@ -76,6 +76,7 @@ nav:
       - Ausgabenmodule 2026: 02-fiskal/ausgabenmodule.md
       - Bürgergeld- und Grundsicherungsgeld-Modul: 02-fiskal/buergergeld-modul.md
       - Bürgergeld – Bedienoberfläche und Szenarien: 02-fiskal/buergergeld-bedienoberflaeche.md
+      - Bürgergeld – Release-Validierung und Abnahme: 02-fiskal/buergergeld-release-validierung.md
       - Unterkunft und Heizung – Berlin 2026: 02-fiskal/kdu-berlin-2026.md
   - Bevölkerung und Datenbasis:
       - Synthetische Bevölkerung: 03-daten/synthetische-bevoelkerung.md
