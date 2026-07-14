@@ -16,6 +16,7 @@ Automatic standard model basis: /03-daten/standard-modellbasis.md
 Synthetic population, calibration, weighting and privacy: /03-daten/synthetische-bevoelkerung.md
 Effects model: /04-modell/wirkungsmodell.md
 Central model level and time horizon: /04-modell/modellstufe-und-zeithorizont.md
+Contextual reform effects: /04-modell/kontextbezogene-wirkungen.md
 Indirect effects: /04-modell/indirekte-und-nichtmonetaere-wirkungen.md
 Indirect and long-term effects: /04-modell/indirekte-und-langfristige-wirkungen.md
 Uncertainty: /04-modell/unsicherheit-und-szenarien.md
@@ -23,4 +24,3 @@ Evidence: /06-evidenz/evidenzdatenbank.md
 Calculation transparency: /06-evidenz/berechnungstransparenz.md
 Population, SGB II and model sources: /06-evidenz/quellenregister.md
 Governance: /09-governance/validierung-governance-ethik.md
-Excluded from public documentation: software architecture, worker protocol, IndexedDB stores, internal requirements, design prompts and implementation planning.
