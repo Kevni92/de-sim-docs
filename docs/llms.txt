@@ -12,6 +12,7 @@ Additional revenue modules: /02-fiskal/weitere-einnahmemodule.md
 Public spending overview: /02-fiskal/ausgaben-und-leistungen.md
 Expense modules 2026: /02-fiskal/ausgabenmodule.md
 SGB II, Bürgergeld and Grundsicherungsgeld microsimulation contract: /02-fiskal/buergergeld-modul.md
+Automatic standard model basis: /03-daten/standard-modellbasis.md
 Synthetic population, calibration, weighting and privacy: /03-daten/synthetische-bevoelkerung.md
 Effects model: /04-modell/wirkungsmodell.md
 Indirect effects: /04-modell/indirekte-und-nichtmonetaere-wirkungen.md
