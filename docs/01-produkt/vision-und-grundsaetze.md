@@ -1,8 +1,8 @@
 ---
 title: Zielbild und Grundsätze
 summary: Fachliche Leitlinien für Neutralität, Zeitdimension, Sprache und den Umgang mit Unsicherheit.
-status: Arbeitsstand 0.4
-last_updated: 2026-07-13
+status: Arbeitsstand 0.5
+last_updated: 2026-07-14
 ---
 
 # Zielbild und Grundsätze
@@ -42,6 +42,18 @@ Nicht jeder plausible Zusammenhang ist belastbar quantifizierbar. Deshalb gelten
 
 Eine minimale Fantasiezahl ist schlechter als ein ehrliches „nicht quantifizierbar“. Der Zusammenhang soll dennoch im Wirkungsgraph erscheinen.
 
+## Progressive Offenlegung
+
+Die fachliche und technische Tiefe bleibt vollständig verfügbar, wird aber nicht als Voraussetzung für die normale Bedienung behandelt. Standardansichten folgen der Reihenfolge:
+
+1. Maßnahme ändern,
+2. direkte Wirkung sehen,
+3. Betroffenheit verstehen,
+4. mögliche Folgewirkungen getrennt ansehen,
+5. Berechnung und Quellen prüfen.
+
+Im ersten Ergebnisbereich erscheinen höchstens vier Kerninformationen. Technische Kennungen, Seeds und Modellversionen gehören in die Prüfebene. Direkte, indirekte und langfristige Wirkungen werden nicht zu einer scheinexakten Gesamtsumme vermischt.
+
 ## Zeitdimension
 
 Jede Wirkung wird einem Horizont zugeordnet:
@@ -63,6 +75,7 @@ Kurzfristige Haushaltswirkungen und langfristige gesellschaftliche Wirkungen dü
 
 ## Verwandte Kapitel
 
+- [Informationsarchitektur und progressive Offenlegung](informationsarchitektur-und-progressive-offenlegung.md)
 - [Wirkungsmodell](../04-modell/wirkungsmodell.md)
 - [Indirekte und nicht monetäre Wirkungen](../04-modell/indirekte-und-nichtmonetaere-wirkungen.md)
 - [Berechnung und Quellen](../06-evidenz/berechnungstransparenz.md)

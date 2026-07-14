@@ -4,6 +4,7 @@ Status: fachliche Modell- und Forschungsdokumentation, version 0.9
 Start: /index.md
 Overview: /00-meta/index.md
 Principles: /01-produkt/vision-und-grundsaetze.md
+Information architecture and progressive disclosure: /01-produkt/informationsarchitektur-und-progressive-offenlegung.md
 Fiscal baseline: /02-fiskal/systemgrenze-und-baseline.md
 Taxes and revenue overview: /02-fiskal/einnahmen-und-steuern.md
 Income tax module 2026 with synthetic population: /02-fiskal/einkommensteuer-modul.md
