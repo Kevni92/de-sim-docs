@@ -79,7 +79,7 @@ nav:
       - Bürgergeld – Bedienoberfläche und Szenarien: 02-fiskal/buergergeld-bedienoberflaeche.md
       - Unterkunft und Heizung – Berlin 2026: 02-fiskal/kdu-berlin-2026.md
   - Bevölkerung und Datenbasis:
-      - Synthetische Bevölkerung: 03-daten/synthetische-bevoelkerung.md
+      - Synthetische Bevölkerung und Modellbasis: 03-daten/synthetische-bevoelkerung.md
   - Wirkungsmodellierung:
       - Grundmodell: 04-modell/wirkungsmodell.md
       - Indirekte und nicht monetäre Wirkungen: 04-modell/indirekte-und-nichtmonetaere-wirkungen.md
