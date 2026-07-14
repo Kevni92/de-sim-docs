@@ -1,17 +1,21 @@
 ---
 title: Unsicherheit und Szenarien
 summary: Modulares Kapitel des Pflichtenhefts und Research Briefings.
-status: Arbeitsstand 0.3
-last_updated: 2026-07-13
+status: Arbeitsstand 0.4
+last_updated: 2026-07-14
 ---
 
 # 16. Unsicherheit und Szenarien
 
 ## 16.1 Drei Ergebnisebenen
 
-- **Statische Erstwirkung:** hohe Nachvollziehbarkeit, keine Verhaltensänderung.
-- **Verhaltensszenario:** Reaktionen von Haushalten und Unternehmen.
-- **Langfristszenario:** Demografie, Humankapital, Wachstum und Rückkopplungen.
+Die Anwendung verwendet in der Szenarioverwaltung verständliche Bezeichnungen. Die internen Werte bleiben für Persistenz und Reproduzierbarkeit erhalten:
+
+- **Nur direkte Wirkung** (`statisch`): hohe Nachvollziehbarkeit, keine Verhaltensänderung.
+- **Mit kurzfristigen Reaktionen** (`verhalten`): dokumentierte Reaktionen von Haushalten und Unternehmen sowie begrenzte Folgewirkungen.
+- **Langfristiges Szenario** (`langfrist`): Demografie, Humankapital, Wachstum und Rückkopplungen mit höherer Unsicherheit.
+
+Modellstufe und Zeithorizont gelten zentral für das gesamte Szenario. Fachseiten zeigen sie schreibgeschützt an und führen keine unabhängigen lokalen Varianten. Langfristige Ergebnisse sind Szenariopfade und keine sichere Prognose.
 
 ## 16.2 Bandbreiten
 
@@ -35,6 +39,7 @@ Widersprechen sich seriöse Quellen, werden mehrere Modellvarianten angeboten. D
 
 ## Verwandte Kapitel
 
+- [Modellstufe und Zeithorizont](modellstufe-und-zeithorizont.md)
 - [Wirkungsmodell](wirkungsmodell.md)
 - [Evidenzdatenbank und Quellenprovenienz](../06-evidenz/evidenzdatenbank.md)
 - [Berechnungstransparenz im Produkt](../06-evidenz/berechnungstransparenz.md)

@@ -32,7 +32,7 @@ Bei Bedarf bleiben vollständig erreichbar:
 
 - weitere Parameter und Annahmen,
 - Betroffenheits- und Inzidenzannahmen,
-- mögliche Folgewirkungen und Modellstufen,
+- mögliche Folgewirkungen und der zentrale Berechnungsrahmen,
 - Finanzierung und Teilkomponenten,
 - Quellen, Formeln, Daten- und Rechtsstand,
 - Unsicherheitsannahmen und bekannte Grenzen,
@@ -104,7 +104,7 @@ Die Umsatzsteuer dient als erste Referenzimplementierung des Reform- und Ergebni
 - Ausgangswert, direkte Aufkommenswirkung, hauptsächlich betroffene Wirkungsträger und Belastbarkeit bilden den ersten Ergebnisbereich.
 - Ermäßigter Satz, Anteil ermäßigter Umsätze und Preisweitergabe liegen unter **Erweiterte Parameter**.
 - Die Inzidenzannahme liegt unter **Wer ist betroffen?**.
-- Die Verhaltenskomponente und die Modellstufe liegen unter **Mögliche Folgewirkungen**.
+- Die Verhaltenskomponente liegt unter **Mögliche Folgewirkungen**; Modellstufe und Zeithorizont werden dort nur angezeigt und zentral im Szenario geändert.
 - Vollständige Quellen und Rechenwege bleiben über **Berechnung und Quellen** erreichbar.
 
 ## Verwandte Kapitel
@@ -112,5 +112,6 @@ Die Umsatzsteuer dient als erste Referenzimplementierung des Reform- und Ergebni
 - [Zielbild und Grundsätze](vision-und-grundsaetze.md)
 - [Synthetische Bevölkerung und Modellbasis](../03-daten/synthetische-bevoelkerung.md)
 - [Weitere Einnahmemodule](../02-fiskal/weitere-einnahmemodule.md)
+- [Modellstufe und Zeithorizont](../04-modell/modellstufe-und-zeithorizont.md)
 - [Unsicherheit und Szenarien](../04-modell/unsicherheit-und-szenarien.md)
 - [Berechnung und Quellen](../06-evidenz/berechnungstransparenz.md)
