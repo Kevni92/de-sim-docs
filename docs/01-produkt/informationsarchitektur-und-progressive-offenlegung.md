@@ -1,7 +1,7 @@
 ---
 title: Informationsarchitektur und progressive Offenlegung
-summary: Verbindlicher UI-Vertrag für verständliche Reformparameter, direkte Ergebnisse, Betroffenheit, Folgewirkungen und Nachweise.
-status: Arbeitsstand 0.1
+summary: Verbindlicher UI-Vertrag für verständliche Reformparameter, direkte Ergebnisse, Betroffenheit, Folgewirkungen, Modellbasis und Nachweise.
+status: Arbeitsstand 0.2
 last_updated: 2026-07-14
 ---
 
@@ -35,7 +35,8 @@ Bei Bedarf bleiben vollständig erreichbar:
 - mögliche Folgewirkungen und Modellstufen,
 - Finanzierung und Teilkomponenten,
 - Quellen, Formeln, Daten- und Rechtsstand,
-- Unsicherheitsannahmen und bekannte Grenzen.
+- Unsicherheitsannahmen und bekannte Grenzen,
+- synthetische Modellbasis, Kalibrierung und technische Laufreferenzen.
 
 ## Gemeinsamer Reform- und Ergebnisvertrag
 
@@ -58,6 +59,27 @@ Unterhalb der Kerninformationen folgen getrennte Vertiefungen:
 
 Die Reihenfolge ist auf Desktop und Mobil identisch. Vertiefungen sind per Tastatur erreichbar und dürfen keine horizontale Pflichtnavigation voraussetzen.
 
+## Modellbasis als Infrastruktur
+
+Die synthetische Bevölkerung ist notwendige Recheninfrastruktur, aber keine verpflichtende Standardaufgabe. Einkommensteuer- und Leistungsberechnungen fordern deshalb automatisch eine stabile, versionierte Standardbasis an.
+
+In normalen Reformansichten erscheint nur ein kompakter fachlicher Status:
+
+- wird vorbereitet,
+- bereit,
+- bereit mit Qualitätswarnung,
+- ursprüngliche Referenz fehlt,
+- konnte nicht geladen werden.
+
+Seed, Stichprobengröße, Lauf-ID und Modellversion liegen in der erweiterten Prüfebene **Modellbasis und Bevölkerung**. Dort können Fachnutzende Verteilungen, Kalibrierung, Quellen und gespeicherte Läufe prüfen oder bewusst eine andere Modellbasis erzeugen und aktivieren.
+
+Ein Szenario mit fehlender Laufreferenz wird nicht still auf einen verfügbaren Lauf umgestellt. Die Oberfläche unterscheidet:
+
+1. **Identische Rekonstruktion:** nur bei vollständigen, kompatiblen Generationsparametern.
+2. **Bewusster Wechsel zur Standardbasis:** mit vorherigem Hinweis, dass sich Ergebnisse verändern können.
+
+Damit bleibt Reproduzierbarkeit erhalten, ohne Seed- und Laufverwaltung in den normalen Reformablauf zu verlagern.
+
 ## Zustände
 
 Der gemeinsame Vertrag gilt auch dann, wenn kein reguläres Ergebnis vorliegt:
@@ -76,7 +98,7 @@ Die direkte Wirkung beschreibt zunächst den rechnerischen Effekt bei unverände
 
 ## Referenz: Umsatzsteuer
 
-Die Umsatzsteuer dient als erste Referenzimplementierung des Vertrags:
+Die Umsatzsteuer dient als erste Referenzimplementierung des Reform- und Ergebnisvertrags:
 
 - Der Regelsteuersatz ist die primäre Stellschraube.
 - Ausgangswert, direkte Aufkommenswirkung, hauptsächlich betroffene Wirkungsträger und Belastbarkeit bilden den ersten Ergebnisbereich.
@@ -85,11 +107,10 @@ Die Umsatzsteuer dient als erste Referenzimplementierung des Vertrags:
 - Die Verhaltenskomponente und die Modellstufe liegen unter **Mögliche Folgewirkungen**.
 - Vollständige Quellen und Rechenwege bleiben über **Berechnung und Quellen** erreichbar.
 
-Diese Struktur ändert weder die Umsatzsteuerformel noch die Szenario-Persistenz. Sie ordnet ausschließlich Bedienung und Ergebnisdarstellung neu.
-
 ## Verwandte Kapitel
 
 - [Zielbild und Grundsätze](vision-und-grundsaetze.md)
+- [Synthetische Bevölkerung und Modellbasis](../03-daten/synthetische-bevoelkerung.md)
 - [Weitere Einnahmemodule](../02-fiskal/weitere-einnahmemodule.md)
 - [Unsicherheit und Szenarien](../04-modell/unsicherheit-und-szenarien.md)
 - [Berechnung und Quellen](../06-evidenz/berechnungstransparenz.md)
