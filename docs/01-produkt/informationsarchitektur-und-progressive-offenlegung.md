@@ -1,7 +1,7 @@
 ---
 title: Informationsarchitektur und progressive Offenlegung
 summary: Verbindlicher UI-Vertrag für verständliche Reformparameter, direkte Ergebnisse, Betroffenheit, Folgewirkungen und Nachweise.
-status: Arbeitsstand 0.1
+status: Arbeitsstand 0.2
 last_updated: 2026-07-14
 ---
 
@@ -32,7 +32,7 @@ Bei Bedarf bleiben vollständig erreichbar:
 
 - weitere Parameter und Annahmen,
 - Betroffenheits- und Inzidenzannahmen,
-- mögliche Folgewirkungen und Modellstufen,
+- mögliche Folgewirkungen und der zentrale Berechnungsrahmen,
 - Finanzierung und Teilkomponenten,
 - Quellen, Formeln, Daten- und Rechtsstand,
 - Unsicherheitsannahmen und bekannte Grenzen.
@@ -58,6 +58,20 @@ Unterhalb der Kerninformationen folgen getrennte Vertiefungen:
 
 Die Reihenfolge ist auf Desktop und Mobil identisch. Vertiefungen sind per Tastatur erreichbar und dürfen keine horizontale Pflichtnavigation voraussetzen.
 
+## Zentrale Szenarioentscheidung
+
+Modellstufe und Zeithorizont werden genau einmal in **Szenario verwalten** bearbeitet. Fachseiten zeigen die aktuell verwendete Einstellung kompakt und schreibgeschützt an. Die Aktion **Im Szenario ändern** öffnet die zentrale Einstellung und setzt den Tastaturfokus auf die Modellstufe.
+
+Die sichtbaren Begriffe lauten:
+
+- **Nur direkte Wirkung**,
+- **Mit kurzfristigen Reaktionen**,
+- **Langfristiges Szenario**.
+
+Abhängige Ergebnisse werden als **Aktuell**, **Aktualisierung läuft** oder **Verwendet ältere Einstellung** gekennzeichnet. Kein Ergebnis einer früheren Modellstufe darf ohne sichtbaren Hinweis als aktueller Szenariostand erscheinen.
+
+Details beschreibt das Kapitel [Modellstufe und Zeithorizont](../04-modell/modellstufe-und-zeithorizont.md).
+
 ## Zustände
 
 Der gemeinsame Vertrag gilt auch dann, wenn kein reguläres Ergebnis vorliegt:
@@ -82,7 +96,7 @@ Die Umsatzsteuer dient als erste Referenzimplementierung des Vertrags:
 - Ausgangswert, direkte Aufkommenswirkung, hauptsächlich betroffene Wirkungsträger und Belastbarkeit bilden den ersten Ergebnisbereich.
 - Ermäßigter Satz, Anteil ermäßigter Umsätze und Preisweitergabe liegen unter **Erweiterte Parameter**.
 - Die Inzidenzannahme liegt unter **Wer ist betroffen?**.
-- Die Verhaltenskomponente und die Modellstufe liegen unter **Mögliche Folgewirkungen**.
+- Die Verhaltenskomponente liegt unter **Mögliche Folgewirkungen**; Modellstufe und Zeithorizont werden dort nur angezeigt und zentral im Szenario geändert.
 - Vollständige Quellen und Rechenwege bleiben über **Berechnung und Quellen** erreichbar.
 
 Diese Struktur ändert weder die Umsatzsteuerformel noch die Szenario-Persistenz. Sie ordnet ausschließlich Bedienung und Ergebnisdarstellung neu.
@@ -91,5 +105,6 @@ Diese Struktur ändert weder die Umsatzsteuerformel noch die Szenario-Persistenz
 
 - [Zielbild und Grundsätze](vision-und-grundsaetze.md)
 - [Weitere Einnahmemodule](../02-fiskal/weitere-einnahmemodule.md)
+- [Modellstufe und Zeithorizont](../04-modell/modellstufe-und-zeithorizont.md)
 - [Unsicherheit und Szenarien](../04-modell/unsicherheit-und-szenarien.md)
 - [Berechnung und Quellen](../06-evidenz/berechnungstransparenz.md)
