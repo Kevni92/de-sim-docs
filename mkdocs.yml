@@ -66,6 +66,7 @@ nav:
   - Grundlagen:
       - Fachlicher Überblick: 00-meta/index.md
       - Zielbild und Grundsätze: 01-produkt/vision-und-grundsaetze.md
+      - Informationsarchitektur und progressive Offenlegung: 01-produkt/informationsarchitektur-und-progressive-offenlegung.md
       - Glossar: 00-meta/glossar.md
   - Staatshaushalt und Steuern:
       - Systemgrenze und Baseline: 02-fiskal/systemgrenze-und-baseline.md
