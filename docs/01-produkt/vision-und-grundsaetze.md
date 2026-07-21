@@ -2,7 +2,7 @@
 title: Zielbild und Grundsätze
 summary: Fachliche Leitlinien für Neutralität, Zeitdimension, Sprache und den Umgang mit Unsicherheit.
 status: Arbeitsstand 0.5
-last_updated: 2026-07-14
+last_updated: 2026-07-21
 ---
 
 # Zielbild und Grundsätze
@@ -76,7 +76,9 @@ Kurzfristige Haushaltswirkungen und langfristige gesellschaftliche Wirkungen dü
 ## Verwandte Kapitel
 
 - [Informationsarchitektur und progressive Offenlegung](informationsarchitektur-und-progressive-offenlegung.md)
+- [Synthetische Bevölkerung und Modellbasis](../03-daten/synthetische-bevoelkerung.md)
 - [Wirkungsmodell](../04-modell/wirkungsmodell.md)
 - [Indirekte und nicht monetäre Wirkungen](../04-modell/indirekte-und-nichtmonetaere-wirkungen.md)
+- [Bürgergeld- und Grundsicherungsmodul](../02-fiskal/buergergeld-modul.md)
 - [Berechnung und Quellen](../06-evidenz/berechnungstransparenz.md)
 - [Validierung, Neutralität und Ethik](../09-governance/validierung-governance-ethik.md)

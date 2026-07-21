@@ -1,8 +1,8 @@
 ---
 title: Indirekte und langfristige Wirkungen
 summary: Fachlicher Vertrag für zeitabhängige Wirkungsmodelle, Rückkopplungen, Unsicherheit und bewusste Nichtberechnung.
-status: Implementiert 0.8
-last_updated: 2026-07-13
+status: Implementiert 0.9
+last_updated: 2026-07-21
 ---
 
 # Indirekte und langfristige Wirkungen
@@ -77,6 +77,20 @@ Das Register umfasst mindestens:
 - Infrastruktur- und Investitionswirkungen.
 
 Module sind unabhängig kombinierbar. Abhängigkeiten und mögliche Rückkopplungen werden im Register explizit angegeben, damit dieselbe Wirkung nicht mehrfach vollständig addiert wird.
+
+## Zwei Zugangswege auf dieselben Wirkungsdaten
+
+Wirkungsdaten werden über zwei getrennte, aber konsistente Zugangswege sichtbar. Beide lesen denselben Wirkungslauf; keiner der beiden Wege verändert Werte, die der andere anzeigt.
+
+### Kontextbezogene Folgewirkung
+
+Innerhalb eines Einnahmen- oder Ausgabenmoduls erscheint unter **Mögliche Folgewirkungen** nur der Ausschnitt, der zur gerade bearbeiteten Maßnahme passt. Diese Ansicht ist bewusst schmal: Sie zeigt die direkte Wirkung weiterhin getrennt von der Verhaltens- und Folgekomponente und verweist erst bei Bedarf auf den vollständigen Berechnungsrahmen. Sie ersetzt keine Bevölkerungs- oder Wirkungsverwaltung und setzt keinen manuellen Modellstart voraus.
+
+### Vollständiges Wirkungsregister
+
+Über **Nachweise → Wirkungsregister** ist dieselbe Wirkungs-Engine zusätzlich als eigenständige, vollständige Fachansicht erreichbar. Dort lassen sich alle Wirkungsbereiche, Modellstufen, Zeithorizonte, Rückkopplungen und gespeicherten Läufe unabhängig von einem einzelnen Modul einsehen und vergleichen. Diese Ansicht richtet sich an Fachprüfung und Reproduzierbarkeit und ist keine gleichrangige Standardaufgabe.
+
+Beide Wege führen zu denselben Zahlen: Ein im Modul sichtbarer Folgewirkungswert und der entsprechende Eintrag im Wirkungsregister widersprechen sich nicht, solange derselbe Wirkungslauf aktiv ist.
 
 ## Kita und Betreuung
 
