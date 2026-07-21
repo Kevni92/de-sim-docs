@@ -2,7 +2,7 @@
 title: Berechnung und Quellen
 summary: Fachliche Anforderungen an nachvollziehbare Rechenwege, Quellen, Status und Unsicherheiten.
 status: Arbeitsstand 0.7
-last_updated: 2026-07-13
+last_updated: 2026-07-21
 ---
 
 # Berechnung und Quellen
@@ -128,6 +128,10 @@ Der Änderungsverlauf einer Kennzahl enthält mindestens:
 
 ## Verwandte Kapitel
 
+- [Informationsarchitektur und progressive Offenlegung](../01-produkt/informationsarchitektur-und-progressive-offenlegung.md)
+- [Zielbild und Grundsätze](../01-produkt/vision-und-grundsaetze.md)
 - [Evidenzdatenbank und Quellenprovenienz](evidenzdatenbank.md)
 - [Visualisierungen](../07-visualisierung/visualisierungen.md)
 - [Unsicherheit und Szenarien](../04-modell/unsicherheit-und-szenarien.md)
+- [Wirkungsmodell](../04-modell/wirkungsmodell.md)
+- [Bürgergeld- und Grundsicherungsmodul](../02-fiskal/buergergeld-modul.md)

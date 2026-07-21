@@ -2,7 +2,7 @@
 title: Bürgergeld- und Grundsicherungsgeld-Modul
 summary: Fachspezifikation für die monatliche Anspruchsberechnung, Unterkunft und Heizung, Jahreshochrechnung, Kalibrierung und transparente Szenarien.
 status: Fachspezifikation 0.1
-last_updated: 2026-07-13
+last_updated: 2026-07-21
 ---
 
 # Bürgergeld- und Grundsicherungsgeld-Modul
@@ -463,6 +463,9 @@ Für jeden Fall werden Eingaben, Zwischenwerte, Rundung und erwartetes Ergebnis 
 
 ## Verwandte Kapitel
 
+- [Informationsarchitektur und progressive Offenlegung](../01-produkt/informationsarchitektur-und-progressive-offenlegung.md)
+- [Zielbild und Grundsätze](../01-produkt/vision-und-grundsaetze.md)
+- [Bürgergeld-Standardmodus](buergergeld-standardmodus.md)
 - [Ausgabenmodule 2026](ausgabenmodule.md)
 - [Synthetische Bevölkerung](../03-daten/synthetische-bevoelkerung.md)
 - [Berechnung und Quellen](../06-evidenz/berechnungstransparenz.md)

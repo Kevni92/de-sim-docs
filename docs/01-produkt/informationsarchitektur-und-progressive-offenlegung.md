@@ -1,8 +1,8 @@
 ---
 title: Informationsarchitektur und progressive Offenlegung
 summary: Verbindlicher UI-Vertrag für verständliche Reformparameter, direkte Ergebnisse, Betroffenheit, Folgewirkungen, Modellbasis und Nachweise.
-status: Arbeitsstand 0.2
-last_updated: 2026-07-14
+status: Arbeitsstand 0.3
+last_updated: 2026-07-21
 ---
 
 # Informationsarchitektur und progressive Offenlegung
@@ -37,6 +37,25 @@ Bei Bedarf bleiben vollständig erreichbar:
 - Quellen, Formeln, Daten- und Rechtsstand,
 - Unsicherheitsannahmen und bekannte Grenzen,
 - synthetische Modellbasis, Kalibrierung und technische Laufreferenzen.
+
+## Hauptnavigation
+
+Die Hauptnavigation folgt den Bedienebenen und nennt fünf gleichrangige Nutzerbereiche:
+
+- **Übersicht** – Einstieg, zentrale Kennzahlen und Szenarioverwaltung.
+- **Einnahmen** – Einkommensteuer und weitere Einnahmemodule.
+- **Ausgaben und Leistungen** – Ausgabenmodule einschließlich Bürgergeld.
+- **Vergleich** – neutrale Gegenüberstellung von Szenarien.
+- **Nachweise** – Einstieg in die Prüfebene.
+
+Bevölkerung, Wirkungsregister und die technische Modellverwaltung sind keine gleichrangigen Hauptnavigationspunkte. Sie liegen als **Modellbasis** und **erweiterte Prüfung** hinter **Nachweise** und werden von dort aus erreicht:
+
+- **Nachweise** → **Bevölkerungslauf und Modellbasis**: Seed, Stichprobengröße, Kalibrierung und gespeicherte Läufe.
+- **Nachweise** → **Wirkungsregister**: das vollständige Fachregister aller indirekten und langfristigen Wirkungspfade (siehe [Wirkungsmodell](../04-modell/wirkungsmodell.md)).
+
+Die Einkommensteuer besitzt weiterhin eine eigene Detailansicht, wird aber über **Einnahmen** erreicht und nicht als eigener Hauptnavigationspunkt geführt. Eine Rückkehr aus der Prüfebene zum ursprünglichen Modul verändert keinen dort bereits geänderten Wert.
+
+Diese Einordnung gilt für Desktop und Mobil gleichermaßen. Es gibt keine tote oder inkonsistente Navigationsroute: Jede über einen Link oder eine Schaltfläche erreichbare Ansicht ist auch unmittelbar über die Hauptnavigation oder eine Prüfebene erreichbar.
 
 ## Gemeinsamer Reform- und Ergebnisvertrag
 
@@ -112,6 +131,9 @@ Die Umsatzsteuer dient als erste Referenzimplementierung des Reform- und Ergebni
 - [Zielbild und Grundsätze](vision-und-grundsaetze.md)
 - [Synthetische Bevölkerung und Modellbasis](../03-daten/synthetische-bevoelkerung.md)
 - [Weitere Einnahmemodule](../02-fiskal/weitere-einnahmemodule.md)
+- [Bürgergeld-Standardmodus](../02-fiskal/buergergeld-standardmodus.md)
+- [Wirkungsmodell](../04-modell/wirkungsmodell.md)
+- [Indirekte und langfristige Wirkungen](../04-modell/indirekte-und-langfristige-wirkungen.md)
 - [Modellstufe und Zeithorizont](../04-modell/modellstufe-und-zeithorizont.md)
 - [Unsicherheit und Szenarien](../04-modell/unsicherheit-und-szenarien.md)
 - [Berechnung und Quellen](../06-evidenz/berechnungstransparenz.md)
