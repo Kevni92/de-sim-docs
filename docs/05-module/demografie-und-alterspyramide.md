@@ -34,7 +34,13 @@ Die interaktive Grafik zeigt:
 - Bundesländer,
 - Unsicherheitsband.
 
-## 12.4 Politische Einflüsse
+## 12.4 Implementierter Rechenvertrag
+
+Die Anwendung speichert für jeden Lauf Datenjahr, Rechtsjahr, Modellversion, Baseline, Szenario und ein Unsicherheitsband. Intern werden Einzelalter bis zur Gruppe `100+` fortgeschrieben; die Standardansicht bündelt sie in verständliche Altersgruppen. Für jedes Jahr bleiben Geburten, Sterbefälle, Zuzüge, Fortzüge und Wanderungssaldo getrennt prüfbar.
+
+Die Projektion ist eine aggregierte Kohortenfortschreibung. Sie schreibt keine individuellen Lebensläufe fort und kalibriert keine politische Wirkung automatisch aus einer beobachteten Korrelation.
+
+## 12.5 Politische Einflüsse
 
 Maßnahmen können über folgende Wege in das Demografiemodul gelangen:
 
@@ -45,9 +51,15 @@ Maßnahmen können über folgende Wege in das Demografiemodul gelangen:
 
 Direkte Eingriffe in diese Parameter werden nur als explizite Szenarioannahme zugelassen. Beispielsweise führt „mehr Kita-Geld“ nicht automatisch zu einer fest definierten zusätzlichen Geburtenzahl.
 
-## 12.5 Zeitverzögerung
+## 12.6 Zeitverzögerung
 
 Demografische Effekte auf Arbeitsmarkt, Schulen, Rente und Pflege treten zu unterschiedlichen Zeitpunkten auf. Die Oberfläche zeigt deshalb, wann ein Effekt erstmals sichtbar wird und wann er sein größtes Gewicht erreicht.
+
+## Verwandte Langfristkapitel
+
+- [Migration, Schutzstatus und Arbeitsmarktzugang](migration-schutzstatus-und-arbeitsmarktzugang.md)
+- [Erwerbspotenzial und Arbeitsvolumen](erwerbspotenzial-und-arbeitsvolumen.md)
+- [Alterssicherung und vereinfachte Rentenindikatoren](alterssicherung-und-rentenindikatoren.md)
 
 ## Verwandte Kapitel
 
