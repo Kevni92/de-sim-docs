@@ -92,6 +92,20 @@ Innerhalb eines Einnahmen- oder Ausgabenmoduls erscheint unter **Mögliche Folge
 
 Beide Wege führen zu denselben Zahlen: Ein im Modul sichtbarer Folgewirkungswert und der entsprechende Eintrag im Wirkungsregister widersprechen sich nicht, solange derselbe Wirkungslauf aktiv ist.
 
+## Langfristige Demografie-, Arbeits- und Rentenpfade
+
+Die implementierte Langfriststufe verbindet mehrere, weiterhin getrennte Rechenverträge:
+
+- Kohortenfortschreibung mit Geburten, Sterbefällen, Zu- und Fortzügen und Altersgruppen,
+- familienpolitische direkte Budgetwirkung getrennt von einem möglichen Geburtenpfad,
+- Migration mit Schutzstatus, Erwerbsberechtigung und Beschäftigung als getrennten Übergängen,
+- Erwerbsalter, Erwerbspotenzial, Erwerbspersonen, Beschäftigte, Vollzeitäquivalente und Beitragszahlende,
+- Rentenbeziehende als Bezugsquote der Kohorten ab Rentenzugangsalter sowie Beiträge, Bundeszuschuss und Ausgaben.
+
+Die gemeinsame Nutzeransicht zeigt höchstens vier Kernkennzahlen. Ursachen, Unsicherheitsband, Modellgrenzen und konkrete Zeitreihen werden erst in der progressiven Vertiefung geöffnet. Eine direkte Reformausgabe wird nicht mit späteren Beitragseinnahmen oder unsicheren Geburtenwirkungen verrechnet.
+
+Weitere Rechenverträge stehen in den Kapiteln [Migration und Arbeitsmarktzugang](../05-module/migration-schutzstatus-und-arbeitsmarktzugang.md), [Erwerbspotenzial](../05-module/erwerbspotenzial-und-arbeitsvolumen.md) und [Alterssicherung](../05-module/alterssicherung-und-rentenindikatoren.md).
+
 ## Kita und Betreuung
 
 Das implementierte Kita-Modul verwendet die aktive synthetische Bevölkerung und wertet Haushalte mit Kindern im relevanten Alter gewichtet aus. Es berücksichtigt insbesondere:
