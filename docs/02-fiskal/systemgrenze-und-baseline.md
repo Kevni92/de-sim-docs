@@ -2,7 +2,7 @@
 title: Systemgrenze und Baseline
 summary: Fachliche Abgrenzung des öffentlichen Sektors und Regeln für den Referenzzustand.
 status: Arbeitsstand 0.4
-last_updated: 2026-07-13
+last_updated: 2026-10-21
 ---
 
 # Systemgrenze und Baseline
@@ -33,6 +33,10 @@ Jede Simulation basiert auf einer versionierten Ausgangslage:
 - Datenstand der verwendeten Statistiken.
 
 Die Baseline ist nicht „die Wahrheit“, sondern ein reproduzierbarer Referenzlauf.
+
+Im aktuellen Produktumfang verwenden gesetzliche Berechnungen den festen Rechtsstand 2026. Eine globale Datenjahresauswahl ist fachlich nicht zutreffend: Jede Kennzahl nennt den Stand ihrer eigenen Quelle. Ein Betrachtungsjahr oder der Startpunkt einer Wirkungsrechnung beschreibt den Zeitraum eines Szenariopfads und ist weder Rechtsstand noch Datenherkunft.
+
+Importierte Szenarien können abweichende Jahresmetadaten enthalten. Diese Angaben bleiben beim Laden und Export erhalten. Die Oberfläche kennzeichnet sie sichtbar als Altmetadaten und erklärt getrennt, welche gesetzliche Grundlage unterstützt wird und welchen Zeitbezug der Szenariopfad verwendet. Abweichende Altjahre werden nicht still umgedeutet oder als unterstützte gesetzliche Tarife ausgegeben.
 
 ## Reale und nominale Werte
 
