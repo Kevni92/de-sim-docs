@@ -2,7 +2,7 @@
 title: Szenario- und Zustandsmodell
 summary: Interner Einstiegspunkt für zentralen Szenariozustand, Historie, Persistenz und Serverabstraktion.
 status: Intern 0.6
-last_updated: 2026-07-13
+last_updated: 2026-10-21
 ---
 
 # Szenario- und Zustandsmodell
@@ -32,6 +32,12 @@ UI-Eingabe
   -> Web Worker
   -> IndexedDB
 ```
+
+## Gemeinsame Haushaltsübersicht
+
+Übersicht und Szenariovergleich verwenden dieselbe Zusammenfassung der dargestellten Einnahme- und Ausgabenposten. Sie übernimmt die Ergebnisse des aktuellen Szenarios und weist Baseline, Veränderung und Saldo aus denselben Zeilen aus. Ein fehlendes Modul darf nicht durch seinen Baselinewert oder null ersetzt werden; in diesem Fall bleiben Gesamtergebnis und Vergleich sichtbar unvollständig.
+
+Die Wirkungsebenen des Wirkungs-Workers bleiben davon getrennt. Nur ein Lauf mit aktueller Eingabesignatur darf als aktuelle modellierte Reaktion erscheinen. Direkte Modulergebnisse und zusätzliche Wirkungspfade werden nicht zu einer neuen Gesamtformel addiert.
 
 Der Clientvertrag bleibt bewusst serverähnlich. Ein späteres Backend soll dieselben Operationen anbieten, ohne dass Seiten oder Fachmodule direkten Datenbankzugriff erhalten.
 
