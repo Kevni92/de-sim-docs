@@ -48,9 +48,10 @@ Ein globales Datenjahr gibt es nicht. Der Datenstand wird je Kennzahl in deren N
 
 ## Hauptnavigation
 
-Die Hauptnavigation folgt den Bedienebenen und nennt fünf gleichrangige Nutzerbereiche:
+Die Hauptnavigation folgt den Bedienebenen und nennt sechs gleichrangige Nutzerbereiche:
 
 - **Übersicht** – Einstieg, zentrale Kennzahlen und Szenarioverwaltung.
+- **Deine Änderungen** – alle konkreten Abweichungen vom Ausgangswert mit Vorher/Nachher, Einzelreset und Modulzugang.
 - **Einnahmen** – Einkommensteuer und weitere Einnahmemodule.
 - **Ausgaben und Leistungen** – Ausgabenmodule einschließlich Bürgergeld.
 - **Vergleich** – neutrale Gegenüberstellung von Szenarien.
