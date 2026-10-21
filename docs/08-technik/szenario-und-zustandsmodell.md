@@ -1,7 +1,7 @@
 ---
 title: Szenario- und Zustandsmodell
 summary: Interner Einstiegspunkt für zentralen Szenariozustand, Historie, Persistenz und Serverabstraktion.
-status: Intern 0.6
+status: Intern 0.7
 last_updated: 2026-10-21
 ---
 
@@ -40,6 +40,14 @@ UI-Eingabe
 Die Wirkungsebenen des Wirkungs-Workers bleiben davon getrennt. Nur ein Lauf mit aktueller Eingabesignatur darf als aktuelle modellierte Reaktion erscheinen. Direkte Modulergebnisse und zusätzliche Wirkungspfade werden nicht zu einer neuen Gesamtformel addiert.
 
 Der Clientvertrag bleibt bewusst serverähnlich. Ein späteres Backend soll dieselben Operationen anbieten, ohne dass Seiten oder Fachmodule direkten Datenbankzugriff erhalten.
+
+## Änderungsübersicht und Einzelreset
+
+Die nutzerseitige Ansicht **Deine Änderungen** wird aus den jeweils aktiven Szenariowerten gegenüber den versionierten Ausgangswerten gebildet. Sie führt nur abweichende konkrete Werte auf und ordnet sie politischen Stellschrauben, Modell- und Wirkungsannahmen oder dem Berechnungsrahmen zu. Gruppierte Bedienelemente wie Regelbedarfe oder Mehrbedarfe erscheinen als einzelne geänderte Parameter; ein zweiter Gruppenwert würde dieselbe Maßnahme doppelt zählen.
+
+Jeder Eintrag enthält den Ausgangswert, den aktuellen Wert, die Einheit, den passenden Modulzugang und einen Einzelreset. Der Reset setzt ausschließlich den ausgewählten Wert auf seine zugehörige Baseline zurück. Andere Parameter im selben Fachpaket bleiben erhalten. Umsatzsteuer-Sätze werden von Anteil ermäßigter Umsätze und Preisweitergabe getrennt ausgewiesen. Bevölkerungslauf und Profilmerkmale sind keine politischen Reformänderungen.
+
+Die Ansicht ist keine zusätzlich gespeicherte Szenariofassung. Import, Undo, Redo und Wiederherstellung des Browserentwurfs müssen dieselbe Änderungsübersicht aus dem jeweils aktuellen Szenariozustand ergeben. Ergebnisse und Wirkungsannahmen werden nicht als unabhängige Einzelwirkungen zu einer neuen Gesamtsumme addiert.
 
 ## Arbeitsentwurf und gespeicherte Szenariofassung
 

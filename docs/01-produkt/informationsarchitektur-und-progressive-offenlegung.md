@@ -1,7 +1,7 @@
 ---
 title: Informationsarchitektur und progressive Offenlegung
 summary: Verbindlicher UI-Vertrag für verständliche Reformparameter, direkte Ergebnisse, Betroffenheit, Folgewirkungen, Modellbasis und Nachweise.
-status: Arbeitsstand 0.3
+status: Arbeitsstand 0.4
 last_updated: 2026-10-21
 ---
 
@@ -48,9 +48,10 @@ Ein globales Datenjahr gibt es nicht. Der Datenstand wird je Kennzahl in deren N
 
 ## Hauptnavigation
 
-Die Hauptnavigation folgt den Bedienebenen und nennt fünf gleichrangige Nutzerbereiche:
+Die Hauptnavigation folgt den Bedienebenen und nennt sechs gleichrangige Nutzerbereiche:
 
 - **Übersicht** – Einstieg, zentrale Kennzahlen und Szenarioverwaltung.
+- **Deine Änderungen** – alle konkreten Abweichungen vom Ausgangswert mit Vorher/Nachher, Einzelreset und Modulzugang.
 - **Einnahmen** – Einkommensteuer und weitere Einnahmemodule.
 - **Ausgaben und Leistungen** – Ausgabenmodule einschließlich Bürgergeld.
 - **Vergleich** – neutrale Gegenüberstellung von Szenarien.
@@ -85,6 +86,18 @@ Unterhalb der Kerninformationen folgen getrennte Vertiefungen:
 - **Erweiterte Parameter**
 
 Die Reihenfolge ist auf Desktop und Mobil identisch. Vertiefungen sind per Tastatur erreichbar und dürfen keine horizontale Pflichtnavigation voraussetzen.
+
+## Änderungen eines Reformpakets prüfen
+
+Die Hauptnavigation bietet **Deine Änderungen**; vom Szenariovergleich aus führt derselbe Einstieg zur vollständigen Paketübersicht. Die Zusammenfassung erscheint vor dem Vergleich und ordnet politische Änderungen, Annahmen und Berechnungseinstellungen getrennt ein.
+
+Die Übersicht zeigt nur tatsächlich veränderte Stellschrauben. Jeder Eintrag nennt verständlich, was verändert wurde, den Ausgangswert, den aktuellen Wert und die Einheit. Ein direkter Modulzugang und ein Einzelreset stehen am jeweiligen Eintrag. Das Zurücksetzen eines Werts erhält alle übrigen Änderungen.
+
+Gruppenregler werden für die Übersicht in ihre konkreten geänderten Einzelwerte aufgelöst. Das gilt insbesondere für Regelbedarfe, Mehrbedarfe und andere SGB-II-Regelpakete. Es gibt dafür keine zusätzliche Sammelzeile, die Werte doppelt zählt. Eine Änderung an Steuer- oder Leistungsregeln bleibt von Modellannahmen getrennt: Bei der Umsatzsteuer sind Regel- und ermäßigter Steuersatz politische Stellschrauben; Anteil ermäßigter Umsätze und Preisweitergabe sind Modellannahmen. Verhaltensannahmen, Modellstufe, Zeithorizont und Modellbasis erscheinen in einer eigenen Vertiefung. Profilmerkmale eines Beispielhaushalts gelten nicht als Reformänderung.
+
+Die Paketübersicht summiert unabhängige Einzelwirkungen nicht zu einem scheinpräzisen Gesamtergebnis. Im Vergleich wird vor den Ergebniskennzahlen auf dieselben Einzelwerte verwiesen. Bei unveränderten Baselines erklärt ein leerer Zustand, dass noch keine Reformänderungen vorliegen.
+
+Import, Rückgängig, Wiederholen und Neuladen aktualisieren die Liste aus dem aktuellen Szenarioentwurf. Desktop und Mobil behalten dieselbe Reihenfolge; Werte, Einheiten und Aktionen bleiben ohne horizontales Scrollen erreichbar. Tastaturbedienung und sichtbarer Fokus gelten auch für Modulzugang und Einzelreset.
 
 ## Modellbasis als Infrastruktur
 
