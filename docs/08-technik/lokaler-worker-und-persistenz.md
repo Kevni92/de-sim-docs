@@ -2,7 +2,7 @@
 title: Lokaler Worker und Persistenz
 summary: Übergangsarchitektur für Quellen, Metriken sowie Speichern und Laden ohne externen Server.
 status: Arbeitsstand 0.7
-last_updated: 2026-07-13
+last_updated: 2026-10-21
 ---
 
 # Lokaler Worker und Persistenz
@@ -126,7 +126,8 @@ Ein dauerhaft gespeichertes Szenario erweitert den Entwurf um:
 Der automatisch gesicherte Arbeitsstand enthält:
 
 - die ID des aktuell geladenen Szenarios oder `null`,
-- den vollständigen Entwurf.
+- den vollständigen Entwurf,
+- den Zeitpunkt der letzten bestätigten Sicherung (optional, damit ältere Browserstände weiter geladen werden).
 
 ## Nachrichtenprotokoll
 
@@ -149,6 +150,10 @@ Jede Anfrage und Antwort trägt eine Korrelations-ID. Fehler werden als struktur
 Änderungen des zentralen Szenariozustands werden kurz verzögert über `draft:save` gespeichert. Die Verzögerung reduziert Schreibvorgänge bei schnellen Eingabefolgen.
 
 Beim Start lädt die Anwendung den Entwurf mit `draft:get`. Der geladene Zustand wird normalisiert, damit ältere lokale Daten weiterhin verwendet werden können.
+
+Die Oberfläche kennzeichnet den Arbeitsentwurf erst nach bestätigter Worker-Antwort als gesichert und zeigt den letzten Sicherungszeitpunkt an. Während ein Schreibvorgang läuft, bleibt der Status sichtbar. Schlägt die Sicherung fehl, zeigt die Oberfläche einen Fehler und eine erneute Speicheraktion; sie meldet den Entwurf nicht als gesichert und behält die aktuellen Eingaben im geöffneten Szenariodialog.
+
+Eine ausdrücklich gespeicherte Fassung liegt getrennt vom Arbeitsentwurf im Store `scenarios`. „Szenario speichern“ aktualisiert die aktive Fassung oder legt die erste gespeicherte Fassung an. „Als neue Variante sichern“ speichert eine zusätzliche Szenario-ID und überschreibt die bisherige Fassung nicht. Nach dem Reload wird die Entwurfs-ID mit den gespeicherten Szenarien verglichen, um Änderungen seit dem letzten ausdrücklichen Speichern erkennbar zu machen.
 
 Quellen und Metriken werden beim Start parallel mit Szenarien und Entwurf geladen. Die UI zeigt einen Nachweis nur, wenn die referenzierte Metrik im Register vorhanden ist.
 
