@@ -54,10 +54,20 @@ Folgende Größen werden getrennt ausgewiesen:
 - implizite langfristige Verpflichtungen,
 - Steuervergünstigungen als entgangene Einnahmen.
 
+## Summen in Übersicht und Vergleich
+
+Die Kennzahlen in Übersicht und Vergleich beruhen auf denselben ausgewiesenen Einnahme- und Ausgabenposten des aktiven Szenarios. Der Vergleich übernimmt damit die sichtbare Bezugsgröße der Übersicht, statt daneben eine abweichende feste Gesamtsumme zu verwenden.
+
+Diese Summen bilden nur die dargestellten Posten ab und sind keine vollständige Haushaltsrechnung. Nicht enthaltene Teilbereiche werden weder ergänzt noch als unverändert oder null behandelt. Fehlt ein benötigter Modulwert, muss die Gesamtsumme als unvollständig erkennbar sein.
+
+Die Werte des aktiven Szenarios verwenden die dort angezeigte Modellstufe. Direkte Modulwirkung und davon getrennte Wirkungsregister-Pfade bleiben benannt; veraltete oder noch berechnete Wirkungspfade dürfen nicht als aktuelle Zahlen erscheinen. Eine Vergleichsannahme ohne gleichwertige Modulergebnisse ist bei Gesamtsummen als nicht vergleichbar zu kennzeichnen.
+
 ## Fachliche Konsistenzregeln
 
 - Jede Kennzahl trägt eine sichtbare Ebenenkennzeichnung.
-- Die Gesamtsumme entspricht nach Rundung der Summe der Unterposten.
+- Die ausgewiesene Summe entspricht nach Rundung der sichtbaren Unterposten und behauptet keine vollständige Haushaltsrechnung.
+- Übersicht und Vergleich verwenden für gleiche Szenarien dieselben Werte und denselben Umfang.
+- Fehlende oder veraltete Ergebnisse erscheinen nicht als null oder aktueller Gesamtwert.
 - Konsolidierungsbuchungen sind in der Berechnungsansicht sichtbar.
 - Jeder Vergleich kann auf den unveränderten Referenzlauf zurückgeführt werden.
 
