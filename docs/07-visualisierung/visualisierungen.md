@@ -2,7 +2,7 @@
 title: Visualisierungen
 summary: Fachliche Darstellungsformen für Haushalt, Verteilung, Wirkungsketten, Regionen und Zeit.
 status: Arbeitsstand 0.4
-last_updated: 2026-07-13
+last_updated: 2026-10-21
 ---
 
 # Visualisierungen
@@ -56,6 +56,12 @@ Baseline und Szenario können überlagert oder als Differenz dargestellt werden.
 - Krankheitstage,
 - Unterrichtsausfall,
 - Verwaltungsminuten.
+
+## Langfristtabellen
+
+Vergleichstabellen trennen Baseline, Szenario, Differenz und Szenarioband in eigene Spalten. Eine Differenz hat dasselbe Bezugsjahr und dieselbe Einheit wie die verglichenen Werte. Ein nicht berechnetes Band wird als solches benannt; ein Unter- oder Oberpfad steht nie unter Baseline oder Zentralwert.
+
+Der Rentenindikator lautet durchgehend „Beitragszahlende je 100 Rentenbeziehende“. Er bleibt als Strukturquote von einer Finanzkennzahl getrennt. Auf schmalen Ansichten bleibt notwendiger Tabellenscroll innerhalb des benannten, per Tastatur erreichbaren Tabellenbereichs.
 
 ## Barrierefreie Alternativen
 

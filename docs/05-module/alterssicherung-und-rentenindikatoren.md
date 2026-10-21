@@ -2,7 +2,7 @@
 title: Alterssicherung und vereinfachte Rentenindikatoren
 summary: Aggregierte Beitrags-, Leistungs- und Finanzierungsindikatoren der gesetzlichen Rentenversicherung.
 status: Implementiert 1.0
-last_updated: 2026-07-22
+last_updated: 2026-10-21
 ---
 
 # Alterssicherung und vereinfachte Rentenindikatoren
@@ -43,7 +43,7 @@ Rentenbeziehende × durchschnittliche jährliche Ausgabe je Beziehendem
 
 | Indikator | Rechenweg und Einordnung |
 |---|---|
-| Beitragszahlende je 100 Rentenbeziehende | Strukturindikator; ersetzt keine Finanzrechnung. |
+| Beitragszahlende je 100 Rentenbeziehende | Strukturindikator mit der Einheit „je 100 Rentenbeziehende“; ersetzt keine Finanzrechnung. |
 | Beitragseinnahmen | Lohnsumme multipliziert mit effektivem Beitragssatz. |
 | Rentenausgaben | Geschätzte Rentenbeziehende multipliziert mit durchschnittlicher Jahresausgabe. |
 | Finanzierungssaldo | Beiträge + weitere Einnahmen + Bundeszuschuss − Renten- und Verwaltungsausgaben. |
