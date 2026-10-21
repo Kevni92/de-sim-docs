@@ -15,6 +15,12 @@ last_updated: 2026-10-21
 - Veränderung zur Baseline,
 - Schuldenpfad und Zinsen.
 
+## Budgetbalken und Zeitbezug
+
+Saldo und Änderungen werden mit einer sichtbaren Nullachse und derselben linearen Skala dargestellt. Nullwerte bleiben ohne Balkenhöhe; positive und negative Werte sind an ihrer Richtung erkennbar. Einheit, Jahresbezug und Zahlenwerte stehen direkt an der Grafik.
+
+Eine Änderung des Jahressaldos ist keine Zeitreihe. Ohne berechnete Folgejahre wird sie nicht automatisch fortgeschrieben oder mit einem pauschalen Wachstum versehen. Für tatsächlich modellierte Mehrjahresszenarien führt ein klarer Einstieg in die Langfristansicht.
+
 ## Sankey-Diagramm
 
 Zeigt Geldflüsse zwischen Einnahmen, staatlichen Ebenen und Ausgaben. Konsolidierte interne Transfers sind gesondert markiert.
