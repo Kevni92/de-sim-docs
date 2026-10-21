@@ -18,6 +18,17 @@ Keine zentrale Zahl darf ohne erkennbare Herkunft und Einordnung erscheinen. Zu 
 
 Der Status ist unabhängig von der Konfidenz. Eine amtliche Baseline kann zuverlässig sein, während eine daraus abgeleitete langfristige Wirkung große Unsicherheit besitzt.
 
+## Bedeutung der Statusangaben
+
+Statusangaben beschreiben, wie ein konkretes Ergebnis zustande kommt:
+
+- **Regelberechnung:** Eine ausgewiesene gesetzliche Regel und ihr Rechtsstand werden auf die Szenarioeinstellungen angewendet. Das Resultat einer geänderten Regel ist ein Szenario, keine amtliche Prognose ihrer tatsächlichen Wirkung.
+- **Modellschätzung:** Das Ergebnis nutzt Modellannahmen, gewichtete Referenzpunkte oder vereinfachte Zusammenhänge. Konfidenz, Reichweite und bekannte Grenzen bleiben direkt am Ergebnis zugänglich.
+- **Beispielwert / Annahme:** Ein fester oder angenommener Wert ohne nachgewiesenen Beobachtungsstand wird als solcher benannt. Ein fehlendes Datenjahr wird nicht durch ein plausibel wirkendes Jahr ersetzt.
+- **Noch nicht berechnet:** Es wird kein Ergebniswert vorgetäuscht. Der fehlende Status ist bereits am Einstieg in die betroffene Ergebnisgruppe sichtbar.
+
+Eine Quelle kann eine Eingangsgröße oder die gesetzliche Baseline belegen. Sie bestätigt nicht automatisch die Modellannahmen, die Rechenqualität oder das Ergebnis, das daraus abgeleitet wird. Diese Unterschiede gelten gleichermaßen für Übersicht, Vergleich und Langfristansicht.
+
 ## Detailansicht
 
 Bei jeder zentralen Ausgabe gibt es einen Nachweis- beziehungsweise Quellenbutton. Er öffnet eine Ansicht mit:
@@ -47,7 +58,7 @@ Zusätzlich zu den Nachweisen an einzelnen Zahlen gibt es ein zentrales Register
 - Öffnen des vollständigen Rechenwegs,
 - Erkennen noch nicht fachlich kalibrierter Bereiche.
 
-Nicht kalibrierte Demonstrationswerte dürfen nicht durch Gestaltung oder Wortwahl den Eindruck amtlicher Präzision erwecken.
+Beispiele und nicht kalibrierte Modellteile dürfen nicht durch Gestaltung oder Wortwahl den Eindruck amtlicher Präzision erwecken. Die übrigen Ergebnisse werden anhand ihres eigenen Status eingeordnet, nicht pauschal als Beispiele abgewertet.
 
 ## Nicht belegte Bestandswerte
 

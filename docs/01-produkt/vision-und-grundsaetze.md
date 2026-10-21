@@ -2,7 +2,7 @@
 title: Zielbild und Grundsätze
 summary: Fachliche Leitlinien für Neutralität, Zeitdimension, Sprache und den Umgang mit Unsicherheit.
 status: Arbeitsstand 0.5
-last_updated: 2026-07-21
+last_updated: 2026-10-21
 ---
 
 # Zielbild und Grundsätze
@@ -41,6 +41,17 @@ Nicht jeder plausible Zusammenhang ist belastbar quantifizierbar. Deshalb gelten
 3. **Ungeklärt:** widersprüchliche oder unzureichende Evidenz.
 
 Eine minimale Fantasiezahl ist schlechter als ein ehrliches „nicht quantifizierbar“. Der Zusammenhang soll dennoch im Wirkungsgraph erscheinen.
+
+## Status von Ergebnissen
+
+Ergebnisse werden so eingeordnet, dass die Grundlage einer Zahl ohne lange Methodiklektüre erkennbar ist:
+
+- **Regelberechnung:** Eine hinterlegte gesetzliche Regel, etwa der Einkommensteuertarif mit ausgewiesenem Rechtsstand, wird auf die aktuellen Szenarioparameter angewendet. Eine geänderte Regel ergibt ein Szenarioergebnis und keine amtliche Wirkungsprognose.
+- **Modellschätzung:** Ein Ergebnis hängt von vereinfachten Annahmen, gewichteten Referenzpunkten oder modellierten Zusammenhängen ab. Grundlage, Reichweite und Unsicherheit stehen am Ergebnis.
+- **Beispielwert:** Ein fest gewählter Betrag illustriert die Oberfläche. Er wird direkt als Beispiel gekennzeichnet und nicht als gemessener Bestand oder berechnete Szenariowirkung ausgegeben.
+- **Noch nicht berechnet:** Fehlt eine Berechnung, wird das bereits vor dem Öffnen des Bereichs sichtbar. Die Oberfläche zeigt dafür weder eine scheinbare Abdeckung noch eine ersatzweise Karte oder Rangfolge.
+
+Eine amtliche Quelle für eine Baseline belegt nicht automatisch die Qualität oder amtliche Gültigkeit eines daraus abgeleiteten Modellergebnisses. Status und Unsicherheit werden für jede Kennzahl einzeln angegeben; eine pauschale Aussage, alle Werte seien Beispiele oder alle Ergebnisse seien validiert, ist zu vermeiden.
 
 ## Progressive Offenlegung
 
