@@ -41,6 +41,14 @@ Die Wirkungsebenen des Wirkungs-Workers bleiben davon getrennt. Nur ein Lauf mit
 
 Der Clientvertrag bleibt bewusst serverähnlich. Ein späteres Backend soll dieselben Operationen anbieten, ohne dass Seiten oder Fachmodule direkten Datenbankzugriff erhalten.
 
+## Arbeitsentwurf und gespeicherte Szenariofassung
+
+Nutzer arbeiten zunächst an einem automatisch gesicherten Entwurf in diesem Browser. Eine gespeicherte Szenariofassung entsteht erst über die ausdrückliche Aktion „Szenario speichern“. Die Oberfläche unterscheidet beide Zustände: Sie zeigt den Zeitpunkt der letzten bestätigten Entwurfssicherung und meldet Änderungen gegenüber der zuletzt gespeicherten Fassung.
+
+„Änderungen speichern“ aktualisiert die aktive gespeicherte Fassung. „Als neue Variante sichern“ legt eine separate Fassung an; die bisher gespeicherte Variante bleibt erhalten. Nach einem Reload stellt die Anwendung den Browser-Entwurf samt Bezug zur aktiven gespeicherten Fassung wieder her und zeigt, ob beide noch übereinstimmen. Ein Speicherfehler wird nicht als Erfolg dargestellt; der Entwurf bleibt im geöffneten Formular und kann erneut gesichert werden.
+
+Der Entwurf liegt nur auf diesem Gerät in diesem Browser. Es gibt weder ein Konto noch eine Synchronisierung zwischen Geräten.
+
 ## Verwandte Kapitel
 
 - [Technische Architektur](technische-architektur.md)
