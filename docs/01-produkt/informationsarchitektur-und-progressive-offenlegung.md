@@ -2,7 +2,7 @@
 title: Informationsarchitektur und progressive Offenlegung
 summary: Verbindlicher UI-Vertrag für verständliche Reformparameter, direkte Ergebnisse, Betroffenheit, Folgewirkungen, Modellbasis und Nachweise.
 status: Arbeitsstand 0.3
-last_updated: 2026-07-21
+last_updated: 2026-10-21
 ---
 
 # Informationsarchitektur und progressive Offenlegung
@@ -37,6 +37,14 @@ Bei Bedarf bleiben vollständig erreichbar:
 - Quellen, Formeln, Daten- und Rechtsstand,
 - Unsicherheitsannahmen und bekannte Grenzen,
 - synthetische Modellbasis, Kalibrierung und technische Laufreferenzen.
+
+## Einstieg und Jahresangaben
+
+Der Einstieg führt ohne angekündigte Zwischenschritte direkt zur Übersicht. Eine Fortschrittsanzeige oder scheinbare Auswahl darf nur erscheinen, wenn die zugehörigen Schritte tatsächlich bedienbar sind.
+
+Für gesetzliche Berechnungen ist im aktuellen Produktumfang ausschließlich der Rechtsstand 2026 unterstützt. Er wird als feste Grundlage benannt und nicht als frei änderbares Szenariojahr angeboten. Das gilt auch für importierte Szenarien: Abweichende Rechtsjahre bleiben als Szenariometadaten erhalten und werden sichtbar als nicht unterstützte Altangaben eingeordnet. Sie dürfen weder still auf 2026 umgeschrieben noch als abweichender unterstützter Tarif dargestellt werden.
+
+Ein globales Datenjahr gibt es nicht. Der Datenstand wird je Kennzahl in deren Nachweis ausgewiesen, weil die verwendeten Quellen unterschiedliche Berichtsjahre haben können. Der Zeitbezug und Zeithorizont einer Wirkungsrechnung werden davon getrennt benannt; sie beschreiben einen Szenariopfad und ändern nicht den gesetzlichen Rechtsstand oder die Quellenjahre.
 
 ## Hauptnavigation
 
