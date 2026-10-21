@@ -49,6 +49,14 @@ Nutzer arbeiten zunächst an einem automatisch gesicherten Entwurf in diesem Bro
 
 Der Entwurf liegt nur auf diesem Gerät in diesem Browser. Es gibt weder ein Konto noch eine Synchronisierung zwischen Geräten.
 
+## Entwurf vor Verwerfen oder Laden absichern
+
+Wenn ein Arbeitsentwurf gegenüber seiner gespeicherten Fassung geändert wurde, fragt die Anwendung vor „Neu“, dem Laden einer anderen Fassung oder einem gültigen Import, wie weiter verfahren werden soll. „Als Variante sichern und fortfahren“ legt zuerst eine eigenständige gespeicherte Fassung an; der bisherige gespeicherte Stand bleibt erhalten. „Entwurf verwerfen und fortfahren“ übernimmt den gewünschten Wechsel ohne die aktuellen Änderungen. „Abbrechen“ schließt die Auswahl und lässt den Entwurf unverändert. Ein unberührter neuer Entwurf kann ohne wiederholte Warnung gewechselt werden.
+
+Ein Import wird erst nach erfolgreicher Prüfung der Datei als möglicher Wechsel angeboten. Eine ungültige Datei verändert weder den Entwurf noch die gespeicherte Auswahl. Schlägt das Sichern als Variante fehl, bleibt die Auswahl geöffnet, die Eingaben bleiben erhalten und der Wechsel wird nicht ausgeführt; ein erneuter Versuch ist möglich.
+
+Vor dem Löschen einer gespeicherten Fassung nennt die Bestätigung deren Namen. Abbrechen erhält die Fassung. Wird die aktive gespeicherte Fassung gelöscht, bleibt der aktuelle Arbeitsentwurf im Browser erhalten und wird von dieser gelöschten Fassung getrennt.
+
 ## Verwandte Kapitel
 
 - [Technische Architektur](technische-architektur.md)
