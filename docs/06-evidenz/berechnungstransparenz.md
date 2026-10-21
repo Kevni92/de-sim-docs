@@ -2,7 +2,7 @@
 title: Berechnung und Quellen
 summary: Fachliche Anforderungen an nachvollziehbare Rechenwege, Quellen, Status und Unsicherheiten.
 status: Arbeitsstand 0.7
-last_updated: 2026-07-21
+last_updated: 2026-10-21
 ---
 
 # Berechnung und Quellen
@@ -48,6 +48,12 @@ Zusätzlich zu den Nachweisen an einzelnen Zahlen gibt es ein zentrales Register
 - Erkennen noch nicht fachlich kalibrierter Bereiche.
 
 Nicht kalibrierte Demonstrationswerte dürfen nicht durch Gestaltung oder Wortwahl den Eindruck amtlicher Präzision erwecken.
+
+## Nicht belegte Bestandswerte
+
+Ein fester Schuldenbetrag ohne nachgewiesenen Stichtag und passende amtliche Reihe ist als Annahme mit niedriger Konfidenz und ohne Datenjahr zu kennzeichnen. Die Oberfläche kann ihn als Beispielwert zeigen, muss dies direkt am Wert nennen und darf keine daraus abgeleitete Szenarioänderung, BIP-Quote oder Bandbreite vortäuschen.
+
+Ein jährlicher Saldo bleibt als Stromgröße mit Zeitraum und Umfang benannt. Eine Änderung des jährlichen Saldos darf nur dort erscheinen; sie wird nicht als Änderung eines historischen Schuldenbestands ausgegeben. Ein Belegbutton führt zum vollständigen Nachweis der Beispielannahme und benennt ausdrücklich, welcher Referenzstand fehlt.
 
 ## Rechenbaum
 

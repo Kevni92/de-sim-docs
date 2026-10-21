@@ -54,6 +54,12 @@ Folgende Größen werden getrennt ausgewiesen:
 - implizite langfristige Verpflichtungen,
 - Steuervergünstigungen als entgangene Einnahmen.
 
+## Schuldenbestand und jährlicher Saldo
+
+Ein Schuldenstand ist eine Bestandsgröße zu einem konkreten Stichtag. Die Oberfläche darf ihn nur als historischen Referenzwert ausweisen, wenn Quelle, Abgrenzung und Stichtag nachvollziehbar zusammenpassen. Fehlt dieser Nachweis, wird ein angezeigter Festwert ausdrücklich als Beispiel markiert oder aus der Hauptübersicht genommen.
+
+Der Saldo der ausgewiesenen Einnahmen und Ausgaben ist eine Jahresgröße. Seine Änderung im Szenario beschreibt die jährliche Wirkung auf die ausgewiesenen Posten; sie ist keine Veränderung des historischen Schuldenbestands und wird nicht zu einer Schuldenprognose fortgeschrieben. Eine Quote zum Bruttoinlandsprodukt erscheint nur, wenn Zähler und Nenner auf denselben belegten Referenzzeitraum und dieselbe Abgrenzung bezogen sind. Ein pauschales Unsicherheitsband ersetzt diesen Nachweis nicht.
+
 ## Summen in Übersicht und Vergleich
 
 Die Kennzahlen in Übersicht und Vergleich beruhen auf denselben ausgewiesenen Einnahme- und Ausgabenposten des aktiven Szenarios. Der Vergleich übernimmt damit die sichtbare Bezugsgröße der Übersicht, statt daneben eine abweichende feste Gesamtsumme zu verwenden.
