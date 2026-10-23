@@ -2,7 +2,7 @@
 title: Visualisierungen
 summary: Fachliche Darstellungsformen für Haushalt, Verteilung, Wirkungsketten, Regionen und Zeit.
 status: Arbeitsstand 0.4
-last_updated: 2026-10-21
+last_updated: 2026-10-23
 ---
 
 # Visualisierungen
@@ -18,6 +18,8 @@ last_updated: 2026-10-21
 ## Budgetbalken und Zeitbezug
 
 Saldo und Änderungen werden mit einer sichtbaren Nullachse und derselben linearen Skala dargestellt. Nullwerte bleiben ohne Balkenhöhe; positive und negative Werte sind an ihrer Richtung erkennbar. Einheit, Jahresbezug und Zahlenwerte stehen direkt an der Grafik.
+
+Die gemeinsame Beschriftung ordnet diese Geldwerte der staatlichen Einnahmen- und Ausgabenperspektive zu und benennt die ausgewiesenen Posten. Haushaltswirkungen erscheinen mit ihrer eigenen Monats- oder Jahresangabe. Eine Preisbasis oder ein Preisjahr wird nur aus dem Kennzahlenvertrag übernommen; fehlt die Festlegung, wird „Preisgrundlage nicht ausgewiesen“ angezeigt.
 
 Eine Änderung des Jahressaldos ist keine Zeitreihe. Ohne berechnete Folgejahre wird sie nicht automatisch fortgeschrieben oder mit einem pauschalen Wachstum versehen. Für tatsächlich modellierte Mehrjahresszenarien führt ein klarer Einstieg in die Langfristansicht.
 
@@ -66,6 +68,8 @@ Baseline und Szenario können überlagert oder als Differenz dargestellt werden.
 ## Langfristtabellen
 
 Vergleichstabellen trennen Baseline, Szenario, Differenz und Szenarioband in eigene Spalten. Eine Differenz hat dasselbe Bezugsjahr und dieselbe Einheit wie die verglichenen Werte. Ein nicht berechnetes Band wird als solches benannt; ein Unter- oder Oberpfad steht nie unter Baseline oder Zentralwert.
+
+Langfristige Geldwerte tragen das Zieljahr und die staatliche Ebene beziehungsweise den betroffenen Teilhaushalt. Im aktuellen Produkt ist ihre Preisgrundlage nicht ausgewiesen; sie werden weder als reale Werte bezeichnet noch in andere Preise umgerechnet. Ein monatlicher Haushaltswert bleibt klar von einem staatlichen Jahresstrom getrennt.
 
 Der Rentenindikator lautet durchgehend „Beitragszahlende je 100 Rentenbeziehende“. Er bleibt als Strukturquote von einer Finanzkennzahl getrennt. Auf schmalen Ansichten bleibt notwendiger Tabellenscroll innerhalb des benannten, per Tastatur erreichbaren Tabellenbereichs.
 
