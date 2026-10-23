@@ -49,6 +49,16 @@ Jeder Eintrag enthält den Ausgangswert, den aktuellen Wert, die Einheit, den pa
 
 Die Ansicht ist keine zusätzlich gespeicherte Szenariofassung. Import, Undo, Redo und Wiederherstellung des Browserentwurfs müssen dieselbe Änderungsübersicht aus dem jeweils aktuellen Szenariozustand ergeben. Ergebnisse und Wirkungsannahmen werden nicht als unabhängige Einzelwirkungen zu einer neuen Gesamtsumme addiert.
 
+## Gespeicherte Szenarien vergleichen
+
+Der Szenariovergleich stellt die gesetzliche Ausgangslage, den aktuellen Arbeitsentwurf und eine ausdrücklich ausgewählte gespeicherte Fassung gegenüber. Die feste Beispielspalte ist kein Szenario und liefert daher keine Vergleichszahlen. Ist noch keine gespeicherte Fassung vorhanden, zeigt die Ansicht einen Leerzustand mit Zugang zur Szenarioverwaltung.
+
+Jede Szenariospalte wird aus ihren eigenen gespeicherten Parametern berechnet. Auswahl und Berechnung ändern weder den Arbeitsentwurf noch eine gespeicherte Fassung. Eine Auswahl wird nicht als Änderung am Szenario persistiert. Fehlt eine für ein Ergebnis benötigte Referenz, wird dieses Ergebnis als nicht verfügbar erläutert; es wird kein ersatzweiser Bevölkerungslauf stillschweigend aktiviert.
+
+Vor dem Vergleich werden Rechtsstand, Datenbezug, Modellstufe, Zeithorizont, Bevölkerungslauf sowie versionierte Fachmodelle geprüft. Abweichungen werden konkret benannt. Die jeweiligen Szenarioergebnisse dürfen einzeln sichtbar bleiben, aber ein Unterschied wird nicht als gleichgrundiger Vergleich ausgegeben. Unvollständige Summen bleiben unvollständig. Fehlende oder veraltete Wirkungsrechnungen werden getrennt vom direkten Budgeteffekt gekennzeichnet.
+
+Die Maßnahmenübersicht führt die gegenüber ihrer Baseline geänderten konkreten Werte beider Szenarien zusammen. Sie kann optional auf Werte begrenzt werden, die sich zwischen Entwurf und gespeicherter Alternative unterscheiden. Gleiche Werte werden nicht doppelt gezählt und die Auswahl der gespeicherten Alternative verändert keine Parametereingabe.
+
 ## Arbeitsentwurf und gespeicherte Szenariofassung
 
 Nutzer arbeiten zunächst an einem automatisch gesicherten Entwurf in diesem Browser. Eine gespeicherte Szenariofassung entsteht erst über die ausdrückliche Aktion „Szenario speichern“. Die Oberfläche unterscheidet beide Zustände: Sie zeigt den Zeitpunkt der letzten bestätigten Entwurfssicherung und meldet Änderungen gegenüber der zuletzt gespeicherten Fassung.

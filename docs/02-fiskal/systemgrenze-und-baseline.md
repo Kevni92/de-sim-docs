@@ -68,6 +68,12 @@ Diese Summen bilden nur die dargestellten Posten ab und sind keine vollständige
 
 Die Werte des aktiven Szenarios verwenden die dort angezeigte Modellstufe. Direkte Modulwirkung und davon getrennte Wirkungsregister-Pfade bleiben benannt; veraltete oder noch berechnete Wirkungspfade dürfen nicht als aktuelle Zahlen erscheinen. Eine Vergleichsannahme ohne gleichwertige Modulergebnisse ist bei Gesamtsummen als nicht vergleichbar zu kennzeichnen.
 
+### Unterschiedliche Szenariogrundlagen
+
+Der Vergleich verwendet die Parameter und verfügbaren Modellreferenzen jeder Spalte unverändert. Er zeigt den aktuellen Arbeitsentwurf neben einer ausdrücklich ausgewählten gespeicherten Szenariofassung; eine feste Beispielannahme ersetzt keine gespeicherte Alternative. Die Auswahl bleibt schreibgeschützt und darf weder den Entwurf noch die gespeicherte Fassung verändern.
+
+Rechts- und Datenstand, Modellstufe, Zeithorizont, Bevölkerungslauf und versionierte Fachmodelle werden vor der Gegenüberstellung geprüft. Abweichungen sind mit ihrer konkreten Bedeutung sichtbar zu machen. Ergebnisse aus abweichenden Grundlagen sind keine gleichgrundige Differenz: Die App berechnet dafür keine zusammenfassende Vergleichswirkung und harmonisiert die Werte nicht stillschweigend. Fehlt eine notwendige Referenz oder ist ein Ergebnis veraltet, wird der betreffende Wert als nicht verfügbar beziehungsweise nicht aktuell gekennzeichnet.
+
 ## Fachliche Konsistenzregeln
 
 - Jede Kennzahl trägt eine sichtbare Ebenenkennzeichnung.
