@@ -87,6 +87,12 @@ Unterhalb der Kerninformationen folgen getrennte Vertiefungen:
 
 Die Reihenfolge ist auf Desktop und Mobil identisch. Vertiefungen sind per Tastatur erreichbar und dürfen keine horizontale Pflichtnavigation voraussetzen.
 
+## Umfang der Haushalts- und Verteilungsansichten
+
+Die Dashboard-Tabs **Haushalte** und **Verteilung** zeigen derzeit ausschließlich die Einkommensteuerwirkung. Ein gut sichtbarer Hinweis nennt diesen Umfang vor dem Öffnen der Tabs. Für das aktuelle Reformpaket weist er Einkommensteuer als abgebildeten Bereich und geänderte, nicht abgebildete politische Module mit Namen aus.
+
+Wenn eine andere Maßnahme, etwa Umsatzsteuer oder Bürgergeld, geändert wird, dürfen unveränderte Einkommensteuerwerte nicht wie eine Aussage über deren Haushaltswirkung erscheinen. Der Hinweis erklärt, dass diese Module in der Verteilungsansicht fehlen und dass unveränderte Werte keine nachgewiesene Wirkungslosigkeit bedeuten. Eine vollständige modulübergreifende Verteilung oder persönliche Perspektive wird dadurch nicht vorweggenommen; die persönliche Perspektive bleibt Gegenstand der [Folgearbeit in der App](https://github.com/Kevni92/de-sim/issues/60).
+
 ## Änderungen eines Reformpakets prüfen
 
 Die Hauptnavigation bietet **Deine Änderungen**; vom Szenariovergleich aus führt derselbe Einstieg zur vollständigen Paketübersicht. Die Zusammenfassung erscheint vor dem Vergleich und ordnet politische Änderungen, Annahmen und Berechnungseinstellungen getrennt ein.
