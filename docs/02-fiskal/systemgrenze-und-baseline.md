@@ -2,7 +2,7 @@
 title: Systemgrenze und Baseline
 summary: Fachliche Abgrenzung des öffentlichen Sektors und Regeln für den Referenzzustand.
 status: Arbeitsstand 0.4
-last_updated: 2026-10-21
+last_updated: 2026-10-23
 ---
 
 # Systemgrenze und Baseline
@@ -38,9 +38,17 @@ Im aktuellen Produktumfang verwenden gesetzliche Berechnungen den festen Rechtss
 
 Importierte Szenarien können abweichende Jahresmetadaten enthalten. Diese Angaben bleiben beim Laden und Export erhalten. Die Oberfläche kennzeichnet sie sichtbar als Altmetadaten und erklärt getrennt, welche gesetzliche Grundlage unterstützt wird und welchen Zeitbezug der Szenariopfad verwendet. Abweichende Altjahre werden nicht still umgedeutet oder als unterstützte gesetzliche Tarife ausgegeben.
 
-## Reale und nominale Werte
+## Preisbasis und Preisjahr
 
-Nutzer können zwischen nominalen Eurobeträgen und preisbereinigten Werten wechseln. Langfristige Vergleiche zeigen standardmäßig reale Werte und nennen die angenommene Inflation.
+Das Datenjahr einer Quelle ist nicht automatisch das Preisjahr eines Geldwerts. Preisbasis und Preisjahr werden nur genannt, wenn der zugrunde liegende Kennzahlenvertrag sie festlegt. Fehlt diese Festlegung, lautet die Einordnung „Preisgrundlage nicht ausgewiesen“; aus Datenjahr, Rechtsstand oder Zieljahr wird keine nominale oder reale Preisbasis abgeleitet.
+
+In der aktuellen Produktfassung ist für die Geldwerte der Langfristansicht keine Preisgrundlage ausgewiesen. Diese Werte dürfen deshalb nicht als real oder inflationsbereinigt bezeichnet werden. Eine Auswahl zwischen nominalen und realen Werten oder eine Umrechnung wird erst angeboten, wenn ein fachlich freigegebener Vertrag Preisjahr, Index, Bezugszeitraum und Quellen festlegt.
+
+## Zeitraum, Ebene und Perspektive
+
+Jede zentrale Kennzahl wird mit ihrer fachlichen Bezugsgröße lesbar gemacht: Jahresstrom, Monatswirkung, Zieljahr oder Bestand zu einem belegten Stichtag. Staatliche Einnahmen und Ausgaben werden als staatliche Perspektive gekennzeichnet; Wirkungen auf Referenzhaushalte werden als private Haushaltsperspektive mit ihrer eigenen Einheit ausgewiesen. Werte aus Teilhaushalten, etwa der Alterssicherung, werden nicht als Gesamtsaldo des öffentlichen Sektors bezeichnet.
+
+Jahreswerte des öffentlichen Gesamthaushalts beruhen auf den ausgewiesenen Einnahmen und Ausgaben von Bund, Ländern, Kommunen und Sozialversicherung. Sie sind ohne vollständige Abdeckung keine vollständige Haushaltsrechnung. Ein Eurobetrag pro Monat für einen Haushalt und ein staatlicher Jahresbetrag sind verschiedene Kennzahlen und dürfen weder in Tabellen noch in Summen gleichgesetzt werden.
 
 ## Staatliche Einnahmen und Ausgaben
 
@@ -76,9 +84,10 @@ Rechts- und Datenstand, Modellstufe, Zeithorizont, Bevölkerungslauf und version
 
 ## Fachliche Konsistenzregeln
 
-- Jede Kennzahl trägt eine sichtbare Ebenenkennzeichnung.
+- Jede Kennzahl nennt Zeitraum, Ebene und Perspektive; Geldwerte nennen die belegte Preisgrundlage oder weisen sie als nicht ausgewiesen aus.
 - Die ausgewiesene Summe entspricht nach Rundung der sichtbaren Unterposten und behauptet keine vollständige Haushaltsrechnung.
 - Übersicht und Vergleich verwenden für gleiche Szenarien dieselben Werte und denselben Umfang.
+- Gleiche Kennzahlen tragen in Übersicht, Vergleich und Nachweis dieselbe Einheit und Perspektive.
 - Fehlende oder veraltete Ergebnisse erscheinen nicht als null oder aktueller Gesamtwert.
 - Konsolidierungsbuchungen sind in der Berechnungsansicht sichtbar.
 - Jeder Vergleich kann auf den unveränderten Referenzlauf zurückgeführt werden.
