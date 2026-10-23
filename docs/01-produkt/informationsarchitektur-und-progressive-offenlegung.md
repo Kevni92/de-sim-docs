@@ -1,7 +1,7 @@
 ---
 title: Informationsarchitektur und progressive Offenlegung
 summary: Verbindlicher UI-Vertrag für verständliche Reformparameter, direkte Ergebnisse, Betroffenheit, Folgewirkungen, Modellbasis und Nachweise.
-status: Arbeitsstand 0.4
+status: Arbeitsstand 0.5
 last_updated: 2026-10-23
 ---
 
@@ -70,10 +70,36 @@ Diese Einordnung gilt für Desktop und Mobil gleichermaßen. Es gibt keine tote 
 
 Einnahmen- und Ausgabenmodule verwenden denselben fachlichen Aufbau. Der erste Ergebnisbereich enthält höchstens vier Kerninformationen:
 
-- Ausgangswert oder Baseline,
-- direkte staatliche Mehr- oder Minderwirkung,
-- hauptsächlich betroffene Personen, Haushalte oder wirtschaftliche Wirkungsträger,
-- Belastbarkeit mit verständlichem Unsicherheitshinweis.
+| Kerninformation | Bedeutung | Visuelle Semantik |
+| --- | --- | --- |
+| **Ausgangswert/Baseline** | Referenz, mit der das aktuelle Szenario verglichen wird. | Neutral oder blau gehalten und klar von der Szenariowirkung getrennt. |
+| **Direkte staatliche Wirkung** | Modellierte Mehr- oder Mindereinnahme beziehungsweise Ausgabe im angezeigten staatlichen Kontext. | Vorzeichen und Einheit stehen am Wert. Grün oder Rot zeigen nur das fiskalische Vorzeichen in dieser Perspektive. |
+| **Hauptsächlich betroffene Gruppe** | Angenommene wirtschaftliche Wirkung auf Personen, Haushalte oder andere Wirkungsträger; sie ist nicht automatisch mit dem gesetzlichen Steuerschuldner gleichzusetzen. | Gruppe und Anteil oder Einordnung werden beschriftet. Ein Gruppen-Icon ergänzt den Text, ersetzt ihn aber nicht. |
+| **Belastbarkeit** | Evidenzlage, Unsicherheit und relevante Grenzen des Ergebnisses, nicht eine politische Bewertung der Maßnahme. | Status und Unsicherheitshinweis sind lesbar benannt; Gelb oder Orange ergänzen einen Vorsichts- oder Extrapolationshinweis. |
+
+### Visuelle Hierarchie der Standardansicht
+
+Die Standardansicht ordnet diese Informationen in einer festen, leicht erfassbaren Folge:
+
+- Der offene Modulkopf benennt Maßnahme und Fachbereich und hält die zentralen Modulaktionen erreichbar.
+- Die primäre Stellschraube steht in einem eigenen Arbeitsbereich. Bezeichnung, Einheit und kurze Erklärung stehen direkt am Regler und Zahlenfeld.
+- Die vier Kerninformationen bilden eine zusammenhängende Ergebnisleiste. Die Baseline bleibt dabei klar von der Szenariowirkung getrennt.
+- Geschlossene Vertiefungen wirken leichter als der primäre Arbeitsbereich. Sie halten die fachlichen Details vollständig erreichbar, ohne die Standardansicht mit gleich schweren Flächen zu überladen.
+
+Desktop und Mobil verwenden dieselbe fachliche Reihenfolge. Die Ergebnisleiste darf sich je nach Platz umbrechen, aber ihre Rollen und sichtbaren Bezeichnungen bleiben eindeutig. Farbe und Symbol ergänzen die Beschriftung; sie ersetzen weder Labels noch Werte.
+
+### Icons und Farbsemantik
+
+Fachliche Symbole stammen aus einem lokalen, konsistenten SVG-Iconsystem. Emoji und Unicode-Piktogramme dienen nicht als fachliche UI-Symbole. Dekorative Icons sind für Screenreader ausgeblendet. Eine Aktion mit Icon erhält zusätzlich einen sichtbaren Text oder einen eindeutigen zugänglichen Namen.
+
+Farbe beschreibt eine begrenzte, kontextbezogene Rolle:
+
+- **Türkis** markiert aktive Bedienung und Auswahl.
+- **Blau oder neutral** kennzeichnet Baseline und sachliche Information.
+- **Grün und Rot** zeigen ausschließlich das fiskalische Vorzeichen in der dargestellten Perspektive. Sie bewerten eine Reform nicht politisch als gut oder schlecht.
+- **Gelb und Orange** weisen auf Unsicherheit, Vorsicht oder Extrapolation hin.
+
+Keine dieser Bedeutungen wird allein durch Farbe vermittelt. Text, Icon, Form oder Statusbezeichnung bleiben als verständliche Alternative verfügbar.
 
 Technische Kennungen, Seeds, Modellversionen und interne Quellen-IDs gehören nicht in diese Standardansicht.
 

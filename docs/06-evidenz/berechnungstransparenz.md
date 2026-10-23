@@ -1,8 +1,8 @@
 ---
 title: Berechnung und Quellen
 summary: Fachliche Anforderungen an nachvollziehbare Rechenwege, Quellen, Status und Unsicherheiten.
-status: Arbeitsstand 0.7
-last_updated: 2026-10-21
+status: Arbeitsstand 0.8
+last_updated: 2026-10-23
 ---
 
 # Berechnung und Quellen
@@ -94,6 +94,20 @@ Jeder Eingangsparameter zeigt mindestens:
 - bekannte Einschränkungen.
 
 Eine modellinterne Größe darf nicht allein deshalb als amtlich bezeichnet werden, weil ein anderer Teil der Berechnung aus amtlichen Daten stammt.
+
+### Wertebereiche und Extrapolation
+
+Bei einer veränderbaren Stellschraube macht der Nachweis die unterschiedlichen Wertebereiche verständlich auffindbar. Er weist den Standardbereich, den validierten Modellbereich und die technische Domäne getrennt aus. Eine harte Grenze wird, sofern sie für den Parameter besteht, zusätzlich genannt und begründet:
+
+- Baseline und aktuell verwendeter Szenariowert,
+- Standard- beziehungsweise Sliderbereich,
+- validierter Modellbereich,
+- technische Domäne als Bereich verarbeitbarer endlicher Werte,
+- harte fachliche oder technische Grenze und ihren konkreten Grund.
+
+Diese Angaben beschreiben unterschiedliche Grenzen. Der Standardbereich ist eine Bedienentscheidung. Der validierte Modellbereich beschreibt, wo die fachliche Berechnung regulär geprüft und dokumentiert ist. Die technische Domäne beschreibt, welche endlichen Werte die Berechnung verarbeiten kann. Eine harte Grenze wird nur für fachlich unmögliche oder nicht sicher berechenbare Werte verwendet und im Nachweis begründet.
+
+Der tatsächlich bestätigte Szenariowert bleibt zusammen mit Einheit und Berechnungsstatus sichtbar. Ein gültiger Wert außerhalb des Sliderbereichs wird nicht still auf dessen Maximum begrenzt, gerundet oder durch einen anderen Wert ersetzt. Liegt er außerhalb des validierten Modellbereichs, werden Extrapolation, zusätzliche Unsicherheit und bekannte Grenzen ausdrücklich benannt. Eine harte Zurückweisung nennt die betroffene Grenze und den Grund in verständlicher Sprache; der letzte gültige Szenariowert bleibt erhalten.
 
 ## Quellenansicht
 
