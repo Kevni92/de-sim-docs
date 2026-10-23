@@ -2,7 +2,7 @@
 title: Einkommensteuer-Modul 2026
 summary: Gesetzliche Tarifbaseline, automatische synthetische Modellbasis, Reformszenarien und Grenzen des Einkommensteuer-Moduls.
 status: Implementiert 1.2
-last_updated: 2026-07-14
+last_updated: 2026-10-23
 ---
 
 # Einkommensteuer-Modul 2026
@@ -131,6 +131,12 @@ Ausgegeben werden:
 - Spanne innerhalb jedes Dezils,
 - gewichteter Median und Mittelwert,
 - Gewicht der betroffenen Steuerfälle.
+
+## Haushalts- und Verteilungsansichten im Dashboard
+
+Die Dashboard-Ansichten **Haushalte** und **Verteilung** zeigen derzeit ausschließlich die berechnete Einkommensteuerwirkung. Umsatzsteuer, Bürgergeld und andere geänderte Reformmodule sind darin nicht enthalten. Ein sichtbarer Hinweis nennt diesen Umfang bereits vor dem Öffnen der Ansichten und weist für das aktuelle Paket geänderte, nicht abgebildete politische Module aus.
+
+Bleibt ein Einkommensteuerwert nach einer Änderung an einem anderen Modul gleich, ist das keine Aussage über dessen Wirkung auf Haushalte. Es bedeutet, dass die Haushalts- und Verteilungsansicht dieses Modul derzeit nicht berechnet. Eine vollständige modulübergreifende Haushaltsverteilung und persönliche Betroffenheit sind davon getrennte Folgearbeiten; die persönliche Perspektive ist in der [App-Folgearbeit](https://github.com/Kevni92/de-sim/issues/60) dokumentiert.
 
 ## Referenzhaushalte
 
