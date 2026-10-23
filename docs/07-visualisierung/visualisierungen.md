@@ -1,11 +1,21 @@
 ---
 title: Visualisierungen
 summary: Fachliche Darstellungsformen für Haushalt, Verteilung, Wirkungsketten, Regionen und Zeit.
-status: Arbeitsstand 0.4
+status: Arbeitsstand 0.5
 last_updated: 2026-10-23
 ---
 
 # Visualisierungen
+
+## Visuelle Orientierung in Reformansichten
+
+Eine Reformansicht verwendet eine klare Hierarchie: Der Modulkopf bleibt sichtbar, die primäre Stellschraube erhält einen eigenen Arbeitsbereich, und Baseline, direkte staatliche Wirkung, hauptsächlich betroffene Gruppe sowie Belastbarkeit erscheinen als zusammenhängende Ergebnisleiste. Vertiefungen bleiben geschlossen visuell leichter als der primäre Arbeitsbereich; beim Öffnen bleiben vollständige Fachdetails erreichbar.
+
+Fachliche Icons stammen aus einem konsistenten lokalen SVG-System. Emoji und Unicode-Piktogramme ersetzen keine UI-Symbole. Dekorative Icons sind für Screenreader verborgen; eine interaktive Symbolaktion erhält einen sichtbaren Text oder einen eindeutigen zugänglichen Namen.
+
+Die Farbakzente haben einen eng begrenzten Sinn: Türkis zeigt aktive Bedienung und Auswahl, Blau oder neutrale Töne Baseline und Information, Grün und Rot das fiskalische Vorzeichen im dargestellten Kontext, Gelb oder Orange Unsicherheit, Vorsicht und Extrapolation. Grün und Rot sind keine politische Gesamtbewertung. Keine Information hängt allein von Farbe ab; sichtbare Labels, Werte und zugängliche Statusangaben bleiben erhalten.
+
+Desktop und Mobil behalten dieselbe fachliche Reihenfolge. Auf schmalen Ansichten dürfen Elemente umbrechen oder untereinander stehen, ohne dass Kerninformation, Einheit oder Bedeutung durch horizontales Pflichtscrollen verloren gehen.
 
 ## Haushaltsbilanz
 
@@ -79,6 +89,7 @@ Jede Grafik besitzt eine Tabelle, eine Textzusammenfassung und einen Datenexport
 
 ## Verwandte Kapitel
 
+- [Informationsarchitektur und progressive Offenlegung](../01-produkt/informationsarchitektur-und-progressive-offenlegung.md)
 - [Indirekte und nicht monetäre Wirkungen](../04-modell/indirekte-und-nichtmonetaere-wirkungen.md)
 - [Berechnung und Quellen](../06-evidenz/berechnungstransparenz.md)
 - [Unsicherheit und Szenarien](../04-modell/unsicherheit-und-szenarien.md)

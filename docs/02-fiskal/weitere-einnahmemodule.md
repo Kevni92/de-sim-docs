@@ -1,8 +1,8 @@
 ---
 title: Weitere Einnahmemodule
 summary: Fachlicher Vertrag für Umsatzsteuer, Erbschaftsteuer, Vermögensteuer, Sozialbeiträge, Körperschaftsteuer, Kapitalertragsteuer sowie Energie- und Verbrauchsteuern.
-status: Arbeitsstand 0.5
-last_updated: 2026-07-13
+status: Arbeitsstand 0.6
+last_updated: 2026-10-23
 ---
 
 # Weitere Einnahmemodule
@@ -18,6 +18,24 @@ Jedes Modul trennt fünf Größen:
 3. **statische Erstwirkung**: Wirkung bei unveränderter Bemessungsgrundlage,
 4. **Verhaltenskomponente**: gesonderte Anpassungsannahme für Nachfrage, Ausweichen, Investitionen oder Deklaration,
 5. **Unsicherheit und Inzidenz**: Bandbreite und modellierte wirtschaftliche Wirkungsträger.
+
+### Gemeinsamer Parametervertrag
+
+Jede veränderbare Stellschraube unterscheidet den Referenzwert, den bequemen Bedienbereich und die fachliche Reichweite der Berechnung. Der sichtbare Sliderbereich ist eine Hilfe zur Bedienung und keine automatische fachliche Obergrenze.
+
+| Begriff | Bedeutung für die Bedienung und Einordnung |
+| --- | --- |
+| **Baseline** | Der Ausgangswert, zu dem ein Szenario verglichen und auf den der einzelne Parameter zurückgesetzt werden kann. |
+| **Standardbereich (Sliderbereich)** | Der für die normale Bedienung gewählte, gut erreichbare Reglerbereich. Er beschreibt keine rechtliche oder fachliche Obergrenze. |
+| **Validierter Modellbereich** | Der Bereich, für den Daten, Annahmen und Berechnung regulär geprüft und dokumentiert sind. Außerhalb davon kann die Berechnung eine Extrapolation sein. |
+| **Technische Domäne** | Werte, die als endliche Zahlen verarbeitet werden können. Diese technische Fähigkeit bedeutet weder, dass ein Wert fachlich belegt ist, noch dass er innerhalb des validierten Modellbereichs liegt. |
+| **Harte Grenze** | Eine fachliche Unmöglichkeit oder eine Grenze, jenseits derer keine sichere Berechnung möglich ist. Sie ist verständlich zu begründen und darf nicht mit einem Slidermaximum verwechselt werden. |
+
+Das Zahlenfeld ist eine eigenständige Eingabemöglichkeit und kann einen Wert außerhalb der sichtbaren Slider-Skala annehmen. Wenn ein gültiger Wert außerhalb der Skala liegt, wird die Skala erweitert oder passend dargestellt; der Wert wird nicht still auf das bisherige Slidermaximum gekürzt. Der bestätigte Szenariowert, die Einheit und seine Größenordnung bleiben sichtbar.
+
+Unvollständige oder unzulässige Eingaben bleiben ein lokaler Entwurf und verändern weder den Szenariowert noch das Ergebnis. Ein ungewöhnlicher Wert ist nicht automatisch ungültig. Eine gültige Eingabe außerhalb des validierten Modellbereichs kann als exploratives Szenario erhalten bleiben, muss aber klar als Extrapolation gekennzeichnet werden und darf nicht als scheinexakte Prognose erscheinen. Ist auch innerhalb der technischen Domäne keine sinnvolle Berechnung mehr möglich, wird ein fachlicher Status wie „nicht seriös quantifizierbar“ statt einer erfundenen Zahl gezeigt.
+
+Für Prozentwerte und absolute Größen gilt derselbe Vertrag. Einheit und Größenordnung bleiben am Eingabefeld sichtbar. Das Zurücksetzen auf die Baseline stellt den Ausgangswert wieder her; eine Rückkehr zur normalen Slider-Skala ist davon eine getrennte Bedienaktion.
 
 Die allgemeine Aggregatlogik lautet:
 
@@ -115,6 +133,16 @@ Das Modul verwendet als Baseline einen Steuersatz von **25 Prozent**. Veränderb
 - nutzbare Verlustverrechnung.
 
 Kirchensteuer, Günstigerprüfung, Investmentsteuer, unterschiedliche Verlustverrechnungstöpfe und die Verteilung von Kapitalerträgen werden noch nicht vollständig simuliert. Ergebnisse bleiben deshalb Aggregatrechnungen mit breitem Unsicherheitsband.
+
+### Nutzerbeispiele für Wertebereiche
+
+#### Abgeltungsteuersatz oberhalb von 50 Prozent
+
+Die Baseline beträgt **25 Prozent**. Der normale Sliderbereich und der hier fachlich geprüfte Bereich reichen zunächst von **0 bis 50 Prozent**. Eine gültige Zahleneingabe von **80 Prozent** wird nicht auf 50 Prozent begrenzt: Die Skala kann bis 100 Prozent erweitert werden, und der Szenariowert bleibt sichtbar. Da der Wert außerhalb des validierten Bereichs liegt, kennzeichnet die Anwendung ihn als Extrapolation und ordnet die verringerte Belastbarkeit ein. Das Ergebnis ist ein exploratives Szenario, keine exakte Prognose. Ein Reset führt zum Baselinewert von 25 Prozent zurück.
+
+#### Sparer-Pauschbetrag als absolute Größe
+
+Beim Sparer-Pauschbetrag bleibt die Einheit **Euro** sichtbar. Der übliche Slider- und validierte Modellbereich reicht im Beispiel von **0 bis 10.000 Euro**; die Baseline beträgt **1.000 Euro**. Eine gültige Eingabe von **12.000 Euro** kann als Szenario übernommen werden, ohne auf das Slidermaximum gekürzt zu werden. Die Anwendung erweitert die Skala und kennzeichnet die Berechnung außerhalb des validierten Bereichs als Extrapolation. Der Reset stellt 1.000 Euro wieder her.
 
 ## Energie- und Verbrauchsteuern
 
