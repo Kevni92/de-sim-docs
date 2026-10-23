@@ -2,7 +2,7 @@
 title: Informationsarchitektur und progressive Offenlegung
 summary: Verbindlicher UI-Vertrag für verständliche Reformparameter, direkte Ergebnisse, Betroffenheit, Folgewirkungen, Modellbasis und Nachweise.
 status: Arbeitsstand 0.4
-last_updated: 2026-10-21
+last_updated: 2026-10-23
 ---
 
 # Informationsarchitektur und progressive Offenlegung
@@ -98,6 +98,16 @@ Gruppenregler werden für die Übersicht in ihre konkreten geänderten Einzelwer
 Die Paketübersicht summiert unabhängige Einzelwirkungen nicht zu einem scheinpräzisen Gesamtergebnis. Im Vergleich wird vor den Ergebniskennzahlen auf dieselben Einzelwerte verwiesen. Bei unveränderten Baselines erklärt ein leerer Zustand, dass noch keine Reformänderungen vorliegen.
 
 Import, Rückgängig, Wiederholen und Neuladen aktualisieren die Liste aus dem aktuellen Szenarioentwurf. Desktop und Mobil behalten dieselbe Reihenfolge; Werte, Einheiten und Aktionen bleiben ohne horizontales Scrollen erreichbar. Tastaturbedienung und sichtbarer Fokus gelten auch für Modulzugang und Einzelreset.
+
+## Szenarien verwalten und auf andere Geräte mitnehmen
+
+Die Szenarioverwaltung zeigt zuerst Name, Beschreibung, Sicherungsstatus und die verfügbaren Aktionen. Ein Entwurf wird nur in diesem Browser auf diesem Gerät gesichert. Gespeicherte Varianten werden mit Name, Beschreibung und letztem Speicherzeitpunkt aufgeführt. Ein Status unterscheidet den automatisch gesicherten Arbeitsentwurf von einer ausdrücklich gespeicherten Szenariofassung und weist Änderungen seit dem letzten Speichern aus.
+
+Zum Wechsel auf ein anderes Gerät laden Nutzende eine Szenario-Datei herunter und übernehmen sie dort aus einer Datei. Die Datei verwendet das JSON-Format. Eine Datei ist eine manuelle Mitnahme; es gibt kein Konto und keine automatische Synchronisierung zwischen Geräten. Import und Export erhalten Szenariowerte, Modellversionen und Quellenbezüge.
+
+Modellversion, interne Szenario-ID und Quellenkennungen bleiben unter **Technische Nachweise** erreichbar. Sie stehen in der Standardansicht nicht im Weg und lassen sich mit der Tastatur öffnen. Die normale Bedienung erfordert weder Kenntnis von Datenbanken und Hintergrundprozessen noch von Quellenkennungen.
+
+Leere und gefüllte Szenariolisten erklären denselben Speicherort. Desktop und Mobil zeigen die Speicherhinweise und Aktionen in gleicher Reihenfolge; Name, Beschreibung und zentrale Aktionen bleiben ohne horizontalen Pflichtscroll erreichbar.
 
 ## Modellbasis als Infrastruktur
 
